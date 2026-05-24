@@ -1,131 +1,158 @@
+<!-- house.html - Heritage Home Details Page -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Staybnb | Holiday rentals, cabins, beach houses & more.</title>
-        <link rel="icon" href="titlelogo.png" type="image/icon type">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav id="navBar" class="navBar-white">
-            <a href="index.html"><img src="logo-red.png" class="logo"></a>
-            <ul class="nav-link">
-                <li><a href="index.html">Popular Places</a></li>
-                <li><a href="house.html" class="active">Travel Outside</a></li>
-                <li><a href="listing.html">Online Packages</a></li>
-            </ul>
-            <a href="register.html" class="register-btn">Register Now</a>
-            <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
-        </nav>
-        <div class="house-details">
-            <div class="house-title">
-                <h1>Wenge House</h1>
-                <div class="row">
-                    <div>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <span>245 Reviews</span>
-                    </div>
-                    <div>
-                        <p>Location: San Francisco, California, United States</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery">
-                <div class="gallery-img-1"><img src="house-1.png"></div>
-                <div><img src="house-2.png"></div>
-                <div><img src="house-3.png"></div>
-                <div><img src="house-4.png"></div>
-                <div><img src="house-5.png"></div>
-            </div>
-            <div class="small-details">
-                <h2>Entire rental unit hosted by Brandon</h2>
-                <p>2 guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
-                <h4>$ 100 / day</h4>
-            </div>
-            <hr class="line">
-            <form class="check-form">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>RT RoyalBNB | Wenge Heritage House - Royal Stay Details</title>
+    <meta name="description" content="Experience royal hospitality in our heritage home. Book this luxurious property in India with best prices in ₹ INR.">
+    <link rel="icon" href="images/titlelogo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navBar" class="navBar-white">
+        <a href="index.html" class="logo-link">
+            <img src="images/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
+        </a>
+        <ul class="nav-link">
+            <li><a href="index.html">Royal Stays</a></li>
+            <li><a href="house.html" class="active">Heritage Homes</a></li>
+            <li><a href="listing.html">Luxury Packages</a></li>
+        </ul>
+        <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a>
+        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    </nav>
+
+    <div class="house-details">
+        <div class="house-title">
+            <h1>Wenge Heritage Palace</h1>
+            <div class="row">
                 <div>
-                    <label>Check-in</label>
-                    <input type="text" placeholder="Add date">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>245 Royal Reviews</span>
                 </div>
                 <div>
-                    <label>check-out</label>
-                    <input type="text" placeholder="Add date">
-                </div>
-                <div class="guets-field">
-                    <label>Guest</label>
-                    <input type="text" placeholder="2 Guest">
-                </div>
-                <button type="submit">Check Availability</button>
-            </form>
-            <ul class="details-list">
-                <li><i class="fa-solid fa-house"></i>Entire Home
-                    <span>You will have the entire flat for you.</span>
-                </li>
-                <li><i class="fa-solid fa-paint-roller"></i>Enhanced Clean
-                    <span>This host has committed to Staybnb's cleaning process.</span>
-                </li>
-                <li><i class="fa-solid fa-location-dot"></i>Great Location
-                    <span>90% of recent guests gave the location a 5 star rating.</span>
-                </li>
-                <li><i class="fa-solid fa-heart"></i>Great Check-in experince
-                    <span>100% of recent guests gave the check-in process a 5 star rating.</span>
-                </li>
-            </ul>
-            <hr class="line">
-            <p class="home-desc">Guests will be allocated on the ground floor according to availability. You get a 
-                comfortable Two Bedroom apartment has a true city feeling. The price qouted is for 
-                two guest, at the guest slot please mark the number of guests to get the exact price
-                for groups. The Guests will be allocated on the ground floor according to availability. You get a 
-                comfortable Two Bedroom apartment has a true city feeling.</p>
-            <hr class="line">
-            <div class="map">
-                <h3>Location On Map</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255505.13025790468!2d-122.60206258325859!3d37.75758573223656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e1!3m2!1sen!2sin!4v1725256675403!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <b>San Francisco, California, United States</b>
-                <p>It's like a home away from home</p>
-            </div>
-            <hr class="line">
-            <div class="host">
-                <img src="host.png">
-                <div>
-                    <h2>Hosted by Fahim Raj</h2>
-                    <p><span>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </span>&nbsp; &nbsp; 245 Reviews &nbsp; &nbsp; Reponse rate: 100% &nbsp; &nbsp; Reponse time: 60 min</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: Jaipur, Rajasthan, India</p>
                 </div>
             </div>
-            <a href="#" class="contact-host">Contact Host</a>
         </div>
-        <div class="container">
-            <div class="footer">
-                <a href="https://facbook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <hr>
-                <p>Copyright @2024</p>
-                <p>Created and Design by MO FAHIM RAJ</p>
-             </div>
+
+        <div class="gallery">
+            <div class="gallery-img-1"><img src="images/house-1.png" alt="Heritage Palace View"></div>
+            <div><img src="images/house-2.png" alt="Royal Suite"></div>
+            <div><img src="images/house-3.png" alt="Courtyard"></div>
+            <div><img src="images/house-4.png" alt="Luxury Bedroom"></div>
+            <div><img src="images/house-5.png" alt="Heritage Architecture"></div>
         </div>
-     <script>
-        var navBar = document.getElementById("navBar");
-        function togglebtn(){
-            navBar.classList.toggle("hidemenu");
+
+        <div class="small-details">
+            <h2>Entire heritage suite hosted by Rajkumar Brandon</h2>
+            <p>4 guest &nbsp; &nbsp; 3 beds &nbsp; &nbsp; 2 bathroom &nbsp; &nbsp; <i class="fas fa-wifi"></i> Free WiFi</p>
+            <h4>₹ 8,500 / day</h4>
+        </div>
+        <hr class="line">
+
+        <form class="check-form" id="availabilityForm">
+            <div>
+                <label><i class="fas fa-calendar-check"></i> Check-in</label>
+                <input type="date" id="checkinDate" placeholder="Select date">
+            </div>
+            <div>
+                <label><i class="fas fa-calendar-check"></i> Check-out</label>
+                <input type="date" id="checkoutDate" placeholder="Select date">
+            </div>
+            <div class="guets-field">
+                <label><i class="fas fa-users"></i> Guest</label>
+                <input type="number" id="guestCount" min="1" max="10" value="2" placeholder="Number of guests">
+            </div>
+            <button type="submit">Check Availability <i class="fas fa-arrow-right"></i></button>
+        </form>
+
+        <ul class="details-list">
+            <li><i class="fa-solid fa-landmark"></i> Entire Heritage Home
+                <span>You will have the entire heritage suite exclusively for you.</span>
+            </li>
+            <li><i class="fa-solid fa-spa"></i> Royal Clean Protocol
+                <span>This host has committed to RT RoyalBNB's enhanced cleaning process.</span>
+            </li>
+            <li><i class="fa-solid fa-location-dot"></i> Prime Location
+                <span>95% of recent guests gave the location a 5 star rating.</span>
+            </li>
+            <li><i class="fa-solid fa-concierge-bell"></i> Royal Check-in Experience
+                <span>Traditional welcome with tilak and garland.</span>
+            </li>
+        </ul>
+        <hr class="line">
+
+        <p class="home-desc">Guests will be allocated on the ground floor according to availability. You get a comfortable three-bedroom heritage apartment with true royal city feeling. The price quoted is for two guests, at the guest slot please mark the number of guests to get the exact price for groups. Experience the charm of Jaipur's pink city with modern amenities. Includes complimentary breakfast and 24/7 royal concierge service.</p>
+        <hr class="line">
+
+        <div class="map">
+            <h3><i class="fas fa-map"></i> Location On Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.444567890123!2d75.7872709!3d26.9124336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3d4f5b5b5b5%3A0x4a501367f076adff!2sJaipur%2C%20Rajasthan%2C%20India!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <b>Jaipur, Rajasthan, India</b>
+            <p>Experience royalty in the heart of Pink City</p>
+        </div>
+        <hr class="line">
+
+        <div class="host">
+            <img src="images/host.png" alt="Host Profile">
+            <div>
+                <h2>Hosted by Rajkumar Brandon Singh</h2>
+                <p><span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </span>&nbsp; &nbsp; 245 Reviews &nbsp; &nbsp; Response rate: 100% &nbsp; &nbsp; Response time: within 30 min</p>
+                <p class="host-bio"><i class="fas fa-crown"></i> Verified Royal Host | 7+ years of heritage hospitality</p>
+            </div>
+        </div>
+        <a href="#" class="contact-host" id="contactHostBtn">Contact Host <i class="fas fa-headset"></i></a>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <hr>
+            <p>© 2025 RT RoyalBNB — Regal Stays in Indian Currency (₹ INR)</p>
+            <p class="credit">Designed with ❤️ for India's Heritage Travelers</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navBar');
+            nav.classList.toggle('hidemenu');
         }
+
+        // Availability form handler
+        document.getElementById('availabilityForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const checkin = document.getElementById('checkinDate')?.value || 'Not selected';
+            const checkout = document.getElementById('checkoutDate')?.value || 'Not selected';
+            const guests = document.getElementById('guestCount')?.value || 2;
+            alert(`✨ Royal Availability Check (₹ INR)\n📅 Check-in: ${checkin}\n📅 Check-out: ${checkout}\n👥 Guests: ${guests}\n\nOur royal concierge will contact you with best heritage rates.`);
+        });
+
+        // Contact host handler
+        document.getElementById('contactHostBtn')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("📞 Connect with Royal Host: +91 98765 01234 (WhatsApp available)\n📧 Email: royal.host@rtroyalbnb.com");
+        });
     </script>
 </body>
 </html>

@@ -1,76 +1,379 @@
+<!-- register.html - Royal Registration & Contact Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staybnb | Holiday rentals, cabins, beach houses & more.</title>
-    <link rel="icon" href="titlelogo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>RT RoyalBNB | Register - Become a Royal Member</title>
+    <meta name="description" content="Register with RT RoyalBNB to book heritage stays or list your property. Join India's premium royal hospitality platform.">
+    <link rel="icon" href="images/titlelogo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav id="navBar" class="navBar-white">
-        <a href="index.html"><img src="logo-red.png" class="logo"></a>
+        <a href="index.html" class="logo-link">
+            <img src="images/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
+        </a>
         <ul class="nav-link">
-            <li><a href="index.html">Popular Places</a></li>
-            <li><a href="house.html">Travel Outside</a></li>
-            <li><a href="listing.html"  class="active">Online Packages</a></li>
+            <li><a href="index.html">Royal Stays</a></li>
+            <li><a href="house.html">Heritage Homes</a></li>
+            <li><a href="listing.html">Luxury Packages</a></li>
         </ul>
     </nav>
-    <div class="container"></div>
-        <div class="content">
-            <div class="left-side">
-                <div class="address details">
-                    <i class="fa-solid fa-location-dot"> </i>
-                    <div class="topic"><b>ADDRESS</b></div>
-                    <div class="text-one">Palej,</div>
-                    <div class="text-two">Bharuch-392001</div>
+
+    <div class="register-container">
+        <div class="register-wrapper">
+            <div class="contact-info">
+                <div class="royal-badge">
+                    <i class="fas fa-crown"></i>
+                    <h2>RT RoyalBNB</h2>
+                    <p>India's Premier Heritage Hospitality Platform</p>
                 </div>
-                <div class="phone details">
-                    <i class="fa-solid fa-phone"></i>
-                    <div class="topic"><b>PHONE</b></div>
-                    <div class="text-one">+91 989.. ..2244</div>
-                </div>
-                <div class="email details">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div class="topic">EMAIL</div>
-                    <div class="text-one">royalcola123@gmail.com</div>
-                    <div class="text-two">www.royalcola.com</div>
+                <div class="info-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Corporate Office</h4>
+                            <p>Jaipur, Rajasthan - 302001</p>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Royal Concierge</h4>
+                            <p>+91 98765 01234</p>
+                            <p>+91 99887 65544</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>royal@rtroyalbnb.com</p>
+                            <p>support@rtroyalbnb.com</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>24/7 Royal Assistance</p>
+                            <p>365 Days a Year</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="right-side">
-                <div class="topic-text">WANT TO REACH US</div>
-                <p>If you want to reach us or want to work with us then please fill these form.</p>
-                <form action="#">
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter a Full name">
+
+            <div class="registration-form">
+                <div class="form-header">
+                    <h2>Royal Registration</h2>
+                    <p>Join our royal community to book heritage stays or list your property. All prices in ₹ INR.</p>
+                </div>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullname" placeholder="Full Name" required>
                     </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Enter a email">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email Address" required>
                     </div>
-                    <div class="input-box message-box">
-                        <textarea placeholder="Message"></textarea>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="Mobile Number (10 digits)" pattern="[0-9]{10}" required>
                     </div>
-                    <button class="cta-button" onclick="OpenSlide()">Submit</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <h2>Thank you</h2>
-                        <p>Your details has been successfully submitted. Thanks!!</p>
-                        <button onclick="CloseSlide()">OK</button>
+                    <div class="input-group">
+                        <i class="fas fa-map-pin"></i>
+                        <select id="city">
+                            <option value="">Select Your City</option>
+                            <option>Jaipur, Rajasthan</option>
+                            <option>Udaipur, Rajasthan</option>
+                            <option>Jodhpur, Rajasthan</option>
+                            <option>Jaisalmer, Rajasthan</option>
+                            <option>Nathdwara, Rajasthan</option>
+                            <option>Ahmedabad, Gujarat</option>
+                            <option>Vadodara, Gujarat</option>
+                            <option>Somnath, Gujarat</option>
+                            <option>Dwarka, Gujarat</option>
+                            <option>Bhavnagar, Gujarat</option>
+                            <option>Gandhinagar, Gujarat</option>
+                            <option>Daman</option>
+                        </select>
                     </div>
-                    &nbsp&nbsp&nbsp<button class="cta-button">Cancel</button>
+                    <div class="input-group">
+                        <i class="fas fa-building"></i>
+                        <select id="interest">
+                            <option value="">I am interested in...</option>
+                            <option>Booking a Heritage Stay</option>
+                            <option>Listing My Property as Host</option>
+                            <option>Both - Booking & Hosting</option>
+                            <option>Partnership / Collaboration</option>
+                        </select>
+                    </div>
+                    <div class="input-group message-box">
+                        <i class="fas fa-comment"></i>
+                        <textarea id="message" placeholder="Additional message or special requests..." rows="3"></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Royal Terms & Conditions</a> and Privacy Policy.</label>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-crown"></i> Register Now</button>
+                    <button type="button" class="cancel-btn" id="cancelBtn">Clear Form</button>
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        var navBar = document.getElementById("navBar");
-        function togglebtn(){
-            navBar.classList.toggle("hidemenu");
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-card">
+            <i class="fa-regular fa-circle-check success-icon"></i>
+            <h2>Registration Successful!</h2>
+            <p>Thank you for joining RT RoyalBNB. Our royal concierge will contact you within 24 hours.</p>
+            <p class="popup-currency"><i class="fas fa-rupee-sign"></i> All prices are in Indian Rupees (₹ INR)</p>
+            <button onclick="closePopup()">Continue to Explore <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <hr>
+            <p>© 2025 RT RoyalBNB — Regal Stays in Indian Currency (₹ INR)</p>
+            <p class="credit">Designed with ❤️ for India's Heritage Travelers</p>
+        </div>
+    </div>
+
+    <style>
+        /* Register page specific styles */
+        .register-container {
+            padding: 120px 7% 60px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFFBF5 0%, #FFF5E8 100%);
         }
+        .register-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: white;
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+        }
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            background: linear-gradient(145deg, #2C221B, #3D2E24);
+            padding: 50px 35px;
+            color: #F5E6D3;
+        }
+        .royal-badge {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .royal-badge i {
+            font-size: 3rem;
+            color: #D4AF7A;
+        }
+        .royal-badge h2 {
+            font-size: 2rem;
+            margin: 10px 0;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .info-details {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .detail-item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .detail-item i {
+            font-size: 1.4rem;
+            color: #D4AF7A;
+            margin-top: 4px;
+        }
+        .detail-item h4 {
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+        .detail-item p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            line-height: 1.4;
+        }
+        .registration-form {
+            flex: 1.5;
+            min-width: 350px;
+            padding: 50px 40px;
+            background: white;
+        }
+        .form-header h2 {
+            font-size: 2rem;
+            color: #2C221B;
+            margin-bottom: 8px;
+        }
+        .form-header p {
+            color: #6B5A4E;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #F9F5EF;
+            border-radius: 60px;
+            padding: 5px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #EDE3D6;
+            transition: 0.3s;
+        }
+        .input-group:focus-within {
+            border-color: #D4AF7A;
+            box-shadow: 0 0 0 3px rgba(212,175,122,0.2);
+        }
+        .input-group i {
+            color: #B88B4A;
+            font-size: 1.1rem;
+        }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+        }
+        .message-box {
+            align-items: flex-start;
+            border-radius: 28px;
+        }
+        .message-box textarea {
+            resize: vertical;
+            padding: 12px 0;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .checkbox-group a {
+            color: #B88B4A;
+            text-decoration: none;
+        }
+        .submit-btn, .cancel-btn {
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+            font-size: 1rem;
+            margin-right: 15px;
+        }
+        .submit-btn {
+            background: #B88B4A;
+            color: white;
+        }
+        .submit-btn:hover {
+            background: #D4AF7A;
+            transform: translateY(-2px);
+        }
+        .cancel-btn {
+            background: #EFE5D8;
+            color: #5A4A3A;
+        }
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-card {
+            background: white;
+            padding: 40px;
+            border-radius: 48px;
+            text-align: center;
+            max-width: 450px;
+            animation: fadeUp 0.4s ease;
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .popup-card button {
+            background: #B88B4A;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        @media (max-width: 850px) {
+            .register-container { padding: 100px 5% 40px; }
+            .registration-form { padding: 35px 25px; }
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navBar');
+            nav.classList.toggle('hidemenu');
+        }
+
+        const popup = document.getElementById('successPopup');
+        
+        function openPopup() {
+            popup.style.display = 'flex';
+        }
+        
+        function closePopup() {
+            popup.style.display = 'none';
+            window.location.href = 'index.html';
+        }
+        
+        document.getElementById('registerForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fullname')?.value;
+            if (!name) {
+                alert('Please enter your full name');
+                return;
+            }
+            openPopup();
+            e.target.reset();
+        });
+        
+        document.getElementById('cancelBtn')?.addEventListener('click', () => {
+            document.getElementById('registerForm')?.reset();
+        });
+        
+        // Close popup when clicking outside
+        popup?.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
     </script>
 </body>
 </html>
