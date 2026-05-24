@@ -884,9 +884,9 @@ nav {
     transform: scale(1.1);
 }
 
-.right-arrow {
+/*.right-arrow {
     transform: rotate(180deg);
-}
+}*/
 
 .pagination span {
     margin: 10px 8px;
