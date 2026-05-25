@@ -1,0 +1,35 @@
+<!-- booking.html - Property Booking Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT RoyalBNB | Book Your Royal Stay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav id="navBar" class="navBar-white"><a href="index.html"><img src="./images/RT_LOGO_BG1.png" class="logo"></a>
+        <ul class="nav-link"><li><a href="index.html">Royal Stays</a></li><li><a href="listing.html">Heritage Homes</a></li><li><a href="register.html">Luxury Packages</a></li></ul>
+        <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a><i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    </nav>
+    <div class="booking-container" id="bookingContainer"><div class="loading">Loading property details...</div></div>
+    <footer class="royal-footer"><div class="footer-container"><div class="footer-section"><div class="social-icons"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-briefcase"></i></a></div></div><div class="footer-section"><div class="copyright"><p>&copy; 2025 RT RoyalBNB</p></div></div><div class="footer-section"><div class="design-credit"><p>Design & Developed by <span>Rishabh Shah</span></p></div></div></div></footer>
+    <script>
+        const properties = [
+            { id:1, name:"Jaipur City Palace Suite", type:"palace", dest:"rajasthan", guests:4, price:12500, img:"./images/properties/jaipur-palace.jpg", rating:4.9, location:"Jaipur, Rajasthan", map:"https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host:"Rishabh Alpeshbhai Shah", beds:3, bathrooms:2, amenities:["Pool","Spa","WiFi","Breakfast"], desc:"Experience royal living in this magnificent palace suite..." },
+            { id:2, name:"Udaipur Lake View Villa", type:"villa", dest:"rajasthan", guests:6, price:18500, img:"./images/properties/udaipur-lake.jpg", rating:4.8, location:"Udaipur, Rajasthan", map:"https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host:"Rishabh Alpeshbhai Shah", beds:4, bathrooms:3, amenities:["Pool","Spa","WiFi","Breakfast","Lake View"], desc:"Overlooking the serene Lake Pichola..." }
+        ];
+        const urlParams = new URLSearchParams(window.location.search);
+        const propertyId = parseInt(urlParams.get('id'));
+        const property = properties.find(p => p.id === propertyId) || properties[0];
+        function loadBooking() {
+            document.getElementById('bookingContainer').innerHTML = `<div class="booking-wrapper"><div class="booking-gallery"><img src="${property.img}" onerror="this.src='https://placehold.co/600x400'"></div><div class="booking-info"><h1>${property.name}</h1><div class="rating">${'★'.repeat(Math.floor(property.rating))}${property.rating%1?'½':''}${'☆'.repeat(5-Math.ceil(property.rating))}</div><p><i class="fas fa-map-pin"></i> ${property.location} | <i class="fas fa-user-tie"></i> Hosted by ${property.host}</p><hr><div class="details"><h3>Property Details</h3><ul><li><i class="fas fa-bed"></i> ${property.beds} Bedrooms</li><li><i class="fas fa-bath"></i> ${property.bathrooms} Bathrooms</li><li><i class="fas fa-users"></i> Sleeps ${property.guests} Guests</li></ul><h3>Amenities</h3><div class="amenities">${property.amenities.map(a => `<span><i class="fas fa-check-circle"></i> ${a}</span>`).join('')}</div><div class="price-box"><h2>${property.price} <span>/ night</span></h2><button class="book-now-btn" onclick="alert('Booking request sent! Royal concierge will contact you.')">Book Now <i class="fas fa-arrow-right"></i></button></div></div></div><div class="booking-map"><h3>Location</h3><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.444567890123!2d75.7872709!3d26.9124336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3d4f5b5b5b5%3A0x4a501367f076adff!2sJaipur%2C%20Rajasthan%2C%20India!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen></iframe><a href="${property.map}" target="_blank" class="map-link">Open in Google Maps <i class="fas fa-external-link-alt"></i></a></div></div>`;
+        }
+        function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
+        document.addEventListener('DOMContentLoaded', loadBooking);
+    </script>
+    <style>.booking-container { padding: 120px 7% 60px; min-height: 80vh; } .booking-wrapper { display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); } .booking-gallery { flex: 1; min-width: 280px; } .booking-gallery img { width: 100%; border-radius: 24px; } .booking-info { flex: 1.5; } .amenities { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; } .amenities span { background: #F9EFE3; padding: 8px 16px; border-radius: 40px; font-size: 0.85rem; } .price-box { background: #FFF6EA; padding: 25px; border-radius: 28px; margin-top: 30px; text-align: center; } .book-now-btn { background: #B88B4A; color: white; border: none; padding: 14px 40px; border-radius: 50px; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-top: 15px; } .book-now-btn:hover { background: #D4AF7A; transform: translateY(-2px); } .booking-map { margin-top: 40px; background: white; border-radius: 32px; padding: 25px; } .map-link { display: inline-block; margin-top: 15px; color: #B88B4A; text-decoration: none; } @media (max-width: 850px) { .booking-wrapper { flex-direction: column; } }</style>
+</body>
+</html>

@@ -1,35 +1,37 @@
-<!-- index.html - RoyalBNB Homepage -->
+<!-- index.html - RT RoyalBNB Homepage -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>RT RoyalBNB | Royal Stays & Heritage Hotels in India</title>
-    <meta name="description" content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas in Gujarat, Rajasthan. Best prices in ₹ INR.">
-    <link rel="icon" href="./image/logo/RT_LOGO_1.png" type="image/png">
-    <!-- Fonts: Elegant serif + modern sans -->
+    <meta name="description" content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
+    <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav id="navBar">
         <a href="index.html" class="logo-link">
-            <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
+            <img src="./images/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
         </a>
         <ul class="nav-link">
             <li><a href="index.html" class="active">Royal Stays</a></li>
-            <li><a href="house.html">Heritage Homes</a></li>
-            <li><a href="listing.html">Luxury Packages</a></li>
+            <li><a href="listing.html">Heritage Homes</a></li>
+            <li><a href="register.html">Luxury Packages</a></li>
         </ul>
         <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a>
         <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
     </nav>
 
-    <!-- Hero Section with Animation -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+    <!-- Hero Section with Auto-Sliding Images -->
+    <section class="hero" id="heroSection">
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide active" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-1.jpg');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-2.jpg');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-3.jpg');"></div>
+        </div>
         <div class="hero-content animate-fade-up">
             <h1 class="hero-title">Forgot Busy Work, <br>Start <span class="gold-text">Royal Vacation</span></h1>
             <p>We provide curated heritage tours & palace stays across India. Time to embrace royal luxury.</p>
@@ -40,158 +42,97 @@
             </div>
             <a href="listing.html" class="hero-btn">Explore Royal Stays <i class="fas fa-arrow-right"></i></a>
         </div>
+        <button class="hero-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+        <div class="hero-dots" id="heroDots"></div>
     </section>
 
     <div class="container">
-        <!-- Most Picked / Highlighted Destinations Section (Royal Collection) -->
+        <!-- Most Picked Royal Retreats -->
         <div class="section-header">
             <h2 class="section-title"><span class="gold-border">✦</span> Most Picked Royal Retreats <span class="gold-border">✦</span></h2>
             <p>Curated just for you — India's finest heritage experiences</p>
         </div>
+        <div class="most-picked-grid" id="mostPickedGrid"></div>
 
-        <div class="most-picked-grid" id="mostPickedGrid">
-            <!-- Dynamic cards will be injected but we provide static fallback -->
+        <!-- Trip Packages Section -->
+        <div class="section-header">
+            <h2 class="section-title"><span class="gold-border">✧</span> Exclusive Royal Packages <span class="gold-border">✧</span></h2>
+            <p>Handcrafted journeys across India's royal landscapes</p>
         </div>
+        <div class="packages-grid" id="packagesGrid"></div>
 
-        <!-- Popular Places / Exclusives -->
+        <!-- Popular Royal Destinations -->
         <h2 class="sub-title"><i class="fas fa-map-marked-alt"></i> Popular Royal Destinations</h2>
         <div class="exclusives" id="exclusivesGrid"></div>
 
-        <!-- Trending Places (with highlight animation) -->
+        <!-- Trending Heritage Circuits -->
         <h2 class="sub-title"><i class="fas fa-fire"></i> Trending Heritage Circuits</h2>
         <div class="trending" id="trendingGrid"></div>
+
+        <!-- About RT RoyalBNB Section -->
+        <div class="about-royal-section">
+            <div class="about-content">
+                <h2>About <span class="gold-text">RT RoyalBNB</span></h2>
+                <h3>Your Gateway to India's Royal Heritage</h3>
+                <p>RT RoyalBNB is India's premier heritage hospitality platform, dedicated to bringing you the finest palace stays, heritage havelis, and luxury retreats across the country. From the majestic forts of Rajasthan to the serene temples of Gujarat, we curate experiences that let you live like royalty.</p>
+                <p>Our mission is to preserve India's architectural legacy while providing travelers with authentic, comfortable, and memorable stays. Every property in our collection is handpicked for its historical significance and quality of hospitality.</p>
+                <div class="about-features">
+                    <div class="feature"><i class="fas fa-check-circle"></i> 100+ Heritage Properties</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> 15+ Royal Destinations</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> 24/7 Royal Concierge</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> Authentic Experiences</div>
+                </div>
+                <a href="register.html" class="about-btn">Join Royal Community <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image">
+                <img src="./images/about-royal.jpg" alt="Royal Heritage Palace" onerror="this.src='https://placehold.co/500x400?text=Royal+Heritage'">
+                <div class="image-badge">Since 2024</div>
+            </div>
+        </div>
+
+        <!-- Royal Testimonials -->
+        <h2 class="sub-title"><i class="fas fa-feather-alt"></i> Royal Testimonials</h2>
+        <div class="stories" id="storiesGrid"></div>
 
         <!-- Become Hotel Owner CTA -->
         <div class="owner-cta">
             <div class="owner-content">
                 <h3>Become a Royal Host</h3>
-                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa. Earn in ₹ INR with zero commission for first 6 months.</p>
+                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa. Join India's most trusted heritage hospitality platform.</p>
                 <a href="register.html" class="owner-btn">Register Now <i class="fas fa-hand-sparkles"></i></a>
             </div>
             <div class="owner-decoration">
                 <i class="fas fa-landmark"></i>
             </div>
         </div>
-
-        <!-- Traveler Stories -->
-        <h2 class="sub-title"><i class="fas fa-feather-alt"></i> Royal Testimonials</h2>
-        <div class="stories" id="storiesGrid"></div>
-
-        <!-- About & Footer -->
-        <div class="about-section">
-            <img src="./image/logo/RT_LOGO_BG2.png" alt="RoyalBNB Footer Logo" class="footer-logo-img">
-            <h2>About RT RoyalBNB</h2>
-            <p>Inspired by the grandeur of Indian royalty, RT RoyalBNB brings you curated heritage stays — from the lakes of Udaipur to the golden sands of Jaisalmer, and from the temples of Dwarka to the pols of Ahmedabad. Every booking supports local artisans and preserves India's architectural legacy. All prices in <strong>Indian Rupees (₹ INR)</strong>.</p>
-        </div>
-
-        <div class="footer">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <hr>
-            <p>© 2025 RT RoyalBNB — Regal Stays in Indian Currency (₹ INR)</p>
-            <p class="credit">Designed with ❤️ for India's Heritage Travelers</p>
-        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="royal-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-briefcase"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="copyright">
+                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="design-credit">
+                    <p>Design & Developed by <span>Rishabh Shah</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="./js/script.js"></script>
-    <script>
-        // Toggle mobile menu
-        function toggleMenu() {
-            const nav = document.getElementById('navBar');
-            nav.classList.toggle('hidemenu');
-        }
-        // Page load animations & data
-        document.addEventListener('DOMContentLoaded', () => {
-            loadRoyalContent();
-        });
-        function loadRoyalContent() {
-            // Most Picked Cards (royal highlights)
-            const mostPicked = [
-                { name: "Blue Origin Fama", location: "Jaisalmer, Rajasthan", type: "Desert Palace", tag: "Space Station", img: "images/most-1.jpg", price: "₹8,500" },
-                { name: "Shangri-La Heritage", location: "Udaipur, Rajasthan", type: "Popular Choice", tag: "Lake View", img: "images/most-2.jpg", price: "₹12,000" },
-                { name: "Hobbiton Village", location: "Daman", type: "Top View", tag: "Coastal Retreat", img: "images/most-3.jpg", price: "₹6,200" },
-                { name: "Green Villa", location: "Somnath, Gujarat", type: "Pine Valley", tag: "Temple Town", img: "images/most-4.jpg", price: "₹5,400" },
-                { name: "Wooden Pit", location: "Mount Abu", type: "Ambassadors Forest", tag: "Forest Escape", img: "images/most-5.jpg", price: "₹4,900" },
-                { name: "Boutique Karditsi", location: "Ahmedabad", type: "Modern Heritage", tag: "Pol House", img: "images/most-6.jpg", price: "₹4,200" },
-                { name: "Silver Rain", location: "Jaipur", type: "Royal Pavilion", tag: "City Palace", img: "images/most-7.jpg", price: "₹9,300" },
-                { name: "Costwise Ampelos", location: "Bhavnagar", type: "Nilambag Wing", tag: "Budget Royal", img: "images/most-8.jpg", price: "₹3,800" }
-            ];
-            const container = document.getElementById('mostPickedGrid');
-            if(container) {
-                container.innerHTML = mostPicked.map(item => `
-                    <div class="pick-card">
-                        <div class="pick-img"><img src="${item.img}" onerror="this.src='https://placehold.co/400x300?text=Royal+Retreat'" alt="${item.name}"></div>
-                        <div class="pick-badge">${item.tag}</div>
-                        <div class="pick-info">
-                            <h3>${item.name}</h3>
-                            <p><i class="fas fa-map-pin"></i> ${item.location}</p>
-                            <div class="pick-price">${item.price} <span>/ night</span></div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-            // Exclusives (destinations)
-            const exclusives = [
-                { img: "images/image-1.png", name: "Jaipur", price: "₹5,500", loc: "Rajasthan" },
-                { img: "images/image-2.png", name: "Udaipur", price: "₹7,200", loc: "Rajasthan" },
-                { img: "images/image-3.png", name: "Jodhpur", price: "₹6,100", loc: "Rajasthan" },
-                { img: "images/image-4.png", name: "Ahmedabad", price: "₹4,200", loc: "Gujarat" },
-                { img: "images/image-5.png", name: "Dwarka", price: "₹3,900", loc: "Gujarat" },
-                { img: "images/image-6.png", name: "Somnath", price: "₹4,400", loc: "Gujarat" },
-                { img: "images/image-7.png", name: "Vadodara", price: "₹4,800", loc: "Gujarat" },
-                { img: "images/image-8.png", name: "Jaisalmer", price: "₹6,800", loc: "Rajasthan" }
-            ];
-            const exclGrid = document.getElementById('exclusivesGrid');
-            if(exclGrid) {
-                exclGrid.innerHTML = exclusives.map(ex => `
-                    <div class="exclusive-card">
-                        <img src="${ex.img}" onerror="this.src='https://placehold.co/400x300?text=Heritage+Destination'">
-                        <div class="exclusive-info">
-                            <h3>${ex.name}</h3>
-                            <p>${ex.loc}</p>
-                            <span class="price">${ex.price}</span>
-                        </div>
-                    </div>
-                `).join('');
-            }
-            // Trending
-            const trending = [
-                { img: "images/dubai.png", name: "Rajasthan Desert Circuit", loc: "Jaisalmer" },
-                { img: "images/new-york.png", name: "Gujarat Pilgrim Trail", loc: "Dwarka-Somnath" },
-                { img: "images/paris.png", name: "Lake Palace Romance", loc: "Udaipur" },
-                { img: "images/new-delhi.png", name: "Royal Heritage Walk", loc: "Jaipur" }
-            ];
-            const trendGrid = document.getElementById('trendingGrid');
-            if(trendGrid) {
-                trendGrid.innerHTML = trending.map(tr => `
-                    <div class="trend-card">
-                        <img src="${tr.img}" onerror="this.src='https://placehold.co/300x200?text=Royal+Circuit'">
-                        <h3>${tr.name}</h3>
-                        <p>${tr.loc}</p>
-                    </div>
-                `).join('');
-            }
-            // Stories
-            const stories = [
-                { img: "images/story-1.png", desc: "Experienced royal welcome at Jaipur's City Palace." },
-                { img: "images/story-2.png", desc: "Serenity at Somnath beach heritage resort." },
-                { img: "images/story-3.png", desc: "Magical desert camping in Jaisalmer under stars." }
-            ];
-            const storyGrid = document.getElementById('storiesGrid');
-            if(storyGrid) {
-                storyGrid.innerHTML = stories.map(st => `
-                    <div class="story-card">
-                        <img src="${st.img}" onerror="this.src='https://placehold.co/400x300?text=Travel+Story'">
-                        <p>${st.desc}</p>
-                    </div>
-                `).join('');
-            }
-        }
-    </script>
 </body>
 </html>
