@@ -132,10 +132,6 @@ to create a luxurious user experience.
   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" width="55"/>
 </p>
 
-<p align="center">
-  <strong>HTML5 • CSS3 • JavaScript (ES6) • Font Awesome • Google Fonts</strong>
-</p>
-
 ---
 
 # 📂 Project Structure
