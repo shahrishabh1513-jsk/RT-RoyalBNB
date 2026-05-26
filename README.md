@@ -29,7 +29,7 @@
 # 🌐 Live Website
 
 <p align="center">
-  <a href="https://your-username.github.io/RT-RoyalBNB/">
+  <a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/">
     <img src="https://img.shields.io/badge/🚀%20Visit%20Live%20Website-RoyalBNB-blue?style=for-the-badge"/>
   </a>
 </p>
@@ -166,36 +166,10 @@ RT_RoyalBNB/
 
 # 📸 Website Sections
 
-## 🏠 Homepage
-- Royal hero section
-- Featured destinations
-- Most picked luxury stays
-- Elegant booking CTA
-
----
-
-## 🏰 Property Listings
-- Advanced property filtering
-- Responsive property cards
-- Pagination support
-- Amenities overview
-
----
-
-## 🏡 House Detail Page
-- Property gallery
-- Royal room details
-- Booking section
-- Host information
-- Map integration
-
----
-
-## 📞 Registration Page
-- Guest registration form
-- Popup confirmation
-- Responsive layout
-- Smooth interactions
+<img width="1876" height="850" alt="Day_64_SS1" src="https://github.com/user-attachments/assets/5baa4f4e-68c0-466b-9bcf-324b7125d666" />
+<img width="1861" height="756" alt="Day_64_SS2" src="https://github.com/user-attachments/assets/3707f717-e5c4-490f-956e-01ad273244f8" />
+<img width="1777" height="745" alt="Day_64_SS3" src="https://github.com/user-attachments/assets/d2265b1f-0ae3-40ce-a0cc-485132f5ff13" />
+<img width="1895" height="515" alt="Day_64_SS4" src="https://github.com/user-attachments/assets/63abd954-8ea9-4f47-b6e9-9b39631a6397" />
 
 ---
 
