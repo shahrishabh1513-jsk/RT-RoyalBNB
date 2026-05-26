@@ -14,8 +14,8 @@ let activeFilters = { types: [], destinations: [], amenities: [] };
 // ROYAL PROPERTIES DATABASE (15+ Properties)
 // --------------------------------------------
 const royalProperties = [
-    { id: 1, name: "Jaipur City Palace Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 3, price: 12500, img: "./images/properties/jaipur-palace.jpg", rating: 4.9, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Experience royal living in this magnificent palace suite with stunning city views." },
-    { id: 2, name: "Udaipur Lake View Villa", type: "villa", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 18500, img: "./images/properties/udaipur-lake.jpg", rating: 4.8, location: "Udaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Overlooking the serene Lake Pichola, this villa offers unmatched luxury." },
+    { id: 1, name: "Jaipur City Palace Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 3, price: 12500, img: "./image/home/Jaipur_City_Palace.jpg", rating: 4.9, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Experience royal living in this magnificent palace suite with stunning city views." },
+    { id: 2, name: "Udaipur Lake View Villa", type: "villa", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 18500, img: "./image/home/Udaipur_Lake_Palace.jpg", rating: 4.8, location: "Udaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Overlooking the serene Lake Pichola, this villa offers unmatched luxury." },
     { id: 3, name: "Jaisalmer Desert Palace", type: "palace", dest: "rajasthan", amenities: ["wifi", "breakfast"], guests: 3, beds: 2, price: 8900, img: "./images/properties/jaisalmer-palace.jpg", rating: 4.7, location: "Jaisalmer, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Golden sandstone palace with breathtaking desert views." },
     { id: 4, name: "Ahmedabad Pol Heritage", type: "heritage", dest: "gujarat", amenities: ["wifi", "breakfast"], guests: 2, beds: 1, price: 4500, img: "./images/properties/ahmedabad-heritage.jpg", rating: 4.5, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Traditional Pol house with modern comforts in the heart of Ahmedabad." },
     { id: 5, name: "Somnath Sea View Resort", type: "resort", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 4, beds: 3, price: 7200, img: "./images/properties/somnath-resort.jpg", rating: 4.6, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beachfront resort with stunning Arabian Sea views." },
@@ -33,99 +33,97 @@ const royalProperties = [
 
 /* ============================================
    HERO SLIDER - AUTO SLIDING EVERY 4 SECONDS
-   NO ARROWS - DOTS ONLY
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize hero slider on homepage
-    const isHomepage = window.location.pathname.includes('index.html') || 
-                       window.location.pathname === '/' || 
-                       window.location.pathname === '';
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.getElementById('heroDots');
     
-    if (isHomepage) {
-        initHeroSlider();
+    if (!slides.length || !dotsContainer) return;
+    
+    let currentIndex = 0;
+    let autoTimer = null;
+    let isAnimating = false;
+    const SLIDE_DURATION = 4000; // 4 seconds = 4000ms
+    
+    // Clear and create dots
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            if (!isAnimating && i !== currentIndex) {
+                stopAutoSlide();
+                goToSlide(i);
+                startAutoSlide();
+            }
+        });
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function goToSlide(index) {
+        if (isAnimating || index === currentIndex) return;
+        isAnimating = true;
+        
+        // Remove active classes
+        slides[currentIndex].classList.remove('active');
+        if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+        
+        // Update current index
+        currentIndex = index;
+        
+        // Add active classes
+        slides[currentIndex].classList.add('active');
+        if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+        
+        // Reset animation flag after transition
+        setTimeout(() => {
+            isAnimating = false;
+        }, 800);
     }
     
-    function initHeroSlider() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dotsContainer = document.getElementById('heroDots');
-        
-        if (!slides.length || !dotsContainer) return;
-        
-        let currentIndex = 0;
-        let autoTimer = null;
-        let isAnimating = false;
-        const SLIDE_DURATION = 4000; // 4 seconds
-        
-        // Clear and create dots
-        dotsContainer.innerHTML = '';
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                if (!isAnimating && i !== currentIndex) {
-                    stopAutoSlide();
-                    goToSlide(i);
-                    startAutoSlide();
-                }
-            });
-            dotsContainer.appendChild(dot);
-        });
-        
-        const dots = document.querySelectorAll('.dot');
-        
-        function goToSlide(index) {
-            if (isAnimating || index === currentIndex) return;
-            isAnimating = true;
-            
-            // Remove active classes
-            slides[currentIndex].classList.remove('active');
-            if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
-            
-            // Update current index
-            currentIndex = index;
-            
-            // Add active classes
-            slides[currentIndex].classList.add('active');
-            if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-            
-            // Reset animation flag after transition
-            setTimeout(() => {
-                isAnimating = false;
-            }, 800);
+    function nextSlide() {
+        const next = (currentIndex + 1) % slides.length;
+        goToSlide(next);
+    }
+    
+    function startAutoSlide() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(nextSlide, SLIDE_DURATION);
+    }
+    
+    function stopAutoSlide() {
+        if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
         }
-        
-        function nextSlide() {
-            const next = (currentIndex + 1) % slides.length;
-            goToSlide(next);
-        }
-        
-        function startAutoSlide() {
-            if (autoTimer) clearInterval(autoTimer);
-            autoTimer = setInterval(nextSlide, SLIDE_DURATION);
-        }
-        
-        function stopAutoSlide() {
-            if (autoTimer) {
-                clearInterval(autoTimer);
-                autoTimer = null;
-            }
-        }
-        
-        // Pause on hover
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.addEventListener('mouseenter', stopAutoSlide);
-            hero.addEventListener('mouseleave', startAutoSlide);
-        }
-        
-        // Start auto sliding
-        startAutoSlide();
+    }
+    
+    // Pause on hover
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.addEventListener('mouseenter', stopAutoSlide);
+        hero.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Start auto sliding
+    startAutoSlide();
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const filename = window.location.pathname.split('/').pop();
+    if (filename === 'index.html' || filename === '' || filename === '/' || window.location.pathname === '/') {
+        initHeroSlider();
     }
 });
 
-// Mobile menu toggle function
+// --------------------------------------------
+// MOBILE MENU TOGGLE
+// --------------------------------------------
 function toggleMenu() {
     const nav = document.getElementById('navBar');
     if (nav) {
@@ -180,6 +178,8 @@ function initScrollAnimations() {
 // HOME PAGE CONTENT LOADER
 // --------------------------------------------
 function loadHomePageContent() {
+    console.log("Loading home page content...");
+    
     // Most Picked Grid
     const mostPickedGrid = document.getElementById('mostPickedGrid');
     if (mostPickedGrid) {
@@ -202,6 +202,7 @@ function loadHomePageContent() {
                 </div>
             </div>
         `).join('');
+        console.log("Most Picked Grid loaded");
     }
     
     // Packages Grid
@@ -226,6 +227,7 @@ function loadHomePageContent() {
                 </div>
             </div>
         `).join('');
+        console.log("Packages Grid loaded");
     }
     
     // Exclusives Grid
@@ -250,6 +252,7 @@ function loadHomePageContent() {
                 </div>
             </div>
         `).join('');
+        console.log("Exclusives Grid loaded");
     }
     
     // Trending Grid
@@ -269,6 +272,7 @@ function loadHomePageContent() {
                 <p><i class="fas fa-map-marker-alt"></i> ${tr.loc}</p>
             </div>
         `).join('');
+        console.log("Trending Grid loaded");
     }
     
     // Stories Grid
@@ -286,6 +290,7 @@ function loadHomePageContent() {
                 <p>${st.desc}</p>
             </div>
         `).join('');
+        console.log("Stories Grid loaded");
     }
 }
 
@@ -551,50 +556,48 @@ function loadBookingPage() {
 }
 
 // --------------------------------------------
-// MOBILE MENU TOGGLE
-// --------------------------------------------
-function toggleMenu() {
-    const nav = document.getElementById('navBar');
-    if (nav) {
-        nav.classList.toggle('hidemenu');
-    }
-}
-
-// --------------------------------------------
 // INITIALIZE ALL ON PAGE LOAD
 // --------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
+    const filename = path.split('/').pop();
+    
+    console.log("Page loaded:", filename);
     
     // Initialize common features
     initNavbarScroll();
     initScrollAnimations();
     
     // Hero slider only on homepage
-    if (path.includes('index.html') || path === '/' || path === '') {
+    if (filename === 'index.html' || filename === '' || filename === '/' || path === '/' || path === '') {
+        console.log("Initializing homepage...");
         initHeroSlider();
         loadHomePageContent();
     }
     
     // Listing page features
-    if (path.includes('listing.html')) {
+    if (filename === 'listing.html') {
+        console.log("Initializing listing page...");
         renderProperties();
         setupFilters();
         setupPagination();
     }
     
     // House page features
-    if (path.includes('house.html')) {
+    if (filename === 'house.html') {
+        console.log("Initializing house page...");
         setupHousePage();
     }
     
     // Register page features
-    if (path.includes('register.html')) {
+    if (filename === 'register.html') {
+        console.log("Initializing register page...");
         setupRegisterPage();
     }
     
     // Booking page features
-    if (path.includes('booking.html')) {
+    if (filename === 'booking.html') {
+        console.log("Initializing booking page...");
         loadBookingPage();
     }
 });
