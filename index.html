@@ -1,16 +1,21 @@
 <!-- index.html - RT RoyalBNB Homepage -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>RT RoyalBNB | Royal Stays & Heritage Hotels in India</title>
-    <meta name="description" content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
+    <meta name="description"
+        content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
     <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <nav id="navBar">
         <a href="index.html" class="logo-link">
@@ -25,39 +30,63 @@
         <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
     </nav>
 
-    <!-- Hero Section with Auto-Sliding Images -->
+    <!-- Hero Section with Auto-Sliding Images (No Arrows) -->
     <section class="hero" id="heroSection">
         <div class="hero-slides" id="heroSlides">
-            <div class="hero-slide active" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-1.jpg');"></div>
-            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-2.jpg');"></div>
-            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.4), rgba(44,34,27,0.6)), url('./images/hero-3.jpg');"></div>
-        </div>
-        <div class="hero-content animate-fade-up">
-            <h1 class="hero-title">Forgot Busy Work, <br>Start <span class="gold-text">Royal Vacation</span></h1>
-            <p>We provide curated heritage tours & palace stays across India. Time to embrace royal luxury.</p>
-            <div class="hero-stats">
-                <div class="stat"><span>2500+</span> Views</div>
-                <div class="stat"><span>2000+</span> Photos</div>
-                <div class="stat"><span>100+</span> Heritage Properties</div>
+            <div class="hero-slide active"
+                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./images/hero-1.jpg');">
             </div>
-            <a href="listing.html" class="hero-btn">Explore Royal Stays <i class="fas fa-arrow-right"></i></a>
+            <div class="hero-slide"
+                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./images/hero-2.jpg');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./images/hero-3.jpg');">
+            </div>
         </div>
-        <button class="hero-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
-        <button class="hero-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="hero-content animate-fade-up">
+            <h1 class="hero-title">
+                Forgot Busy Work, <br>
+                Start <span class="gold-text">Royal Vacation</span>
+            </h1>
+            <p class="hero-description">
+                We provide curated heritage tours & palace stays across India. Time to embrace royal luxury.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1500+</span>
+                    <span class="stat-label">Views</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Photos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Heritage Properties</span>
+                </div>
+            </div>
+            <a href="listing.html" class="hero-btn">
+                Explore Royal Stays <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
         <div class="hero-dots" id="heroDots"></div>
     </section>
 
     <div class="container">
         <!-- Most Picked Royal Retreats -->
         <div class="section-header">
-            <h2 class="section-title"><span class="gold-border">✦</span> Most Picked Royal Retreats <span class="gold-border">✦</span></h2>
+            <h2 class="section-title"><span class="gold-border">✦</span> Most Picked Royal Retreats <span
+                    class="gold-border">✦</span></h2>
             <p>Curated just for you — India's finest heritage experiences</p>
         </div>
         <div class="most-picked-grid" id="mostPickedGrid"></div>
 
         <!-- Trip Packages Section -->
         <div class="section-header">
-            <h2 class="section-title"><span class="gold-border">✧</span> Exclusive Royal Packages <span class="gold-border">✧</span></h2>
+            <h2 class="section-title"><span class="gold-border">✧</span> Exclusive Royal Packages <span
+                    class="gold-border">✧</span></h2>
             <p>Handcrafted journeys across India's royal landscapes</p>
         </div>
         <div class="packages-grid" id="packagesGrid"></div>
@@ -75,8 +104,13 @@
             <div class="about-content">
                 <h2>About <span class="gold-text">RT RoyalBNB</span></h2>
                 <h3>Your Gateway to India's Royal Heritage</h3>
-                <p>RT RoyalBNB is India's premier heritage hospitality platform, dedicated to bringing you the finest palace stays, heritage havelis, and luxury retreats across the country. From the majestic forts of Rajasthan to the serene temples of Gujarat, we curate experiences that let you live like royalty.</p>
-                <p>Our mission is to preserve India's architectural legacy while providing travelers with authentic, comfortable, and memorable stays. Every property in our collection is handpicked for its historical significance and quality of hospitality.</p>
+                <p>RT RoyalBNB is India's premier heritage hospitality platform, dedicated to bringing you the finest
+                    palace stays, heritage havelis, and luxury retreats across the country. From the majestic forts of
+                    Rajasthan to the serene temples of Gujarat, we curate experiences that let you live like royalty.
+                </p>
+                <p>Our mission is to preserve India's architectural legacy while providing travelers with authentic,
+                    comfortable, and memorable stays. Every property in our collection is handpicked for its historical
+                    significance and quality of hospitality.</p>
                 <div class="about-features">
                     <div class="feature"><i class="fas fa-check-circle"></i> 100+ Heritage Properties</div>
                     <div class="feature"><i class="fas fa-check-circle"></i> 15+ Royal Destinations</div>
@@ -86,7 +120,8 @@
                 <a href="register.html" class="about-btn">Join Royal Community <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="about-image">
-                <img src="./images/about-royal.jpg" alt="Royal Heritage Palace" onerror="this.src='https://placehold.co/500x400?text=Royal+Heritage'">
+                <img src="./images/about-royal.jpg" alt="Royal Heritage Palace"
+                    onerror="this.src='https://placehold.co/500x400?text=Royal+Heritage'">
                 <div class="image-badge">Since 2024</div>
             </div>
         </div>
@@ -99,7 +134,8 @@
         <div class="owner-cta">
             <div class="owner-content">
                 <h3>Become a Royal Host</h3>
-                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa. Join India's most trusted heritage hospitality platform.</p>
+                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa. Join India's most
+                    trusted heritage hospitality platform.</p>
                 <a href="register.html" class="owner-btn">Register Now <i class="fas fa-hand-sparkles"></i></a>
             </div>
             <div class="owner-decoration">
@@ -135,4 +171,5 @@
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>
