@@ -4,31 +4,76 @@
    ============================================ */
 
 // --------------------------------------------
-// GLOBAL VARIABLES
+// GLOBAL VARIABABLES
 // --------------------------------------------
 let currentPage = 1;
 const itemsPerPage = 6;
 let activeFilters = { types: [], destinations: [], amenities: [] };
 
 // --------------------------------------------
-// ROYAL PROPERTIES DATABASE (15+ Properties)
+// ROYAL PROPERTIES DATABASE (UPDATED WITH NEW HOTELS)
 // --------------------------------------------
 const royalProperties = [
-    { id: 1, name: "Jaipur City Palace Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 3, price: 12500, img: "./image/home/Jaipur_City_Palace.jpg", rating: 4.9, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Experience royal living in this magnificent palace suite with stunning city views." },
-    { id: 2, name: "Udaipur Lake View Villa", type: "villa", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 18500, img: "./image/home/Udaipur_Lake_Palace.jpg", rating: 4.8, location: "Udaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Overlooking the serene Lake Pichola, this villa offers unmatched luxury." },
-    { id: 3, name: "Jaisalmer Desert Palace", type: "palace", dest: "rajasthan", amenities: ["wifi", "breakfast"], guests: 3, beds: 2, price: 8900, img: "./image/home/Somnath Beach Resort.png", rating: 4.7, location: "Jaisalmer, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Golden sandstone palace with breathtaking desert views." },
-    { id: 4, name: "Ahmedabad Pol Heritage", type: "heritage", dest: "gujarat", amenities: ["wifi", "breakfast"], guests: 2, beds: 1, price: 4500, img: "./image/home/Ahmedabad_Heritage.jpg", rating: 4.5, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Traditional Pol house with modern comforts in the heart of Ahmedabad." },
-    { id: 5, name: "Somnath Sea View Resort", type: "resort", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 4, beds: 3, price: 7200, img: "./image/home/Somnath_Beach_Resort.jpg", rating: 4.6, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beachfront resort with stunning Arabian Sea views." },
-    { id: 6, name: "Dwarka Divine Stay", type: "heritage", dest: "gujarat", amenities: ["wifi", "breakfast"], guests: 3, beds: 2, price: 5400, img: "./image/home/Dwarka_Divine_Retreat.jpg", rating: 4.7, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Peaceful retreat near Dwarkadhish Temple." },
-    { id: 7, name: "Jodhpur Blue City Haveli", type: "heritage", dest: "rajasthan", amenities: ["wifi", "breakfast", "pool"], guests: 4, beds: 3, price: 7800, img: "./image/home/Jodhpur_Blue_City.jpg", rating: 4.8, location: "Jodhpur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beautiful haveli with panoramic views of the Blue City." },
-    { id: 8, name: "Vadodara Laxmi Vilas Wing", type: "palace", dest: "gujarat", amenities: ["wifi", "breakfast", "spa"], guests: 5, beds: 3, price: 11200, img: "./image/home/Vadodara_Palace.jpg", rating: 4.9, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Royal wing of the famous Laxmi Vilas Palace." },
-    { id: 9, name: "Daman Beachfront Villa", type: "villa", dest: "daman", amenities: ["pool", "wifi", "breakfast"], guests: 6, beds: 4, price: 9500, img: "./image/home/Daman_Beach_Villa.jpg", rating: 4.4, location: "Daman", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Luxury villa with private beach access." },
-    { id: 10, name: "Bhavnagar Nilambag Palace", type: "palace", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 4, beds: 3, price: 6800, img: "./image/home/Bhavnagar_Palace.jpg", rating: 4.7, location: "Bhavnagar, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Historic palace with royal architecture and gardens." },
-    { id: 11, name: "Nathdwara Shrinathji Haveli", type: "heritage", dest: "rajasthan", amenities: ["wifi", "breakfast"], guests: 4, beds: 2, price: 6200, img: "./image/home/Nathdwara_Haveli.jpg", rating: 4.9, location: "Nathdwara, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beautiful haveli near the famous Shrinathji Temple." },
-    { id: 12, name: "Mount Abu Royal Retreat", type: "resort", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 5, beds: 3, price: 8500, img: "./image/home/Mount_Abu_Retreat.jpg", rating: 4.6, location: "Mount Abu, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Hill station resort with lush green surroundings." },
-    { id: 13, name: "Pushkar Royal Camp", type: "resort", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 2, price: 6500, img: "./image/home/Pushkar_Royal_Camp.jpg", rating: 4.7, location: "Pushkar, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Luxury tented camp near Pushkar Lake." },
-    { id: 14, name: "Mandvi Beach Palace", type: "palace", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 5, beds: 3, price: 9800, img: "./image/home/Mandvi_Beach_Palace.jpg", rating: 4.6, location: "Mandvi, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beachfront palace with stunning sunset views." },
-    { id: 15, name: "Raj Palace Heritage Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 22000, img: "./image/home/Raj_Palace_Heritage.jpg", rating: 5.0, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 4, desc: "The crown jewel - world's leading heritage hotel suite." }
+    // ========== EXISTING RAJASTHAN PROPERTIES (UNCHANGED) ==========
+    { id: 1, name: "Jaipur City Palace Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 3, price: 12500, img: "./image/home/Jaipur_City_Palace.jpg", rating: 4.9, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Experience royal living in this magnificent palace suite with stunning city views. The suite features traditional Rajasthani decor, modern amenities, and 24/7 royal concierge service." },
+    { id: 2, name: "Udaipur Lake View Villa", type: "villa", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 18500, img: "./image/home/Udaipur_Lake_Palace.jpg", rating: 4.8, location: "Udaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Overlooking the serene Lake Pichola, this luxury villa offers unmatched views, a private pool, and traditional hospitality. Perfect for families and groups." },
+    { id: 3, name: "Jaisalmer Desert Palace", type: "palace", dest: "rajasthan", amenities: ["wifi", "breakfast"], guests: 3, beds: 2, price: 8900, img: "./image/home/Jaisalmer_Desert_Camp.jpg", rating: 4.7, location: "Jaisalmer, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Golden sandstone palace with breathtaking desert views. Experience the magic of the Thar Desert with traditional folk performances and camel rides." },
+    { id: 7, name: "Jodhpur Blue City Haveli", type: "heritage", dest: "rajasthan", amenities: ["wifi", "breakfast", "pool"], guests: 4, beds: 3, price: 7800, img: "./image/home/Jodhpur_Blue_City.jpg", rating: 4.8, location: "Jodhpur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beautiful haveli with panoramic views of the Blue City. Located near Mehrangarh Fort, this heritage property offers an authentic Rajasthani experience." },
+    { id: 11, name: "Nathdwara Shrinathji Haveli", type: "heritage", dest: "rajasthan", amenities: ["wifi", "breakfast"], guests: 4, beds: 2, price: 6200, img: "./image/home/Nathdwara_Haveli.jpg", rating: 4.9, location: "Nathdwara, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beautiful haveli near the famous Shrinathji Temple. Ideal for pilgrims and heritage lovers seeking peace and spirituality." },
+    { id: 12, name: "Mount Abu Royal Retreat", type: "resort", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 5, beds: 3, price: 8500, img: "./image/home/Mount_Abu_Retreat.jpg", rating: 4.6, location: "Mount Abu, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Hill station resort with lush green surroundings, offering a cool escape from the desert heat. Features a large swimming pool and nature walks." },
+    { id: 13, name: "Pushkar Royal Camp", type: "resort", dest: "rajasthan", amenities: ["pool", "wifi", "breakfast"], guests: 4, beds: 2, price: 6500, img: "./image/home/Pushkar_Royal_Camp.jpg", rating: 4.7, location: "Pushkar, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Luxury tented camp near Pushkar Lake. Experience the famous Pushkar Camel Fair and enjoy traditional Rajasthani hospitality under the stars." },
+    { id: 15, name: "Raj Palace Heritage Suite", type: "palace", dest: "rajasthan", amenities: ["pool", "spa", "wifi", "breakfast"], guests: 6, beds: 4, price: 22000, img: "./image/home/Raj_Palace_Heritage.jpg", rating: 5.0, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 4, desc: "The crown jewel - world's leading heritage hotel suite. Experience royalty like never before with personal butler service and exclusive access to palace amenities." },
+
+    // ========== EXISTING DAMAN PROPERTIES (UNCHANGED) ==========
+    { id: 9, name: "Daman Beachfront Villa", type: "villa", dest: "daman", amenities: ["pool", "wifi", "breakfast"], guests: 6, beds: 4, price: 9500, img: "./image/home/Daman_Beach_Villa.jpg", rating: 4.4, location: "Daman", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Luxury villa with private beach access. Enjoy the perfect blend of Portuguese and Indian culture with stunning sea views and water sports." },
+
+    // ========== EXISTING GUJARAT PROPERTIES (KEPT FOR REFERENCE) ==========
+    { id: 4, name: "Ahmedabad Pol Heritage", type: "heritage", dest: "gujarat", amenities: ["wifi", "breakfast"], guests: 2, beds: 1, price: 4500, img: "./image/home/Ahmedabad_Heritage.jpg", rating: 4.5, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "Traditional Pol house with modern comforts in the heart of Ahmedabad. Experience the city's rich cultural heritage from this beautifully restored property." },
+    { id: 8, name: "Vadodara Laxmi Vilas Wing", type: "palace", dest: "gujarat", amenities: ["wifi", "breakfast", "spa"], guests: 5, beds: 3, price: 11200, img: "./image/home/Vadodara_Palace.jpg", rating: 4.9, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 3, desc: "Royal wing of the famous Laxmi Vilas Palace. Stay like a Maharaja in this luxurious property with stunning architecture and royal gardens." },
+    { id: 10, name: "Bhavnagar Nilambag Palace", type: "palace", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 4, beds: 3, price: 6800, img: "./image/home/Bhavnagar_Palace.jpg", rating: 4.7, location: "Bhavnagar, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Historic palace with royal architecture and gardens. Experience the grandeur of Gujarat's royal past with modern comforts." },
+    { id: 14, name: "Mandvi Beach Palace", type: "palace", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa"], guests: 5, beds: 3, price: 9800, img: "./image/home/Mandvi_Beach_Palace.jpg", rating: 4.6, location: "Mandvi, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Beachfront palace with stunning sunset views. Enjoy the pristine beaches of Mandvi with royal hospitality and delicious seafood." },
+
+    // ========== NEWLY ADDED GUJARAT HOTELS (DWARKA & SOMNATH) ==========
+    
+    // Dwarka Hotels
+    { id: 16, name: "The Fern Sattva Resort", type: "resort", dest: "gujarat", amenities: ["pool", "spa", "wifi", "breakfast", "ev-charging", "gym", "yoga"], guests: 3, beds: 2, price: 8500, img: "./image/home/Fern_Sattva_Resort_Dwarka.jpg", rating: 4.8, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "An upscale eco-friendly resort spread over 3 acres with 81 contemporary rooms. Features a vegetarian restaurant, coffee shop, swimming pool, spa, and banquet facilities. Winter Green Room (370 sq.ft.) and Fern Classic Room (475 sq.ft.) options available." },
+    
+    { id: 17, name: "Hawthorn Suites by Wyndham", type: "hotel", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "gym", "business-center"], guests: 4, beds: 2, price: 7200, img: "./image/home/Hawthorn_Suites_Dwarka.jpg", rating: 4.6, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "Extended stay hotel offering spacious suites with fully equipped kitchens. Perfect for families and long-term travelers. Features a fitness center and complimentary breakfast." },
+    
+    { id: 18, name: "The Sky Imperial - Bapu's Resort", type: "resort", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "spa", "restaurant"], guests: 4, beds: 2, price: 6500, img: "./image/home/Sky_Imperial_Dwarka.jpg", rating: 4.5, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A serene resort offering comfortable accommodations with modern amenities. Features multi-cuisine restaurant, swimming pool, and spa services. Close to Dwarkadhish Temple." },
+    
+    { id: 19, name: "Dwarkadhish Lords Eco Inn", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "conference"], guests: 3, beds: 2, price: 4800, img: "./image/home/Lords_Eco_Inn_Dwarka.jpg", rating: 4.3, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "An eco-friendly hotel offering comfortable rooms at affordable prices. Features a pure vegetarian restaurant and conference facilities. Ideal for pilgrims and budget travelers." },
+    
+    { id: 20, name: "Hotel Roma Kristo", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "room-service"], guests: 3, beds: 2, price: 3500, img: "./image/home/Hotel_Roma_Kristo_Dwarka.jpg", rating: 4.2, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "A budget-friendly hotel located near Dwarkadhish Temple. Offers clean and comfortable rooms with vegetarian dining options. Perfect for pilgrims seeking affordable accommodation." },
+    
+    // Somnath Hotels
+    { id: 21, name: "The Square Somnath (Pure Veg)", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "parking"], guests: 3, beds: 2, price: 4200, img: "./image/home/The_Square_Somnath.jpg", rating: 4.4, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "A pure vegetarian hotel offering comfortable accommodations near the famous Somnath Temple. Features a multi-cuisine restaurant and ample parking space." },
+    
+    { id: 22, name: "The Somnath Gateway Hotel", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "conference", "pool"], guests: 4, beds: 2, price: 5500, img: "./image/home/Somnath_Gateway_Hotel.jpg", rating: 4.5, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A premium hotel offering stunning views of the Arabian Sea. Features a swimming pool, multi-cuisine restaurant, and conference facilities. Close to Somnath Temple." },
+    
+    { id: 23, name: "Lords Inn Somnath", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "conference"], guests: 3, beds: 2, price: 4600, img: "./image/home/Lords_Inn_Somnath.jpg", rating: 4.3, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "A modern hotel offering comfortable rooms with modern amenities. Features a pure vegetarian restaurant and conference facilities. Ideal for pilgrims and tourists." },
+    
+    { id: 24, name: "Sarovar Portico Somnath", type: "hotel", dest: "gujarat", amenities: ["pool", "spa", "wifi", "breakfast", "restaurant", "gym"], guests: 4, beds: 2, price: 7800, img: "./image/home/Sarovar_Portico_Somnath.jpg", rating: 4.7, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A premium hotel from the Sarovar group offering luxurious accommodations. Features a swimming pool, spa, fitness center, and multi-cuisine restaurant. Perfect for a relaxing stay." },
+    
+    { id: 25, name: "The S Crown", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "banquet"], guests: 3, beds: 2, price: 5000, img: "./image/home/The_S_Crown_Somnath.jpg", rating: 4.4, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "A modern hotel offering comfortable accommodations with stunning sea views. Features a rooftop restaurant, banquet facilities, and proximity to Somnath Temple." },
+    
+    // Ahmedabad Hotels
+    { id: 26, name: "ITC Narmada, Ahmedabad", type: "hotel", dest: "gujarat", amenities: ["pool", "spa", "wifi", "breakfast", "restaurant", "gym", "business-center"], guests: 4, beds: 2, price: 12000, img: "./image/home/ITC_Narmada_Ahmedabad.jpg", rating: 4.9, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A Luxury Collection Hotel offering world-class amenities. Features multiple dining options, a luxurious spa, swimming pool, and state-of-the-art fitness center. Perfect for business and leisure." },
+    
+    { id: 27, name: "Novotel Ahmedabad", type: "hotel", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "restaurant", "gym", "business-center"], guests: 4, beds: 2, price: 8500, img: "./image/home/Novotel_Ahmedabad.jpg", rating: 4.7, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A contemporary hotel located in the heart of Ahmedabad. Features a swimming pool, fitness center, and multi-cuisine restaurant. Known for its excellent hospitality and modern amenities." },
+    
+    { id: 28, name: "Hotel Eldorado", type: "hotel", dest: "gujarat", amenities: ["wifi", "breakfast", "restaurant", "conference"], guests: 3, beds: 2, price: 4000, img: "./image/home/Hotel_Eldorado_Ahmedabad.jpg", rating: 4.3, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 1, desc: "A comfortable hotel offering excellent value for money. Features clean rooms, vegetarian dining, and conference facilities. Centrally located for easy access to city attractions." },
+    
+    { id: 29, name: "Hyatt Ahmedabad", type: "hotel", dest: "gujarat", amenities: ["pool", "spa", "wifi", "breakfast", "restaurant", "gym", "business-center"], guests: 4, beds: 2, price: 9800, img: "./image/home/Hyatt_Ahmedabad.jpg", rating: 4.8, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A luxury hotel offering world-class amenities. Features multiple dining options, a spa, swimming pool, and state-of-the-art fitness center. Perfect for discerning travelers." },
+    
+    // Vadodara Hotels
+    { id: 30, name: "Hyatt Place Vadodara", type: "hotel", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "restaurant", "gym", "business-center"], guests: 4, beds: 2, price: 7500, img: "./image/home/Hyatt_Place_Vadodara.jpg", rating: 4.7, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A modern hotel offering spacious rooms with comfortable beds and smart TVs. Features a fitness center, outdoor pool, and complimentary breakfast. Perfect for business and leisure travelers." },
+    
+    { id: 31, name: "Laxminarayan Club & Resort", type: "resort", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "restaurant", "sports", "banquet"], guests: 5, beds: 3, price: 6000, img: "./image/home/Laxminarayan_Club_Resort.jpg", rating: 4.5, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A sprawling resort offering Deluxe, Super Executive, and Suite rooms. Features swimming pool, sports facilities, multi-cuisine restaurant, and banquet halls. Ideal for family getaways and corporate events." },
+    
+    { id: 32, name: "Prakruti Resort", type: "resort", dest: "gujarat", amenities: ["pool", "wifi", "breakfast", "restaurant", "spa", "activities"], guests: 5, beds: 3, price: 5800, img: "./image/home/Prakruti_Resort_Vadodara.jpg", rating: 4.6, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A nature-centric resort offering a perfect getaway from city life. Features swimming pool, spa, indoor and outdoor activities, and multi-cuisine dining. Perfect for weekend getaways." },
+    
+    { id: 33, name: "Welcomhotel Vadodara", type: "hotel", dest: "gujarat", amenities: ["pool", "spa", "wifi", "breakfast", "restaurant", "gym", "business-center"], guests: 4, beds: 2, price: 8800, img: "./image/home/Welcomhotel_Vadodara.jpg", rating: 4.8, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", bathrooms: 2, desc: "A premium hotel from ITC Hotels offering warm hospitality. Features multiple dining options, swimming pool, spa, and well-equipped fitness center. Known for its excellent service and prime location in Alkapuri." }
 ];
 
 /* ============================================
@@ -170,11 +215,11 @@ function loadHomePageContent() {
     const mostPickedGrid = document.getElementById('mostPickedGrid');
     if (mostPickedGrid) {
         const mostPicked = [
-            { name: "Jaipur City Palace", location: "Jaipur, Rajasthan", tag: "Most Booked", img: "./image/home/Jaipur_City_Palace.jpg", price: "12,500" },
-            { name: "Udaipur Lake Palace", location: "Udaipur, Rajasthan", tag: "Popular Choice", img: "./image/home/Udaipur_Lake_Palace.jpg", price: "18,500" },
-            { name: "Somnath Beach Resort", location: "Somnath, Gujarat", tag: "Top Rated", img: "./image/home/Somnath Beach Resort.png", price: "7,200" },
-            { name: "Dwarka Divine Retreat", location: "Dwarka, Gujarat", tag: "Spiritual", img: "./image/home/Dwarka_Divine_Retreat.jpg", price: "5,400" },
-            { name: "Jaisalmer Desert Camp", location: "Jaisalmer, Rajasthan", tag: "Adventure", img: "./image/home/Jaisalmer_Desert_Camp.jpg", price: "8,900" }
+            { name: "The Fern Sattva Resort", location: "Dwarka, Gujarat", tag: "Eco-Luxury", img: "./image/home/Fern_Sattva_Resort_Dwarka.jpg", price: "8,500" },
+            { name: "ITC Narmada Ahmedabad", location: "Ahmedabad, Gujarat", tag: "Luxury Collection", img: "./image/home/ITC_Narmada_Ahmedabad.jpg", price: "12,000" },
+            { name: "Welcomhotel Vadodara", location: "Vadodara, Gujarat", tag: "Premium Stay", img: "./image/home/Welcomhotel_Vadodara.jpg", price: "8,800" },
+            { name: "Sarovar Portico Somnath", location: "Somnath, Gujarat", tag: "Sea View", img: "./image/home/Sarovar_Portico_Somnath.jpg", price: "7,800" },
+            { name: "Jaipur City Palace", location: "Jaipur, Rajasthan", tag: "Royal Heritage", img: "./image/home/Jaipur_City_Palace.jpg", price: "12,500" }
         ];
         
         mostPickedGrid.innerHTML = mostPicked.map(item => `
@@ -195,9 +240,9 @@ function loadHomePageContent() {
     const packagesGrid = document.getElementById('packagesGrid');
     if (packagesGrid) {
         const packages = [
-            { name: "Royal Rajasthan Circuit", duration: "7 Days / 6 Nights", locations: "Jaipur → Jodhpur → Udaipur → Jaisalmer", highlights: "Palace stays, Camel safari, Folk show", price: "45,000", img: "./image/home/Royal_Rajasthan_Package.jpg" },
-            { name: "Gujarat Pilgrimage & Heritage", duration: "5 Days / 4 Nights", locations: "Ahmedabad → Somnath → Dwarka", highlights: "Temple visits, Beach resort, Local cuisine", price: "28,000", img: "./image/home/Gujarat_Pilgrimage_Package.jpg" },
-            { name: "Royal Lakes & Forts", duration: "6 Days / 5 Nights", locations: "Udaipur → Mount Abu → Jodhpur", highlights: "Lake cruise, Fort exploration, Luxury stays", price: "38,000", img: "./image/home/Royal_Lakes_Package.jpg" }
+            { name: "Royal Dwarka Pilgrimage", duration: "3 Days / 2 Nights", locations: "Dwarka Temple → Nageshwar → Bet Dwarka", highlights: "Temple visits, Beach resort stay, Local cuisine", price: "12,500", img: "./image/home/Dwarka_Pilgrimage_Package.jpg" },
+            { name: "Somnath Spiritual Tour", duration: "2 Days / 1 Night", locations: "Somnath Temple → Triveni Sangam → Bhalka Tirth", highlights: "Temple visits, Sea view hotel, Gujarati thali", price: "8,500", img: "./image/home/Somnath_Spiritual_Package.jpg" },
+            { name: "Ahmedabad Heritage Walk", duration: "3 Days / 2 Nights", locations: "Sabarmati Ashram → Adalaj Stepwell → Kankaria Lake", highlights: "Heritage walk, Luxury hotel, Local shopping", price: "15,000", img: "./image/home/Ahmedabad_Heritage_Package.jpg" }
         ];
         
         packagesGrid.innerHTML = packages.map(pkg => `
@@ -222,10 +267,10 @@ function loadHomePageContent() {
         const exclusives = [
             { img: "./image/home/Jaipur_Destination.jpg", name: "Jaipur", price: "5,500", loc: "Rajasthan" },
             { img: "./image/home/Udaipur_Destination.jpg", name: "Udaipur", price: "7,200", loc: "Rajasthan" },
-            { img: "./image/home/Jodhpur_Destination.jpg", name: "Jodhpur", price: "6,100", loc: "Rajasthan" },
             { img: "./image/home/Ahmedabad_Destination.jpg", name: "Ahmedabad", price: "4,200", loc: "Gujarat" },
             { img: "./image/home/Dwarka_Destination.jpg", name: "Dwarka", price: "3,900", loc: "Gujarat" },
-            { img: "./image/home/Somnath_Destination.jpg", name: "Somnath", price: "4,400", loc: "Gujarat" }
+            { img: "./image/home/Somnath_Destination.jpg", name: "Somnath", price: "4,400", loc: "Gujarat" },
+            { img: "./image/home/Vadodara_Destination.jpg", name: "Vadodara", price: "4,800", loc: "Gujarat" }
         ];
         
         exclusivesGrid.innerHTML = exclusives.map(ex => `
@@ -246,9 +291,9 @@ function loadHomePageContent() {
     if (trendingGrid) {
         const trending = [
             { img: "./image/home/Rajasthan_Desert_Circuit.jpg", name: "Rajasthan Desert Circuit", loc: "Jaisalmer - Jodhpur" },
-            { img: "./image/home/Gujarat_Pilgrim_Trail.jpg", name: "Gujarat Pilgrim Trail", loc: "Dwarka - Somnath" },
-            { img: "./image/home/Lake_Palace_Romance.jpg", name: "Lake Palace Romance", loc: "Udaipur - Mount Abu" },
-            { img: "./image/home/Royal_Heritage_Walk.jpg", name: "Royal Heritage Walk", loc: "Jaipur - Amer Fort" }
+            { img: "./image/home/Gujarat_Pilgrim_Trail.jpg", name: "Dwarka Somnath Yatra", loc: "Dwarka - Somnath" },
+            { img: "./image/home/Ahmedabad_Vadodara_Circuit.jpg", name: "Business & Heritage", loc: "Ahmedabad - Vadodara" },
+            { img: "./image/home/Saurashtra_Circuit.jpg", name: "Saurashtra Heritage", loc: "Rajkot - Junagadh - Somnath" }
         ];
         
         trendingGrid.innerHTML = trending.map(tr => `
@@ -265,9 +310,9 @@ function loadHomePageContent() {
     const storiesGrid = document.getElementById('storiesGrid');
     if (storiesGrid) {
         const stories = [
-            { img: "./image/home/Royal_Testimonial_1.jpg", desc: "Experienced royal welcome at Jaipur's City Palace. The hospitality was unmatched!" },
-            { img: "./image/home/Royal_Testimonial_2.jpg", desc: "Serenity at Somnath beach heritage resort. Sunset views are breathtaking." },
-            { img: "./image/home/Royal_Testimonial_3.jpg", desc: "Magical desert camping in Jaisalmer under the starlit sky." }
+            { img: "./image/home/Royal_Testimonial_1.jpg", desc: "The Fern Sattva Resort in Dwarka was amazing! Eco-friendly luxury with stunning sea views. Highly recommended for a peaceful getaway." },
+            { img: "./image/home/Royal_Testimonial_2.jpg", desc: "ITC Narmada Ahmedabad offers world-class hospitality. The spa and dining options are exceptional. A true luxury experience!" },
+            { img: "./image/home/Royal_Testimonial_3.jpg", desc: "Sarovar Portico Somnath is the best place to stay near the temple. Clean rooms, great food, and excellent service." }
         ];
         
         storiesGrid.innerHTML = stories.map(st => `
@@ -332,7 +377,7 @@ function renderProperties() {
                     <img src="${prop.img}" onerror="this.src='https://placehold.co/400x300?text=Heritage+Property'" alt="${prop.name}">
                 </div>
                 <div class="house-info">
-                    <p><i class="fas fa-crown"></i> ${prop.type === 'palace' ? 'Royal Palace' : prop.type === 'villa' ? 'Luxury Villa' : prop.type === 'heritage' ? 'Heritage Haveli' : 'Premium Resort'}</p>
+                    <p><i class="fas fa-crown"></i> ${prop.type === 'palace' ? 'Royal Palace' : prop.type === 'villa' ? 'Luxury Villa' : prop.type === 'heritage' ? 'Heritage Haveli' : prop.type === 'resort' ? 'Premium Resort' : 'Luxury Hotel'}</p>
                     <h3>${prop.name}</h3>
                     <p>${prop.guests} Guests / ${prop.beds} Beds / ${prop.bathrooms} Baths</p>
                     <div class="rating">${stars}</div>
@@ -524,7 +569,7 @@ function loadBookingPage() {
                     </ul>
                     <h3>Amenities</h3>
                     <div class="amenities">
-                        ${property.amenities.map(a => `<span><i class="fas fa-check-circle"></i> ${a.charAt(0).toUpperCase() + a.slice(1)}</span>`).join('')}
+                        ${property.amenities.map(a => `<span><i class="fas fa-check-circle"></i> ${a.charAt(0).toUpperCase() + a.slice(1).replace('-', ' ')}</span>`).join('')}
                     </div>
                     <div class="price-box">
                         <h2>${property.price.toLocaleString('en-IN')} <span>/ night</span></h2>
