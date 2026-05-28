@@ -309,11 +309,7 @@ Thank you for visiting <b>RT RoyalBNB 👑</b>
 
 This project reflects my passion for building elegant, luxurious, and modern frontend experiences inspired by India's royal heritage & hospitality culture 🇮🇳
 
-<br><br>
-
-<img src="https://img.shields.io/badge/Built%20With-❤️-red?style=for-the-badge"/>
-
-</p>
+<br>
 
 <h3 align="center">
   👨‍💻 Built by <b>Rishabh A. Shah</b>
