@@ -1,18 +1,18 @@
 RT_RoyalBNB/
 ├── index.html
-├── house.html
 ├── listing.html
-├── register.html
 ├── booking.html
+├── checkout.html
+├── payment.html
+├── invoice.html
+├── reviews.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── script.js
-└── images/
-    ├── RT_LOGO_BG1.png
-    ├── RT_LOGO_BG2.png
-    ├── (all other images)
-    └── properties/
-        ├── jaipur-palace.jpg
-        ├── udaipur-lake.jpg
-        └── ... (property images)
+├── images/
+│   ├── RT_LOGO_1.png
+│   ├── logo/
+│   │   ├── RT_LOGO_BG1.png
+│   │   └── RT_LOGO_BG2.png
+│   └── (other images)

@@ -1,242 +1,135 @@
-<!-- index.html - RT RoyalBNB Homepage -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>RT RoyalBNB | Royal Stays & Heritage Hotels in India</title>
-    <meta name="description"
-        content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
+    <meta name="description" content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
     <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <nav id="navBar">
+    <nav id="navBar" class="nav-transparent">
         <a href="index.html" class="logo-link">
             <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
         </a>
         <ul class="nav-link">
-            <li><a href="index.html" class="active">Royal Stays</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="listing.html">Heritage Homes</a></li>
-            <li><a href="register.html">Luxury Packages</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="register.html">Contact Us</a></li>
         </ul>
-        <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a>
+        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
         <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
     </nav>
 
-    <!-- Hero Section with Auto-Sliding Images (No Arrows) -->
+    <!-- Hero Section -->
     <section class="hero" id="heroSection">
         <div class="hero-slides" id="heroSlides">
-            <div class="hero-slide active"
-                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG1.jpg');">
-            </div>
-            <div class="hero-slide"
-                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG2.jpg');">
-            </div>
-            <div class="hero-slide"
-                style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG3.jpg');">
-            </div>
+            <div class="hero-slide active" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG1.jpg');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG2.jpg');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(107deg, rgba(0,0,0,0.5), rgba(44,34,27,0.7)), url('./image/home/BG3.jpg');"></div>
         </div>
-
         <div class="hero-content animate-fade-up">
-            <h1 class="hero-title">
-                Forgot Busy Work, <br>
-                Start <span class="gold-text">Royal Vacation</span>
-            </h1>
-            <p class="hero-description">
-                We provide curated heritage tours & palace stays across India. Time to embrace royal luxury.
-            </p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">1500+</span>
-                    <span class="stat-label">Views</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">1000+</span>
-                    <span class="stat-label">Photos</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Heritage Properties</span>
-                </div>
+            <h1 class="hero-title">Experience Refined Hospitality<br>Crafted to Make Every Moment <span class="gold-text">Truly Exceptional</span></h1>
+            <p class="hero-description">A premium destination for weddings, fine dining, and luxury stays. Trusted by 6K+ guests.</p>
+            <div class="hero-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span>4.4/5 rating - Trusted by 6K+ guests</span>
             </div>
-            <a href="listing.html" class="hero-btn">
-                Explore Royal Stays <i class="fas fa-arrow-right"></i>
-            </a>
+            <div class="hero-buttons">
+                <a href="listing.html" class="hero-btn primary">Book Your Stay <i class="fas fa-arrow-right"></i></a>
+                <a href="register.html" class="hero-btn secondary">Plan Your Wedding <i class="fas fa-heart"></i></a>
+            </div>
         </div>
-
         <div class="hero-dots" id="heroDots"></div>
     </section>
 
     <div class="container">
-        <!-- Most Picked Royal Retreats -->
         <div class="section-header">
-            <h2 class="section-title"><span class="gold-border">✦</span> Most Picked Royal Retreats <span
-                    class="gold-border">✦</span></h2>
+            <h2 class="section-title"><span class="gold-border">✦</span> Most Picked Royal Retreats <span class="gold-border">✦</span></h2>
             <p>Curated just for you — India's finest heritage experiences</p>
         </div>
         <div class="most-picked-grid" id="mostPickedGrid"></div>
 
-        <!-- Trip Packages Section -->
         <div class="section-header">
-            <h2 class="section-title"><span class="gold-border">✧</span> Exclusive Royal Packages <span
-                    class="gold-border">✧</span></h2>
+            <h2 class="section-title"><span class="gold-border">✧</span> Exclusive Royal Packages <span class="gold-border">✧</span></h2>
             <p>Handcrafted journeys across India's royal landscapes</p>
         </div>
         <div class="packages-grid" id="packagesGrid"></div>
 
-        <!-- Popular Royal Destinations -->
-        <h2 class="sub-title"><i class="fas fa-map-marked-alt"></i> Popular Royal Destinations</h2>
-        <div class="exclusives" id="exclusivesGrid"></div>
-
-        <!-- Trending Heritage Circuits -->
-        <h2 class="sub-title"><i class="fas fa-fire"></i> Trending Heritage Circuits</h2>
-        <div class="trending" id="trendingGrid"></div>
-
-        <!-- About RT RoyalBNB Section -->
         <div class="about-royal-section">
             <div class="about-content">
                 <h2>About <span class="gold-text">RT RoyalBNB</span></h2>
                 <h3>Your Gateway to India's Royal Heritage</h3>
-                <p>RT RoyalBNB is India's premier heritage hospitality platform, dedicated to bringing you the finest
-                    palace stays, heritage havelis, and luxury retreats across the country. From the majestic forts of
-                    Rajasthan to the serene temples of Gujarat, we curate experiences that let you live like royalty.
-                </p>
-                <p>Our mission is to preserve India's architectural legacy while providing travelers with authentic,
-                    comfortable, and memorable stays. Every property in our collection is handpicked for its historical
-                    significance and quality of hospitality.</p>
+                <p>RT RoyalBNB is India's premier heritage hospitality platform, dedicated to bringing you the finest palace stays, heritage havelis, and luxury retreats across the country.</p>
                 <div class="about-features">
-                    <div class="feature"><i class="fas fa-check-circle"></i> 100+ Heritage Properties</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> 50+ Heritage Properties</div>
                     <div class="feature"><i class="fas fa-check-circle"></i> 15+ Royal Destinations</div>
                     <div class="feature"><i class="fas fa-check-circle"></i> 24/7 Royal Concierge</div>
                     <div class="feature"><i class="fas fa-check-circle"></i> Authentic Experiences</div>
                 </div>
-                <a href="register.html" class="about-btn">Join Royal Community <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="about-image">
-                <img src="./image/RT_ABOUT.png" alt="Royal Heritage Palace"
-                    onerror="this.src='https://placehold.co/500x400?text=Royal+Heritage'">
+                <img src="./image/RT_ABOUT.png" alt="Royal Heritage Palace">
                 <div class="image-badge">Since 2024</div>
             </div>
         </div>
 
-        <!-- Royal Testimonials -->
-        <h2 class="sub-title"><i class="fas fa-feather-alt"></i> Royal Testimonials</h2>
-        <div class="stories" id="storiesGrid"></div>
-
-        <!-- Become Hotel Owner CTA -->
         <div class="owner-cta">
             <div class="owner-content">
                 <h3>Become a Royal Host</h3>
-                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa. Join India's most
-                    trusted heritage hospitality platform.</p>
+                <p>Partner with RT RoyalBNB and list your heritage property, haveli, or luxury villa.</p>
                 <a href="register.html" class="owner-btn">Register Now <i class="fas fa-hand-sparkles"></i></a>
             </div>
-            <div class="owner-decoration">
-                <i class="fas fa-landmark"></i>
-            </div>
+            <div class="owner-decoration"><i class="fas fa-landmark"></i></div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="royal-footer">
         <div class="footer-container">
-            <!-- Footer Left - Logo & About -->
             <div class="footer-section footer-about">
                 <img src="./image/logo/RT_LOGO_BG2.png" alt="RT RoyalBNB Logo" class="footer-logo">
                 <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
-                <p class="footer-desc">Experience royal living across India's finest palace stays, heritage havelis, and
-                    luxury retreats.</p>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" target="_blank"
-                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk" target="_blank" class="social-link github"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" target="_blank"
-                        class="social-link project"><i class="fas fa-code-branch"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk" target="_blank" class="social-link github"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" target="_blank" class="social-link project"><i class="fas fa-code-branch"></i></a>
                 </div>
             </div>
-
-            <!-- Footer Center Left - Quick Links -->
             <div class="footer-section footer-links">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
                     <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Luxury Packages</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Become a Host</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Royal Access</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Footer Center Right - Support -->
-            <div class="footer-section footer-support">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cancellation Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Sitemap</a></li>
-                </ul>
-            </div>
-
-            <!-- Footer Right - Contact Info -->
             <div class="footer-section footer-contact">
                 <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p>Vadodara, Gujarat</p>
-                        <p>PIN Code: 391760, India</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <p>+91 78619 76128</p>
-                        <p>Available 24/7</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p>shahrishu1515@gmail.com</p>
-                        <p>royal@rtroyalbnb.com</p>
-                    </div>
-                </div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><p>Vadodara, Gujarat - 391760</p></div></div>
+                <div class="contact-item"><i class="fas fa-phone-alt"></i><div><p>+91 78619 76128</p></div></div>
+                <div class="contact-item"><i class="fas fa-envelope"></i><div><p>shahrishu1515@gmail.com</p></div></div>
             </div>
         </div>
-
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <div class="copyright">
-                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
-                </div>
-                <div class="design-credit">
-                    <p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p>
-                </div>
-                <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fas fa-rupee-sign"></i>
-                </div>
+                <div class="copyright"><p>&copy; 2025 RT RoyalBNB. All rights reserved.</p></div>
+                <div class="design-credit"><p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p></div>
             </div>
         </div>
     </footer>
 
     <script src="./js/script.js"></script>
+    <script>
+        function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
+        document.addEventListener('DOMContentLoaded', () => {
+            initHeroSlider();
+            loadHomePageContent();
+        });
+    </script>
 </body>
-
 </html>
