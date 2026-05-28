@@ -1,27 +1,28 @@
 <p align="center">
-  <img width="700" alt="RT RoyalBNB Logo" src="https://github.com/user-attachments/assets/0b20dd69-6a8f-4eda-a840-ce27a1bd70dd" />
+  <img width="780" alt="RT RoyalBNB Logo" src="https://github.com/user-attachments/assets/0b20dd69-6a8f-4eda-a840-ce27a1bd70dd"/>
 </p>
 
 <h1 align="center">👑 RT RoyalBNB</h1>
 
 <p align="center">
-  🇮🇳 India's Premier Heritage Hospitality Platform
-  <br>
-  🏰 Royal Heritage Stays • ✨ Regal Experience • 📱 Fully Responsive
+  <b>🇮🇳 India's Premier Heritage Hospitality Platform</b>
+  <br><br>
+  🏰 Luxury Heritage Stays • ✨ Regal Experience • 📱 Fully Responsive
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Frontend-Web%20Project-0f172a?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Responsive-Design-22c55e?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Currency-INR-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Frontend-Luxury%20Web%20Project-111827?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Responsive-100%25-22c55e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/UI-Royal%20Luxury-f59e0b?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/India-Focused-ff9933?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Theme-Royal%20Luxury-gold?style=flat-square"/>
-  <img src="https://img.shields.io/badge/UI-Cream%20%26%20Gold-fff8dc?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Theme-Cream%20%26%20Gold-fff8dc?style=flat-square"/>
   <img src="https://img.shields.io/badge/Experience-Premium-8b5cf6?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Animations-Smooth-e11d48?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Currency-INR-orange?style=flat-square"/>
 </p>
 
 ---
@@ -30,72 +31,75 @@
 
 <p align="center">
   <a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/">
-    <img src="https://img.shields.io/badge/🚀%20Visit%20Live%20Website-RoyalBNB-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/🚀%20Visit%20Live%20Website-RT%20RoyalBNB-blue?style=for-the-badge"/>
   </a>
 </p>
 
 ---
 
-# 👑 About RT RoyalBNB
+# 👑 About The Project
 
-**RT RoyalBNB** is a premium heritage hotel booking and hospitality platform designed exclusively for **India 🇮🇳**.
+**RT RoyalBNB** is a premium heritage hospitality and hotel booking platform inspired by the royal culture of India 🇮🇳.
 
-Inspired by the elegance of Indian royalty, the platform allows travelers to discover and explore:
+The platform allows users to explore and book:
 
-- 🏰 Heritage Hotels  
 - 👑 Palace Stays  
+- 🏰 Heritage Hotels  
 - 🌴 Luxury Villas  
 - 🏖️ Beach Resorts  
 - 🛕 Cultural Havelis  
 
-across iconic destinations in **Rajasthan, Gujarat, and Daman**.
+across iconic destinations of **Rajasthan, Gujarat, and Daman**.
 
-The project combines:
-- ✨ Royal UI aesthetics
-- 📱 Responsive modern design
-- ⚡ Smooth interactions & animations
-- 💰 INR-focused booking experience
-- 🧭 Destination-based property discovery
+The entire experience is designed with:
+
+✨ Luxury UI/UX  
+📱 Responsive layouts  
+⚡ Smooth animations  
+💰 INR-focused booking system  
+🏰 Royal aesthetics & typography  
+
+to deliver a premium hospitality experience.
 
 ---
 
-# ✨ Core Features
+# ✨ Key Features
 
 | 👑 Category | 🚀 Features |
 |-------------|-------------|
-| 🏰 Property Listings | Palace stays, villas, heritage hotels, luxury resorts |
-| 📍 Destinations | Jaipur, Udaipur, Jodhpur, Ahmedabad, Dwarka & more |
-| 💰 Indian Currency | Fully INR-based booking experience |
-| 🎨 Royal Theme | Cream & gold luxury UI design |
-| ✨ Animations | Fade-up, slide-in, hover glow, pulse effects |
-| 🔍 Smart Filters | Destination, property type, amenities |
-| 📅 Booking UI | Check-in/out & guest selection |
-| 📱 Responsive Design | Mobile, tablet & desktop optimized |
-| 🗺️ Google Maps | Location integration for each property |
-| 📞 Contact System | Registration & host inquiry forms |
+| 🏰 Heritage Listings | Luxury palace stays & premium resorts |
+| 📍 Smart Destinations | Rajasthan, Gujarat & Daman locations |
+| 🔍 Advanced Filters | Destination, amenities & property type |
+| 📅 Booking System | Check-in/out & guest selection |
+| 💳 Checkout Flow | Booking → Checkout → Payment → Invoice |
+| ⭐ Reviews Section | User review & feedback interface |
+| 📱 Responsive UI | Desktop, tablet & mobile optimized |
+| ✨ Animations | Hover glow, fade-up & smooth transitions |
+| 🗺️ Google Maps | Property location integration |
+| 💰 INR Pricing | Fully India-focused booking experience |
 
 ---
 
-# 🏰 Supported Destinations
+# 🏛️ Supported Destinations
 
 ## 🇮🇳 Rajasthan
 - Jaipur
 - Udaipur
 - Jodhpur
 - Jaisalmer
-- Nathdwara
 - Pushkar
+- Nathdwara
 
 ## 🇮🇳 Gujarat
 - Ahmedabad
 - Vadodara
-- Somnath
 - Dwarka
+- Somnath
 - Bhavnagar
 - Gandhinagar
 - Mandvi
 
-## 🇮🇳 Union Territory
+## 🌴 Union Territory
 - Daman
 
 ---
@@ -104,142 +108,157 @@ The project combines:
 
 RT RoyalBNB is inspired by:
 
-✨ Royal Indian architecture  
-✨ Palace hospitality aesthetics  
-✨ Luxury booking platforms  
+✨ Indian royal architecture  
+✨ Luxury palace aesthetics  
+✨ Heritage hospitality culture  
+✨ Premium booking platforms  
 ✨ Elegant serif typography  
-✨ Gold-accent premium interfaces  
 
-The interface uses:
-- 🤍 Off-white / cream backgrounds
-- 🟨 Gold accents
-- 🖋️ Elegant typography
-- 🌟 Smooth visual transitions
+The visual design focuses on:
 
-to create a luxurious user experience.
+- 🤍 Cream & off-white backgrounds  
+- 🟨 Gold luxury accents  
+- 🖋️ Elegant typography  
+- 🌟 Smooth transitions  
+- 📐 Clean premium layouts  
+
+to create a royal digital experience.
 
 ---
 
 # 🧰 Technologies Used
 
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" width="55"/>
-  &nbsp;&nbsp;
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" width="55"/>
-  &nbsp;&nbsp;
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="55"/>
-  &nbsp;&nbsp;
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" width="55"/>
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" width="65"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" width="65"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="65"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" width="65"/>
 </p>
 
 ---
 
-# 📂 Project Structure
+# 📂 Updated Project Structure
 
 ```bash
 RT_RoyalBNB/
 │
 ├── index.html
-├── house.html
 ├── listing.html
-├── register.html
-├── style.css
-├── script.js
+├── booking.html
+├── checkout.html
+├── payment.html
+├── invoice.html
+├── reviews.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
 │
 ├── images/
-│   ├── RT_LOGO_BG1.png
-│   ├── RT_LOGO_BG2.png
-│   ├── titlelogo.png
-│   ├── banner.png
-│   ├── house-1.png
-│   ├── image-1.png
-│   └── more assets...
+│   ├── RT_LOGO_1.png
+│   │
+│   ├── logo/
+│   │   ├── RT_LOGO_BG1.png
+│   │   └── RT_LOGO_BG2.png
+│   │
+│   └── (other images & assets)
 │
 └── README.md
-```
+````
 
 ---
 
-# 📸 Website Sections
+# 📸 Website Preview
 
 <img width="1876" height="850" alt="Day_64_SS1" src="https://github.com/user-attachments/assets/5baa4f4e-68c0-466b-9bcf-324b7125d666" />
+
 <img width="1861" height="756" alt="Day_64_SS2" src="https://github.com/user-attachments/assets/3707f717-e5c4-490f-956e-01ad273244f8" />
+
 <img width="1777" height="745" alt="Day_64_SS3" src="https://github.com/user-attachments/assets/d2265b1f-0ae3-40ce-a0cc-485132f5ff13" />
+
 <img width="1895" height="515" alt="Day_64_SS4" src="https://github.com/user-attachments/assets/63abd954-8ea9-4f47-b6e9-9b39631a6397" />
 
 ---
 
-# 🌟 Highlights
+# 🌟 Project Highlights
 
-✨ Royal Gold & Cream Theme  
-✨ Fully India-Focused Experience  
-✨ Smooth Modern Animations  
-✨ Responsive Luxury UI  
-✨ Interactive Booking Design  
-✨ Elegant Typography & Layouts  
-✨ Clean Frontend Architecture  
-✨ No Framework Dependency  
+✨ Royal Cream & Gold Theme
+✨ India-focused hospitality platform
+✨ Modern responsive UI
+✨ Interactive booking flow
+✨ Elegant typography & layouts
+✨ Smooth animations & transitions
+✨ Premium frontend architecture
+✨ Clean organized folder structure
 
 ---
 
 # 📱 Responsive Experience
 
-RT RoyalBNB is optimized for:
-
-| Device | Support |
-|--------|----------|
+| Device     | Experience        |
+| ---------- | ----------------- |
 | 💻 Desktop | ✅ Fully Optimized |
-| 📱 Mobile | ✅ Responsive |
-| 📲 Tablet | ✅ Adaptive Layout |
+| 📱 Mobile  | ✅ Responsive      |
+| 📲 Tablet  | ✅ Adaptive Layout |
 
 ---
 
 # 🚀 Future Enhancements
 
 ## 🔐 Authentication System
-- User Login / Signup
-- OTP Verification
-- User Dashboard
 
-## 💳 Booking & Payments
-- Real Payment Gateway
-- UPI & Card Integration
-- Booking Management
+* Login & Signup
+* OTP Verification
+* User Dashboard
+
+## 💳 Payment & Booking
+
+* Real Payment Gateway
+* Booking History
+* Cancellation System
 
 ## 🏆 Advanced Features
-- Host Dashboard
-- Reviews & Ratings
-- Wishlist System
-- Loyalty Rewards
+
+* Wishlist System
+* Loyalty Rewards
+* Reviews & Ratings
+* Host Dashboard
 
 ## 🌐 Technical Upgrades
-- Backend Integration
-- Database Connectivity
-- Progressive Web App (PWA)
-- Multi-language Support
+
+* Backend Integration
+* Database Connectivity
+* Progressive Web App (PWA)
+* Multi-language Support
 
 ---
 
 # 🎯 Project Objectives
 
-| # | Objective |
-|---|-----------|
-| 1 | Build a premium Indian hospitality platform |
-| 2 | Showcase advanced frontend development |
-| 3 | Create elegant luxury UI/UX |
-| 4 | Practice responsive design |
-| 5 | Simulate real-world booking workflow |
+| #   | Objective                                   |
+| --- | ------------------------------------------- |
+| 1️⃣ | Build a premium Indian hospitality platform |
+| 2️⃣ | Showcase luxury frontend development        |
+| 3️⃣ | Create modern responsive UI/UX              |
+| 4️⃣ | Simulate real-world booking workflow        |
+| 5️⃣ | Practice clean frontend architecture        |
 
 ---
 
-# 🌟 Why This Project Stands Out
+# 💎 Why This Project Stands Out
 
-✅ Royal & luxury inspired UI  
-✅ India-focused hospitality experience  
-✅ Elegant typography & animations  
-✅ Fully responsive architecture  
-✅ Premium frontend portfolio project  
-✅ Clean organized code structure  
+✅ Royal luxury inspired design
+✅ Fully India-focused experience
+✅ Smooth animations & transitions
+✅ Elegant typography combinations
+✅ Responsive premium layouts
+✅ Clean code architecture
+✅ Portfolio-ready frontend project
 
 ---
 
@@ -247,46 +266,56 @@ RT RoyalBNB is optimized for:
 
 <p align="center">
   <a href="https://github.com/shahrishabh1513-jsk">
-    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504911.png" width="50"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504911.png" width="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/">
-    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504923.png" width="50"/>
+    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504923.png" width="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:shahrishu1515@">
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="50"/>
+  <a href="mailto:shahrishu1515@gmail.com">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="55"/>
   </a>
 </p>
+
+---
+
+# ⭐ Support This Project
+
+If you liked this project:
+
+⭐ Star this repository
+🍴 Fork & contribute
+💬 Share feedback & suggestions
+🚀 Support future updates
 
 ---
 
 # 📄 License
 
 This project is created for:
-- 🎓 Educational purposes
-- 💼 Portfolio showcase
-- 🚀 Frontend development practice
 
----
-
-# ⭐ Support
-
-If you liked this project:
-
-- ⭐ Star this repository
-- 🍴 Fork this project
-- 💬 Share suggestions
-- 🚀 Support future updates
+🎓 Educational Purposes
+💼 Portfolio Showcase
+🚀 Frontend Development Practice
 
 ---
 
 # 🙌 Final Note
 
-Thank you for visiting **RT RoyalBNB 👑**
-
-This project reflects my passion for building elegant, responsive, and premium frontend experiences inspired by India's royal heritage and luxury hospitality culture.
-
 <p align="center">
-  Built with ❤️ by <b>Rishabh A. Shah</b>
+
+Thank you for visiting <b>RT RoyalBNB 👑</b>
+
+This project reflects my passion for building elegant, luxurious, and modern frontend experiences inspired by India's royal heritage & hospitality culture 🇮🇳
+
+<br><br>
+
+<img src="https://img.shields.io/badge/Built%20With-❤️-red?style=for-the-badge"/>
+
 </p>
+
+<h3 align="center">
+  👨‍💻 Built by <b>Rishabh A. Shah</b>
+</h3>
+```
