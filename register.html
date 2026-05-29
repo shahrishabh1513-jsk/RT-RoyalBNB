@@ -1,11 +1,11 @@
-<!-- register.html - Royal Registration -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RT RoyalBNB | Register</title>
+    <title>RT RoyalBNB | Contact & Registration</title>
+    <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -14,15 +14,17 @@
 </head>
 
 <body>
-    <nav id="navBar" class="navBar-white"><a href="index.html"><img src="./images/RT_LOGO_BG1.png" class="logo"></a>
+    <nav id="navBar" class="navBar-white"><a href="index.html"><img src="./image/logo/RT_LOGO_BG1.png" class="logo"></a>
         <ul class="nav-link">
-            <li><a href="index.html">Royal Stays</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="listing.html">Heritage Homes</a></li>
-            <li><a href="register.html" class="active">Luxury Packages</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="register.html" class="active">Contact Us</a></li>
         </ul>
-        <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a><i
-            class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
+        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
     </nav>
+
     <div class="register-container">
         <div class="register-wrapper">
             <div class="contact-info">
@@ -33,19 +35,21 @@
                 <div class="info-details">
                     <div class="detail-item"><i class="fas fa-map-pin"></i>
                         <div>
-                            <h4>Office</h4>
-                            <p>Jaipur, Rajasthan</p>
+                            <h4>Corporate Office</h4>
+                            <p>Vadodara, Gujarat - 391760</p>
                         </div>
                     </div>
                     <div class="detail-item"><i class="fas fa-phone"></i>
                         <div>
-                            <h4>Concierge</h4>
-                            <p>+91 98765 01234</p>
+                            <h4>Royal Concierge</h4>
+                            <p>+91 78619 76128</p>
+                            <p>24/7 Available</p>
                         </div>
                     </div>
                     <div class="detail-item"><i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h4>Email Us</h4>
+                            <p>shahrishu1515@gmail.com</p>
                             <p>royal@rtroyalbnb.com</p>
                         </div>
                     </div>
@@ -54,25 +58,34 @@
             <div class="registration-form">
                 <div class="form-header">
                     <h2>Royal Registration</h2>
-                    <p>Join our royal community</p>
+                    <p>Join our royal community to book heritage stays or list your property</p>
                 </div>
                 <form id="registerForm">
                     <div class="input-group"><i class="fas fa-user"></i><input type="text" id="fullname"
                             placeholder="Full Name" required></div>
                     <div class="input-group"><i class="fas fa-envelope"></i><input type="email" id="email"
-                            placeholder="Email" required></div>
+                            placeholder="Email Address" required></div>
                     <div class="input-group"><i class="fas fa-phone"></i><input type="tel" id="phone"
-                            placeholder="Mobile" required></div>
+                            placeholder="Mobile Number" required></div>
                     <div class="input-group"><i class="fas fa-map-pin"></i><select id="city">
-                            <option>Select City</option>
-                            <option>Jaipur</option>
-                            <option>Udaipur</option>
-                            <option>Ahmedabad</option>
+                            <option>Select Your City</option>
+                            <option>Jaipur, Rajasthan</option>
+                            <option>Udaipur, Rajasthan</option>
+                            <option>Ahmedabad, Gujarat</option>
+                            <option>Vadodara, Gujarat</option>
+                            <option>Dwarka, Gujarat</option>
+                            <option>Somnath, Gujarat</option>
+                        </select></div>
+                    <div class="input-group"><i class="fas fa-building"></i><select id="interest">
+                            <option>I am interested in...</option>
+                            <option>Booking a Heritage Stay</option>
+                            <option>Listing My Property as Host</option>
+                            <option>Both - Booking & Hosting</option>
                         </select></div>
                     <div class="checkbox-group"><input type="checkbox" id="terms" required><label>I agree to the <a
-                                href="#">Royal Terms</a></label></div><button type="submit" class="submit-btn"><i
-                            class="fas fa-crown"></i> Register Now</button><button type="button" class="cancel-btn"
-                        id="cancelBtn">Clear</button>
+                                href="#">Royal Terms & Conditions</a></label></div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-crown"></i> Register Now</button><button
+                        type="button" class="cancel-btn" id="cancelBtn">Clear</button>
                 </form>
             </div>
         </div>
@@ -80,166 +93,37 @@
     <div id="successPopup" class="popup-overlay">
         <div class="popup-card"><i class="fa-regular fa-circle-check success-icon"></i>
             <h2>Welcome to Royal Family!</h2>
-            <p>Our concierge will contact you within 24 hours.</p><button onclick="closePopup()">Explore</button>
+            <p>Our concierge will contact you within 24 hours.</p><button onclick="closePopup()">Explore Stays</button>
         </div>
     </div>
-    <!-- Footer -->
+
     <footer class="royal-footer">
         <div class="footer-container">
-            <!-- Footer Left - Logo & About -->
-            <div class="footer-section footer-about">
-                <img src="./image/logo/RT_LOGO_BG2.png" alt="RT RoyalBNB Logo" class="footer-logo">
-                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
-                <p class="footer-desc">Experience royal living across India's finest palace stays, heritage havelis, and
-                    luxury retreats.</p>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" target="_blank"
-                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk" target="_blank" class="social-link github"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" target="_blank"
-                        class="social-link project"><i class="fas fa-code-branch"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
+            <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+                <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
+                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
+                        href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
+                            class="fab fa-github"></i></a></div>
             </div>
-
-            <!-- Footer Center Left - Quick Links -->
-            <div class="footer-section footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Luxury Packages</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Become a Host</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Royal Access</a></li>
-                </ul>
-            </div>
-
-            <!-- Footer Center Right - Support -->
-            <div class="footer-section footer-support">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cancellation Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Sitemap</a></li>
-                </ul>
-            </div>
-
-            <!-- Footer Right - Contact Info -->
-            <div class="footer-section footer-contact">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p>Vadodara, Gujarat</p>
-                        <p>PIN Code: 391760, India</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <p>+91 78619 76128</p>
-                        <p>Available 24/7</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p>shahrishu1515@gmail.com</p>
-                        <p>royal@rtroyalbnb.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-container">
+            <div class="footer-section">
                 <div class="copyright">
-                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
+                    <p>&copy; 2025 RT RoyalBNB</p>
                 </div>
                 <div class="design-credit">
-                    <p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p>
-                </div>
-                <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fas fa-rupee-sign"></i>
+                    <p>Design & Developed by <span>Rishabh Shah</span></p>
                 </div>
             </div>
         </div>
     </footer>
-    <style>
-        .register-container {
-            padding: 120px 7% 60px;
-        }
 
-        .register-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            background: white;
-            border-radius: 48px;
-            overflow: hidden;
-        }
-
-        .contact-info {
-            flex: 1;
-            background: #2C221B;
-            padding: 50px 35px;
-            color: #F5E6D3;
-        }
-
-        .registration-form {
-            flex: 1.5;
-            padding: 50px 40px;
-        }
-
-        .input-group {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: #F9F5EF;
-            border-radius: 60px;
-            padding: 5px 20px;
-            margin-bottom: 20px;
-        }
-
-        .submit-btn {
-            background: #B88B4A;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .popup-card {
-            background: white;
-            padding: 40px;
-            border-radius: 48px;
-            text-align: center;
-        }
-    </style>
-    <script>function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); } function openPopup() { document.getElementById('successPopup').style.display = 'flex'; } function closePopup() { document.getElementById('successPopup').style.display = 'none'; location.href = 'index.html'; } document.getElementById('registerForm')?.addEventListener('submit', (e) => { e.preventDefault(); if (document.getElementById('fullname').value) openPopup(); else alert('Enter full name'); }); document.getElementById('cancelBtn')?.addEventListener('click', () => { document.getElementById('registerForm')?.reset(); });</script>
+    <script src="./js/script.js"></script>
+    <script>
+        function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
+        function openPopup() { document.getElementById('successPopup').style.display = 'flex'; }
+        function closePopup() { document.getElementById('successPopup').style.display = 'none'; window.location.href = 'index.html'; }
+        document.getElementById('registerForm')?.addEventListener('submit', (e) => { e.preventDefault(); if (document.getElementById('fullname').value) openPopup(); else alert('Please enter your full name'); });
+        document.getElementById('cancelBtn')?.addEventListener('click', () => { document.getElementById('registerForm')?.reset(); });
+    </script>
 </body>
 
 </html>

@@ -16,20 +16,27 @@
 </head>
 
 <body>
-    <nav id="navBar">
-        <a href="index.html" class="logo-link">
-            <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
-        </a>
-        <ul class="nav-link">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="listing.html">Heritage Homes</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="register.html">Contact Us</a></li>
-        </ul>
-        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
-        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
-    </nav>
+    <!-- Header - Transparent at top, solid on scroll -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo logo-light">
+                <img src="./image/logo/RT_LOGO_BG2.png" alt="RT RoyalBNB Logo" class="logo logo-dark">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="listing.html">Heritage Homes</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="register.html">Contact Us</a></li>
+                </ul>
+                <a href="listing.html" class="book-now-btn">Book Now <i class="fas fa-arrow-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="heroSection">
         <div class="hero-slides" id="heroSlides">
             <div class="hero-slide active"
@@ -43,8 +50,8 @@
             </div>
         </div>
         <div class="hero-content animate-fade-up">
-            <h1 class="hero-title">Experience Refined Hospitality<br>Start <span class="gold-text">Royal Vacation</span>
-            </h1>
+            <h1 class="hero-title">Experience Refined Hospitality<br>Crafted to Make Every Moment <span
+                    class="gold-text">Truly Exceptional</span></h1>
             <p class="hero-description">A premium destination for weddings, fine dining, and luxury stays. Trusted by
                 6K+ guests.</p>
             <div class="hero-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -151,8 +158,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
-    <script>function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
-        document.addEventListener('DOMContentLoaded', () => { if (typeof initHeroSlider === 'function') initHeroSlider(); if (typeof loadHomePageContent === 'function') loadHomePageContent(); });</script>
 </body>
 
 </html>
