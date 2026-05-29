@@ -1,208 +1,48 @@
-<!-- listing.html - Heritage Homes & Properties -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RT RoyalBNB | Heritage Homes - Luxury Properties in India</title>
-    <meta name="description"
-        content="Experience royal hospitality across India. Book heritage hotels, palace stays, and luxury villas.">
     <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <nav id="navBar" class="navBar-white">
-        <a href="index.html" class="logo-link">
-            <img src="./images/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
-        </a>
+        <a href="index.html" class="logo-link"><img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo"></a>
         <ul class="nav-link">
-            <li><a href="index.html">Royal Stays</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="listing.html" class="active">Heritage Homes</a></li>
-            <li><a href="register.html">Luxury Packages</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="register.html">Contact Us</a></li>
         </ul>
-        <a href="register.html" class="register-btn"><i class="fas fa-crown"></i> Royal Access</a>
+        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
         <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
     </nav>
 
     <div class="container">
         <div class="list-container">
-            <div class="left-col" id="propertiesList">
-                <p><i class="fas fa-building"></i> 20+ Royal Options</p>
-                <h1>Heritage Properties Across India</h1>
-            </div>
-            <div class="right-col">
-                <div class="sidebar">
-                    <h2><i class="fas fa-sliders-h"></i> Select Filters</h2>
-                    <h3>Property Type</h3>
-                    <div class="filter"><input type="checkbox" data-type="palace">
-                        <p>Palace/Haveli</p> <span>(0)</span>
-                    </div>
-                    <div class="filter"><input type="checkbox" data-type="villa">
-                        <p>Luxury Villa</p> <span>(0)</span>
-                    </div>
-                    <div class="filter"><input type="checkbox" data-type="heritage">
-                        <p>Heritage Hotel</p> <span>(0)</span>
-                    </div>
-                    <div class="filter"><input type="checkbox" data-type="resort">
-                        <p>Beach/Desert Resort</p> <span>(0)</span>
-                    </div>
-                    <h3>Destination</h3>
-                    <div class="filter"><input type="checkbox" data-dest="rajasthan">
-                        <p>Rajasthan</p> <span>(0)</span>
-                    </div>
-                    <div class="filter"><input type="checkbox" data-dest="gujarat">
-                        <p>Gujarat</p> <span>(0)</span>
-                    </div>
-                    <div class="filter"><input type="checkbox" data-dest="daman">
-                        <p>Daman</p> <span>(0)</span>
-                    </div>
-                    <div class="sidebar-link"><a href="#" id="clearFiltersBtn">Clear All Filters</a></div>
-                </div>
-            </div>
+            <div class="left-col" id="propertiesList"><p><i class="fas fa-building"></i> Loading...</p><h1>Heritage Properties Across India</h1></div>
+            <div class="right-col"><div class="sidebar"><h2><i class="fas fa-sliders-h"></i> Select Filters</h2>
+                <h3>Property Type</h3>
+                <div class="filter"><input type="checkbox" data-type="palace"><p>Palace/Haveli</p><span>(0)</span></div>
+                <div class="filter"><input type="checkbox" data-type="villa"><p>Luxury Villa</p><span>(0)</span></div>
+                <div class="filter"><input type="checkbox" data-type="heritage"><p>Heritage Hotel</p><span>(0)</span></div>
+                <div class="filter"><input type="checkbox" data-type="resort"><p>Resort</p><span>(0)</span></div>
+                <h3>Destination</h3>
+                <div class="filter"><input type="checkbox" data-dest="rajasthan"><p>Rajasthan</p><span>(0)</span></div>
+                <div class="filter"><input type="checkbox" data-dest="gujarat"><p>Gujarat</p><span>(0)</span></div>
+                <div class="sidebar-link"><a href="#" id="clearFiltersBtn">Clear All Filters</a></div>
+            </div></div>
         </div>
-        <div class="pagination"><img src="./images/left.png" alt="Previous" id="prevPage"><span
-                class="current">1</span><span>2</span><span>3</span><img src="./images/right.png" alt="Next"
-                id="nextPage"></div>
+        <div class="pagination"><img src="./images/left.png" alt="Previous" id="prevPage"><span class="current">1</span><span>2</span><span>3</span><img src="./images/right.png" alt="Next" id="nextPage"></div>
     </div>
 
-    <!-- Footer -->
-    <footer class="royal-footer">
-        <div class="footer-container">
-            <!-- Footer Left - Logo & About -->
-            <div class="footer-section footer-about">
-                <img src="./image/logo/RT_LOGO_BG2.png" alt="RT RoyalBNB Logo" class="footer-logo">
-                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
-                <p class="footer-desc">Experience royal living across India's finest palace stays, heritage havelis, and
-                    luxury retreats.</p>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" target="_blank"
-                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk" target="_blank" class="social-link github"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" target="_blank"
-                        class="social-link project"><i class="fas fa-code-branch"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-
-            <!-- Footer Center Left - Quick Links -->
-            <div class="footer-section footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Luxury Packages</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Become a Host</a></li>
-                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Royal Access</a></li>
-                </ul>
-            </div>
-
-            <!-- Footer Center Right - Support -->
-            <div class="footer-section footer-support">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cancellation Policy</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Sitemap</a></li>
-                </ul>
-            </div>
-
-            <!-- Footer Right - Contact Info -->
-            <div class="footer-section footer-contact">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p>Vadodara, Gujarat</p>
-                        <p>PIN Code: 391760, India</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <p>+91 78619 76128</p>
-                        <p>Available 24/7</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p>shahrishu1515@gmail.com</p>
-                        <p>royal@rtroyalbnb.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-container">
-                <div class="copyright">
-                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
-                </div>
-                <div class="design-credit">
-                    <p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p>
-                </div>
-                <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fas fa-rupee-sign"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="royal-footer"><div class="footer-container"><div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo"><p class="footer-tagline">India's Premier Heritage Hospitality Platform</p><div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i class="fab fa-github"></i></a><a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" class="social-link project"><i class="fas fa-code-branch"></i></a></div></div><div class="footer-section footer-links"><h3>Quick Links</h3><ul><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li><li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li></ul></div><div class="footer-section footer-contact"><h3>Contact Us</h3><div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><p>Vadodara, Gujarat - 391760</p></div></div><div class="contact-item"><i class="fas fa-phone-alt"></i><div><p>+91 78619 76128</p></div></div><div class="contact-item"><i class="fas fa-envelope"></i><div><p>shahrishu1515@gmail.com</p></div></div></div></div><div class="footer-bottom"><div class="footer-bottom-container"><div class="copyright"><p>&copy; 2025 RT RoyalBNB</p></div><div class="design-credit"><p>Design & Developed by <span>Rishabh Shah</span></p></div></div></div></footer>
 
     <script src="./js/script.js"></script>
-    <script>
-        const properties = [
-            { id: 1, name: "Jaipur City Palace Suite", type: "palace", dest: "rajasthan", guests: 4, price: 12500, img: "./images/properties/jaipur-palace.jpg", rating: 4.9, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["Pool", "Spa", "WiFi", "Breakfast"] },
-            { id: 2, name: "Udaipur Lake View Villa", type: "villa", dest: "rajasthan", guests: 6, price: 18500, img: "./images/properties/udaipur-lake.jpg", rating: 4.8, location: "Udaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 4, bathrooms: 3, amenities: ["Pool", "Spa", "WiFi", "Breakfast", "Lake View"] },
-            { id: 3, name: "Jaisalmer Desert Palace", type: "palace", dest: "rajasthan", guests: 3, price: 8900, img: "./images/properties/jaisalmer-palace.jpg", rating: 4.7, location: "Jaisalmer, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 2, bathrooms: 1, amenities: ["WiFi", "Breakfast", "Desert View"] },
-            { id: 4, name: "Ahmedabad Pol Heritage", type: "heritage", dest: "gujarat", guests: 2, price: 4500, img: "./images/properties/ahmedabad-heritage.jpg", rating: 4.5, location: "Ahmedabad, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 1, bathrooms: 1, amenities: ["WiFi", "Breakfast", "Heritage Walk"] },
-            { id: 5, name: "Somnath Sea View Resort", type: "resort", dest: "gujarat", guests: 4, price: 7200, img: "./images/properties/somnath-resort.jpg", rating: 4.6, location: "Somnath, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["Pool", "WiFi", "Breakfast", "Spa", "Sea View"] },
-            { id: 6, name: "Dwarka Divine Stay", type: "heritage", dest: "gujarat", guests: 3, price: 5400, img: "./images/properties/dwarka-heritage.jpg", rating: 4.7, location: "Dwarka, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 2, bathrooms: 2, amenities: ["WiFi", "Breakfast", "Temple View"] },
-            { id: 7, name: "Jodhpur Blue City Haveli", type: "heritage", dest: "rajasthan", guests: 4, price: 7800, img: "./images/properties/jodhpur-haveli.jpg", rating: 4.8, location: "Jodhpur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["WiFi", "Breakfast", "Pool", "City View"] },
-            { id: 8, name: "Vadodara Laxmi Vilas Wing", type: "palace", dest: "gujarat", guests: 5, price: 11200, img: "./images/properties/vadodara-palace.jpg", rating: 4.9, location: "Vadodara, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 3, amenities: ["Pool", "WiFi", "Breakfast", "Spa"] },
-            { id: 9, name: "Daman Beachfront Villa", type: "villa", dest: "daman", guests: 6, price: 9500, img: "./images/properties/daman-villa.jpg", rating: 4.4, location: "Daman", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 4, bathrooms: 3, amenities: ["Pool", "WiFi", "Breakfast", "Beach Access"] },
-            { id: 10, name: "Bhavnagar Nilambag Palace", type: "palace", dest: "gujarat", guests: 4, price: 6800, img: "./images/properties/bhavnagar-palace.jpg", rating: 4.7, location: "Bhavnagar, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["Pool", "WiFi", "Breakfast", "Spa"] },
-            { id: 11, name: "Nathdwara Shrinathji Haveli", type: "heritage", dest: "rajasthan", guests: 4, price: 6200, img: "./images/properties/nathdwara-haveli.jpg", rating: 4.9, location: "Nathdwara, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 2, bathrooms: 2, amenities: ["WiFi", "Breakfast", "Temple View"] },
-            { id: 12, name: "Mount Abu Royal Retreat", type: "resort", dest: "rajasthan", guests: 5, price: 8500, img: "./images/properties/mount-abu.jpg", rating: 4.6, location: "Mount Abu, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["Pool", "WiFi", "Breakfast", "Hill View"] },
-            { id: 13, name: "Pushkar Royal Camp", type: "resort", dest: "rajasthan", guests: 4, price: 6500, img: "./images/properties/pushkar-camp.jpg", rating: 4.7, location: "Pushkar, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 2, bathrooms: 1, amenities: ["Pool", "WiFi", "Breakfast", "Tent Experience"] },
-            { id: 14, name: "Mandvi Beach Palace", type: "palace", dest: "gujarat", guests: 5, price: 9800, img: "./images/properties/mandvi-palace.jpg", rating: 4.6, location: "Mandvi, Gujarat", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 3, bathrooms: 2, amenities: ["Pool", "WiFi", "Breakfast", "Spa", "Beach"] },
-            { id: 15, name: "Raj Palace Heritage Suite", type: "palace", dest: "rajasthan", guests: 6, price: 22000, img: "./images/properties/raj-palace.jpg", rating: 5.0, location: "Jaipur, Rajasthan", map: "https://maps.app.goo.gl/GRqekt9GqwPJpgu57", host: "Rishabh Alpeshbhai Shah", beds: 4, bathrooms: 4, amenities: ["Pool", "Spa", "WiFi", "Breakfast", "Museum", "Butler"] }
-        ];
-        let currentPage = 1, itemsPerPage = 6, activeFilters = { types: [], destinations: [] };
-        function renderProperties() {
-            let filtered = properties.filter(p => (activeFilters.types.length ? activeFilters.types.includes(p.type) : true) && (activeFilters.destinations.length ? activeFilters.destinations.includes(p.dest) : true));
-            document.querySelectorAll('.filter input[data-type]').forEach(cb => { let c = properties.filter(p => p.type === cb.dataset.type).length; cb.parentElement.querySelector('span').innerText = `(${c})`; });
-            document.querySelectorAll('.filter input[data-dest]').forEach(cb => { let c = properties.filter(p => p.dest === cb.dataset.dest).length; cb.parentElement.querySelector('span').innerText = `(${c})`; });
-            let paginated = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-            let container = document.getElementById('propertiesList');
-            container.innerHTML = `<p><i class="fas fa-building"></i> ${filtered.length} Royal Options</p><h1>Heritage Properties Across India</h1>`;
-            if (paginated.length === 0) { container.innerHTML += `<div class="no-results">No matching properties found.</div>`; return; }
-            paginated.forEach(p => { container.innerHTML += `<div class="house" onclick="window.location.href='booking.html?id=${p.id}'"><div class="house-img"><img src="${p.img}" onerror="this.src='https://placehold.co/400x300'"></div><div class="house-info"><p><i class="fas fa-crown"></i> ${p.type === 'palace' ? 'Royal Palace' : p.type === 'villa' ? 'Luxury Villa' : p.type === 'heritage' ? 'Heritage Haveli' : 'Premium Resort'}</p><h3>${p.name}</h3><p>${p.guests} Guests / ${p.beds} Beds / ${p.bathrooms} Baths</p><div class="rating">${'★'.repeat(Math.floor(p.rating))}${p.rating % 1 ? '½' : ''}${'☆'.repeat(5 - Math.ceil(p.rating))}</div><div class="house-price"><p><i class="fas fa-map-pin"></i> ${p.location}</p><h4>${p.price} <span>/ night</span></h4></div></div></div>`; });
-        }
-        function setupFilters() {
-            document.querySelectorAll('.filter input[data-type]').forEach(cb => cb.addEventListener('change', () => { let t = cb.dataset.type; cb.checked ? activeFilters.types.push(t) : activeFilters.types = activeFilters.types.filter(x => x !== t); currentPage = 1; renderProperties(); }));
-            document.querySelectorAll('.filter input[data-dest]').forEach(cb => cb.addEventListener('change', () => { let d = cb.dataset.dest; cb.checked ? activeFilters.destinations.push(d) : activeFilters.destinations = activeFilters.destinations.filter(x => x !== d); currentPage = 1; renderProperties(); }));
-            document.getElementById('clearFiltersBtn')?.addEventListener('click', (e) => { e.preventDefault(); document.querySelectorAll('.filter input').forEach(cb => cb.checked = false); activeFilters = { types: [], destinations: [] }; currentPage = 1; renderProperties(); });
-        }
-        document.getElementById('prevPage')?.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderProperties(); } });
-        document.getElementById('nextPage')?.addEventListener('click', () => { if (currentPage < Math.ceil(properties.length / itemsPerPage)) { currentPage++; renderProperties(); } });
-        document.addEventListener('DOMContentLoaded', () => { renderProperties(); setupFilters(); });
-        function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
-    </script>
+    <script>function toggleMenu(){document.getElementById('navBar').classList.toggle('hidemenu');}</script>
 </body>
-
 </html>
