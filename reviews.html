@@ -14,20 +14,28 @@
 </head>
 
 <body>
-    <nav id="navBar" class="navBar-white"><a href="index.html"><img src="./image/logo/RT_LOGO_BG1.png" class="logo"></a>
-        <ul class="nav-link">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="listing.html">Heritage Homes</a></li>
-            <li><a href="reviews.html" class="active">Reviews</a></li>
-            <li><a href="register.html">Contact Us</a></li>
-        </ul>
-        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
-        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
-    </nav>
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="./image/logo/RT_LOGO_BG1.png" class="logo logo-light">
+                <img src="./image/logo/RT_LOGO_BG2.png" class="logo logo-dark">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Heritage Homes</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="listing.html" class="book-now-btn">Book Now <i class="fas fa-arrow-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
 
     <div class="reviews-container">
         <div class="reviews-header">
-            <h1>Royal Guest Reviews</h1>
+            <h1>Royal Guest <span class="gold-text">Reviews</span></h1>
             <p>What our guests say about their royal experience</p>
             <div class="overall-rating"><span class="rating-number">4.8</span>
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -42,9 +50,10 @@
                 <div class="star-input"><i class="far fa-star" data-rate="1"></i><i class="far fa-star"
                         data-rate="2"></i><i class="far fa-star" data-rate="3"></i><i class="far fa-star"
                         data-rate="4"></i><i class="far fa-star" data-rate="5"></i></div>
-            </div><input type="text" id="reviewName" placeholder="Your Name"><textarea id="reviewText"
-                placeholder="Write your review..." rows="3"></textarea><button onclick="submitReview()">Submit Review <i
-                    class="fas fa-paper-plane"></i></button>
+            </div>
+            <input type="text" id="reviewName" placeholder="Your Name">
+            <textarea id="reviewText" placeholder="Write your review..." rows="3"></textarea>
+            <button onclick="submitReview()">Submit Review <i class="fas fa-paper-plane"></i></button>
             <div id="reviewMsg"></div>
         </div>
     </div>
@@ -52,12 +61,42 @@
     <footer class="royal-footer">
         <div class="footer-container">
             <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
                 <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
                         class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
                         href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
                             class="fab fa-github"></i></a></div>
             </div>
-            <div class="footer-section">
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Contact Us</h3>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Vadodara, Gujarat - 391760</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt"></i>
+                    <div>
+                        <p>+91 78619 76128</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope"></i>
+                    <div>
+                        <p>shahrishu1515@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
                 <div class="copyright">
                     <p>&copy; 2025 RT RoyalBNB</p>
                 </div>
@@ -79,8 +118,7 @@
         function loadReviews() { document.getElementById('reviewsGrid').innerHTML = reviews.map(r => `<div class="review-card"><div class="review-header"><div><i class="fas fa-user-circle"></i> <strong>${r.name}</strong></div><div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div></div><p class="review-text">${r.text}</p><span class="review-date">${new Date(r.date).toLocaleDateString('en-IN')}</span></div>`).join(''); }
         function submitReview() { const name = document.getElementById('reviewName').value, text = document.getElementById('reviewText').value, rating = document.querySelectorAll('.star-input .fas').length; if (!name || !text || rating === 0) { document.getElementById('reviewMsg').innerHTML = '<span style="color:red">Please provide name, rating and review</span>'; return; } reviews.unshift({ name, rating, text, date: new Date().toISOString().split('T')[0] }); localStorage.setItem('royalReviews', JSON.stringify(reviews)); loadReviews(); document.getElementById('reviewName').value = ''; document.getElementById('reviewText').value = ''; document.querySelectorAll('.star-input i').forEach(s => s.className = 'far fa-star'); document.getElementById('reviewMsg').innerHTML = '<span style="color:green">Thank you for your review!</span>'; setTimeout(() => document.getElementById('reviewMsg').innerHTML = '', 3000); }
         document.querySelectorAll('.star-input i').forEach(star => { star.addEventListener('click', function () { let rate = parseInt(this.dataset.rate); document.querySelectorAll('.star-input i').forEach((s, i) => { if (i < rate) s.className = 'fas fa-star'; else s.className = 'far fa-star'; }); }); });
-        document.addEventListener('DOMContentLoaded', loadReviews);
-        function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }
+        document.addEventListener('DOMContentLoaded', () => { loadReviews(); initHeaderScroll(); initMobileMenu(); });
     </script>
 </body>
 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT RoyalBNB | Contact & Registration</title>
+    <link rel="icon" href="./images/RT_LOGO_1.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="./image/logo/RT_LOGO_BG1.png" class="logo logo-light">
+                <img src="./image/logo/RT_LOGO_BG2.png" class="logo logo-dark">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html">Heritage Homes</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+                <a href="listing.html" class="book-now-btn">Book Now <i class="fas fa-arrow-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-page-container">
+        <div class="contact-header">
+            <h1>Royal <span class="gold-text">Concierge</span></h1>
+            <p>We're here to assist you with your royal journey</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info-card">
+                <div class="royal-badge"><i class="fas fa-crown"></i>
+                    <h2>RT RoyalBNB</h2>
+                    <p>India's Premier Heritage Hospitality</p>
+                </div>
+                <div class="info-details">
+                    <div class="detail-item"><i class="fas fa-map-pin"></i>
+                        <div>
+                            <h4>Corporate Office</h4>
+                            <p>Vadodara, Gujarat - 391760</p>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="detail-item"><i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Royal Concierge</h4>
+                            <p>+91 78619 76128</p>
+                            <p>24/7 Available</p>
+                        </div>
+                    </div>
+                    <div class="detail-item"><i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>shahrishu1515@gmail.com</p>
+                            <p>royal@rtroyalbnb.com</p>
+                        </div>
+                    </div>
+                    <div class="detail-item"><i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>Monday - Sunday</p>
+                            <p>24/7 Royal Assistance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk" class="social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" class="social-link"><i
+                            class="fas fa-code-branch"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <div class="form-header">
+                    <h2>Royal Registration</h2>
+                    <p>Join our royal community to book heritage stays or list your property</p>
+                </div>
+                <form id="contactForm">
+                    <div class="input-group"><i class="fas fa-user"></i><input type="text" id="fullname"
+                            placeholder="Full Name" required></div>
+                    <div class="input-group"><i class="fas fa-envelope"></i><input type="email" id="email"
+                            placeholder="Email Address" required></div>
+                    <div class="input-group"><i class="fas fa-phone"></i><input type="tel" id="phone"
+                            placeholder="Mobile Number" required></div>
+                    <div class="input-group"><i class="fas fa-map-pin"></i><select id="city">
+                            <option>Select Your City</option>
+                            <option>Jaipur, Rajasthan</option>
+                            <option>Udaipur, Rajasthan</option>
+                            <option>Ahmedabad, Gujarat</option>
+                            <option>Vadodara, Gujarat</option>
+                            <option>Dwarka, Gujarat</option>
+                            <option>Somnath, Gujarat</option>
+                        </select></div>
+                    <div class="input-group"><i class="fas fa-building"></i><select id="interest">
+                            <option>I am interested in...</option>
+                            <option>Booking a Heritage Stay</option>
+                            <option>Listing My Property as Host</option>
+                            <option>Both - Booking & Hosting</option>
+                        </select></div>
+                    <div class="input-group message-group"><i class="fas fa-comment"></i><textarea id="message"
+                            placeholder="Your Message / Special Requests" rows="3"></textarea></div>
+                    <div class="checkbox-group"><input type="checkbox" id="terms" required><label>I agree to the <a
+                                href="#">Royal Terms & Conditions</a></label></div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-crown"></i> Send Request</button>
+                    <button type="button" class="cancel-btn" id="cancelBtn">Clear Form</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-card"><i class="fa-regular fa-circle-check success-icon"></i>
+            <h2>Welcome to Royal Family!</h2>
+            <p>Our concierge will contact you within 24 hours.</p><button onclick="closePopup()">Explore Stays</button>
+        </div>
+    </div>
+
+    <footer class="royal-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
+                <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
+                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
+                        href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
+                            class="fab fa-github"></i></a></div>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Contact Us</h3>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Vadodara, Gujarat - 391760</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt"></i>
+                    <div>
+                        <p>+91 78619 76128</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope"></i>
+                    <div>
+                        <p>shahrishu1515@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="copyright">
+                    <p>&copy; 2025 RT RoyalBNB</p>
+                </div>
+                <div class="design-credit">
+                    <p>Design & Developed by <span>Rishabh Shah</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script>
+        function toggleMenu() { document.getElementById('siteHeader').classList.toggle('hidemenu'); }
+        function openPopup() { document.getElementById('successPopup').style.display = 'flex'; }
+        function closePopup() { document.getElementById('successPopup').style.display = 'none'; window.location.href = 'index.html'; }
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => { e.preventDefault(); if (document.getElementById('fullname').value) openPopup(); else alert('Please enter your full name'); });
+        document.getElementById('cancelBtn')?.addEventListener('click', () => { document.getElementById('contactForm')?.reset(); });
+        initHeaderScroll();
+        initMobileMenu();
+    </script>
+</body>
+
+</html>
