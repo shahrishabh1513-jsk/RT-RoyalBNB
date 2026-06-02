@@ -39,15 +39,18 @@
                 <div><label>Check-out Date</label><input type="date" id="checkoutDate" class="date-input"></div>
                 <div><label>Number of Guests</label><input type="number" id="guestCount" min="1" max="10" value="2"
                         class="guest-input"></div>
-            </div><button class="next-btn" onclick="goToStep(2)">Continue to Room Selection <i
+            </div>
+            <div id="dateError" class="error-msg"></div>
+            <button class="next-btn" onclick="validateAndGoToStep2()">Continue to Room Selection <i
                     class="fas fa-arrow-right"></i></button>
         </div>
 
         <div id="step2Content" class="step-content">
             <h2>Choose Your Room</h2>
             <div id="roomOptionsList" class="room-options-grid"></div>
+            <div id="roomError" class="error-msg"></div>
             <div class="step-buttons"><button class="prev-btn" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i>
-                    Back</button><button class="next-btn" onclick="goToStep(3)">Continue to Details <i
+                    Back</button><button class="next-btn" onclick="validateAndGoToStep3()">Continue to Details <i
                         class="fas fa-arrow-right"></i></button></div>
         </div>
 
@@ -59,8 +62,9 @@
                 <div><input type="tel" id="custPhone" placeholder="Phone Number" required></div>
                 <div><input type="text" id="custAddress" placeholder="Complete Address" required></div>
             </div>
+            <div id="detailsError" class="error-msg"></div>
             <div class="step-buttons"><button class="prev-btn" onclick="goToStep(2)"><i class="fas fa-arrow-left"></i>
-                    Back</button><button class="next-btn" onclick="goToStep(4)">Proceed to Payment <i
+                    Back</button><button class="next-btn" onclick="validateAndGoToStep4()">Proceed to Payment <i
                         class="fas fa-arrow-right"></i></button></div>
         </div>
 
@@ -116,6 +120,7 @@
         let selectedProperty = null, selectedRoom = null, totalNights = 1, basePrice = 0, finalPrice = 0, couponApplied = false, couponDiscount = 0;
         const urlParams = new URLSearchParams(window.location.search);
         const propertyId = parseInt(urlParams.get('id'));
+        let isDateValid = false, isRoomSelected = false;
 
         function loadPropertyAndRooms() {
             if (typeof royalProperties === 'undefined') { document.getElementById('roomOptionsList').innerHTML = '<p>Loading properties...</p>'; return; }
@@ -124,16 +129,81 @@
             document.getElementById('roomOptionsList').innerHTML = property.rooms.map(room => `<div class="room-card" data-room='${JSON.stringify(room)}' onclick="selectRoom(this, '${room.name}', ${room.price})"><div class="room-img"><img src="${room.img || property.img}" onerror="this.src='https://placehold.co/400x300'"></div><div class="room-info"><h3>${room.name}</h3><p>${room.desc || 'Luxury room with modern amenities'}</p><div class="room-details"><span><i class="fas fa-bed"></i> ${room.beds || 1} Bed</span><span><i class="fas fa-users"></i> ${room.maxGuests || 2} Guests</span><span><i class="fas fa-wifi"></i> Free WiFi</span></div><div class="room-price">${room.price.toLocaleString('en-IN')} <span>/ night</span></div></div></div>`).join('');
         }
 
-        function selectRoom(el, name, price) { document.querySelectorAll('.room-card').forEach(c => c.classList.remove('selected')); el.classList.add('selected'); selectedRoom = { name, price }; basePrice = price; calculateTotal(); }
+        function validateAndGoToStep2() {
+            const checkin = document.getElementById('checkinDate').value;
+            const checkout = document.getElementById('checkoutDate').value;
+            if (!checkin || !checkout) {
+                document.getElementById('dateError').innerHTML = '<span style="color:red">Please select both check-in and check-out dates.</span>';
+                return;
+            }
+            if (new Date(checkin) >= new Date(checkout)) {
+                document.getElementById('dateError').innerHTML = '<span style="color:red">Check-out date must be after check-in date.</span>';
+                return;
+            }
+            document.getElementById('dateError').innerHTML = '';
+            isDateValid = true;
+            calculateTotal();
+            goToStep(2);
+        }
 
-        function calculateTotal() { const checkin = document.getElementById('checkinDate').value, checkout = document.getElementById('checkoutDate').value; if (checkin && checkout) totalNights = Math.max(1, Math.ceil((new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24))); let subtotal = basePrice * totalNights; let gst = subtotal * 0.05, tax = subtotal * 0.025; finalPrice = subtotal + gst + tax - couponDiscount; document.getElementById('billingSummary').innerHTML = `<div class="bill-row"><span>Room Charges (${totalNights} night${totalNights > 1 ? 's' : ''})</span><span>₹${subtotal.toLocaleString('en-IN')}</span></div><div class="bill-row"><span>GST (5%)</span><span>₹${gst.toLocaleString('en-IN')}</span></div><div class="bill-row"><span>Tax (2.5%)</span><span>₹${tax.toLocaleString('en-IN')}</span></div>${couponDiscount > 0 ? `<div class="bill-row discount"><span>Coupon Discount</span><span>-₹${couponDiscount.toLocaleString('en-IN')}</span></div>` : ''}<div class="bill-row total"><span>Total Amount</span><span>₹${finalPrice.toLocaleString('en-IN')}</span></div>`; }
+        function validateAndGoToStep3() {
+            if (!selectedRoom) {
+                document.getElementById('roomError').innerHTML = '<span style="color:red">Please select a room to continue.</span>';
+                return;
+            }
+            document.getElementById('roomError').innerHTML = '';
+            isRoomSelected = true;
+            goToStep(3);
+        }
+
+        function validateAndGoToStep4() {
+            const name = document.getElementById('custName').value;
+            const email = document.getElementById('custEmail').value;
+            const phone = document.getElementById('custPhone').value;
+            if (!name || !email || !phone) {
+                document.getElementById('detailsError').innerHTML = '<span style="color:red">Please fill all your details.</span>';
+                return;
+            }
+            document.getElementById('detailsError').innerHTML = '';
+            calculateTotal();
+            goToStep(4);
+        }
+
+        function selectRoom(el, name, price) {
+            document.querySelectorAll('.room-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedRoom = { name, price };
+            basePrice = price;
+            calculateTotal();
+            document.getElementById('roomError').innerHTML = '';
+        }
+
+        function calculateTotal() {
+            const checkin = document.getElementById('checkinDate').value, checkout = document.getElementById('checkoutDate').value;
+            if (checkin && checkout) totalNights = Math.max(1, Math.ceil((new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24)));
+            let subtotal = basePrice * totalNights;
+            let gst = subtotal * 0.05, tax = subtotal * 0.025;
+            finalPrice = subtotal + gst + tax - couponDiscount;
+            document.getElementById('billingSummary').innerHTML = `<div class="bill-row"><span>Room Charges (${totalNights} night${totalNights > 1 ? 's' : ''})</span><span>₹${subtotal.toLocaleString('en-IN')}</span></div><div class="bill-row"><span>GST (5%)</span><span>₹${gst.toLocaleString('en-IN')}</span></div><div class="bill-row"><span>Tax (2.5%)</span><span>₹${tax.toLocaleString('en-IN')}</span></div>${couponDiscount > 0 ? `<div class="bill-row discount"><span>Coupon Discount</span><span>-₹${couponDiscount.toLocaleString('en-IN')}</span></div>` : ''}<div class="bill-row total"><span>Total Amount</span><span>₹${finalPrice.toLocaleString('en-IN')}</span></div>`;
+        }
 
         function applyCoupon() { const code = document.getElementById('couponCode').value; if (code === 'ROYAL10' && !couponApplied) { couponDiscount = basePrice * totalNights * 0.1; couponApplied = true; document.getElementById('couponMsg').innerHTML = '<span style="color:green">Coupon applied! 10% off</span>'; calculateTotal(); } else if (couponApplied) document.getElementById('couponMsg').innerHTML = '<span style="color:orange">Coupon already applied</span>'; else document.getElementById('couponMsg').innerHTML = '<span style="color:red">Invalid coupon code. Try ROYAL10</span>'; }
 
         let currentStep = 1;
-        function goToStep(step) { if (step === 2 && (!selectedRoom || !document.getElementById('checkinDate').value)) { alert('Please select dates and a room first'); return; } if (step === 3 && !document.getElementById('custName').value) { alert('Please enter your details'); return; } document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active')); document.getElementById(`step${step}Content`).classList.add('active'); document.querySelectorAll('.step').forEach((s, i) => { if (i + 1 <= step) s.classList.add('active'); else s.classList.remove('active'); }); currentStep = step; if (step === 4) calculateTotal(); }
+        function goToStep(step) {
+            document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+            document.getElementById(`step${step}Content`).classList.add('active');
+            document.querySelectorAll('.step').forEach((s, i) => { if (i + 1 <= step) s.classList.add('active'); else s.classList.remove('active'); });
+            currentStep = step;
+            if (step === 4) calculateTotal();
+        }
 
-        function processPayment() { if (!document.getElementById('custName').value) { alert('Please complete all details'); goToStep(3); return; } const paymentMethod = document.querySelector('input[name="payment"]:checked').value; const bookingData = { bookingId: 'RT' + Date.now(), property: selectedProperty, room: selectedRoom, customer: { name: document.getElementById('custName').value, email: document.getElementById('custEmail').value, phone: document.getElementById('custPhone').value, address: document.getElementById('custAddress').value }, checkin: document.getElementById('checkinDate').value, checkout: document.getElementById('checkoutDate').value, guests: document.getElementById('guestCount').value, nights: totalNights, subtotal: basePrice * totalNights, gst: (basePrice * totalNights * 0.05), tax: (basePrice * totalNights * 0.025), discount: couponDiscount, total: finalPrice, paymentMethod }; localStorage.setItem('currentBooking', JSON.stringify(bookingData)); document.getElementById('paymentPopup').style.display = 'flex'; }
+        function processPayment() {
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+            const bookingData = { bookingId: 'RT' + Date.now(), property: selectedProperty, room: selectedRoom, customer: { name: document.getElementById('custName').value, email: document.getElementById('custEmail').value, phone: document.getElementById('custPhone').value, address: document.getElementById('custAddress').value }, checkin: document.getElementById('checkinDate').value, checkout: document.getElementById('checkoutDate').value, guests: document.getElementById('guestCount').value, nights: totalNights, subtotal: basePrice * totalNights, gst: (basePrice * totalNights * 0.05), tax: (basePrice * totalNights * 0.025), discount: couponDiscount, total: finalPrice, paymentMethod };
+            localStorage.setItem('currentBooking', JSON.stringify(bookingData));
+            document.getElementById('paymentPopup').style.display = 'flex';
+        }
 
         function viewInvoice() { window.location.href = 'invoice.html'; }
         function closePaymentPopup() { document.getElementById('paymentPopup').style.display = 'none'; window.location.href = 'index.html'; }
@@ -144,6 +214,7 @@
         document.addEventListener('DOMContentLoaded', loadPropertyAndRooms);
 
         window.selectRoom = selectRoom; window.goToStep = goToStep; window.applyCoupon = applyCoupon; window.processPayment = processPayment; window.viewInvoice = viewInvoice; window.closePaymentPopup = closePaymentPopup;
+        window.validateAndGoToStep2 = validateAndGoToStep2; window.validateAndGoToStep3 = validateAndGoToStep3; window.validateAndGoToStep4 = validateAndGoToStep4;
     </script>
 </body>
 
