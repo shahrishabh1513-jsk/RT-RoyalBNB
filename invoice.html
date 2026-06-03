@@ -35,14 +35,63 @@
             </div>
         </div>
     </div>
+
+    <footer class="royal-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
+                <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
+                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
+                        href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
+                            class="fab fa-github"></i></a></div>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Contact Us</h3>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Vadodara, Gujarat - 391760</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-phone-alt"></i>
+                    <div>
+                        <p>+91 78619 76128</p>
+                    </div>
+                </div>
+                <div class="contact-item"><i class="fas fa-envelope"></i>
+                    <div>
+                        <p>shahrishu1515@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="copyright">
+                    <p>&copy; 2025 RT RoyalBNB</p>
+                </div>
+                <div class="design-credit">
+                    <p>Design & Developed by <span>Rishabh Shah</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
     <script>
         const booking = JSON.parse(localStorage.getItem('currentBooking'));
         function formatDate(dateStr) { if (!dateStr) return 'Not selected'; const d = new Date(dateStr); return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }); }
         function loadInvoice() {
             if (!booking) { document.getElementById('invoiceContent').innerHTML = '<p>No booking found. Please make a booking first.</p><a href="listing.html" class="print-btn" style="display:inline-block;margin-top:20px">Browse Properties</a>'; return; }
             document.getElementById('invoiceContent').innerHTML = `<div class="info-grid"><div class="info-box"><h4>Booking ID</h4><p>${booking.bookingId}</p></div><div class="info-box"><h4>Booking Date</h4><p>${new Date().toLocaleDateString('en-IN')}</p></div><div class="info-box"><h4>Guest Name</h4><p>${booking.customer.name}</p></div><div class="info-box"><h4>Email & Phone</h4><p>${booking.customer.email}<br>${booking.customer.phone}</p></div><div class="info-box"><h4>Address</h4><p>${booking.customer.address}</p></div><div class="info-box"><h4>Payment Method</h4><p>${booking.paymentMethod === 'online' ? 'Online Payment' : booking.paymentMethod === 'cash' ? 'Cash on Arrival' : 'Card at Hotel'}</p></div></div>
-            <table class="booking-details-table"><tr><th>Hotel Property</th><td colspan="3">${booking.property.name} - ${booking.property.location}</td><tr><th>Room Type</th><td colspan="3">${booking.room.name}</td></tr>
-            <tr><th>Check-in Date</th><td>${formatDate(booking.checkin)}</td><th>Check-out Date</th><td>${formatDate(booking.checkout)}</td></tr>
+            <table class="booking-details-table"><tr><th>Hotel Property</th><td colspan="3">${booking.property.name} - ${booking.property.location}</td></tr><tr><th>Room Type</th><td colspan="3">${booking.room.name}</td></tr><tr><th>Check-in Date</th><td>${formatDate(booking.checkin)}</td><th>Check-out Date</th><td>${formatDate(booking.checkout)}</td></tr>
             <tr><th>Number of Nights</th><td>${booking.nights} night${booking.nights > 1 ? 's' : ''}</td><th>Guests</th><td>${booking.guests} Guest${booking.guests > 1 ? 's' : ''}</td></tr></table>
             <div class="total-section"><div class="total-row"><span>Room Charges (${booking.nights} nights)</span><span>₹${booking.subtotal.toLocaleString('en-IN')}</span></div><div class="total-row"><span>GST (5%)</span><span>₹${booking.gst.toLocaleString('en-IN')}</span></div><div class="total-row"><span>Tax (2.5%)</span><span>₹${booking.tax.toLocaleString('en-IN')}</span></div>${booking.discount > 0 ? `<div class="total-row"><span>Discount</span><span>-₹${booking.discount.toLocaleString('en-IN')}</span></div>` : ''}<div class="grand-total"><span>Total Amount Paid</span><span>₹${booking.total.toLocaleString('en-IN')}</span></div></div>
             <div style="background:#FFF6EA;border-radius:16px;padding:15px;margin-top:20px"><p><i class="fas fa-check-circle" style="color:#4CAF50"></i> <strong>Booking Confirmed!</strong> Your royal stay has been successfully booked.</p><p style="margin-top:10px;font-size:0.85rem">Please carry this invoice and a valid ID proof at check-in.</p></div>`;

@@ -14,17 +14,24 @@
 </head>
 
 <body>
-    <nav id="navBar" class="navBar-white">
-        <a href="index.html" class="logo-link"><img src="./image/logo/RT_LOGO_BG1.png" class="logo"></a>
-        <ul class="nav-link">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="listing.html" class="active">Heritage Homes</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="register.html">Contact Us</a></li>
-        </ul>
-        <a href="listing.html" class="register-btn"><i class="fas fa-crown"></i> Book Now</a>
-        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
-    </nav>
+    <!-- Header - Same as index.html -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listing.html" class="active">Heritage Homes</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="listing.html" class="book-now-btn">Book Now <i class="fas fa-arrow-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
 
     <div class="container">
         <div class="list-container">
@@ -58,9 +65,6 @@
                     <div class="filter"><input type="checkbox" data-dest="gujarat">
                         <p>Gujarat</p><span>(0)</span>
                     </div>
-                    <div class="filter"><input type="checkbox" data-dest="daman">
-                        <p>Daman</p><span>(0)</span>
-                    </div>
                     <div class="sidebar-link"><a href="#" id="clearFiltersBtn">Clear All Filters</a></div>
                 </div>
             </div>
@@ -72,13 +76,22 @@
         </div>
     </div>
 
+    <!-- Footer - Same as index.html -->
     <footer class="royal-footer">
         <div class="footer-container">
-            <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
-                <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
-                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
-                        href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
-                            class="fab fa-github"></i></a></div>
+            <div class="footer-section footer-about">
+                <img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+                <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
+                <p class="footer-desc">Experience royal living across India's finest palace stays, heritage havelis, and
+                    luxury retreats.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
+                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" class="social-link project"><i
+                            class="fas fa-code-branch"></i></a>
+                </div>
             </div>
             <div class="footer-section footer-links">
                 <h3>Quick Links</h3>
@@ -86,6 +99,7 @@
                     <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
                     <li><a href="listing.html"><i class="fas fa-chevron-right"></i> Heritage Homes</a></li>
                     <li><a href="reviews.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section footer-contact">
@@ -110,17 +124,16 @@
         <div class="footer-bottom">
             <div class="footer-bottom-container">
                 <div class="copyright">
-                    <p>&copy; 2025 RT RoyalBNB</p>
+                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
                 </div>
                 <div class="design-credit">
-                    <p>Design & Developed by <span>Rishabh Shah</span></p>
+                    <p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="./js/script.js"></script>
-    <script>function toggleMenu() { document.getElementById('navBar').classList.toggle('hidemenu'); }</script>
 </body>
 
 </html>

@@ -126,8 +126,10 @@ function updatePagination(total) {
     for (let i = 1; i <= totalPages; i++) { pagesHtml += `<div class="page-number ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</div>`; }
     pageNumbersDiv.innerHTML = pagesHtml;
     document.querySelectorAll('.page-number').forEach(btn => { btn.addEventListener('click', () => { currentPage = parseInt(btn.dataset.page); renderProperties(); window.scrollTo({ top: 300, behavior: 'smooth' }); }); });
-    document.getElementById('prevPage').style.visibility = currentPage > 1 ? 'visible' : 'hidden';
-    document.getElementById('nextPage').style.visibility = currentPage < totalPages ? 'visible' : 'hidden';
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+    if (prevBtn) prevBtn.style.visibility = currentPage > 1 ? 'visible' : 'hidden';
+    if (nextBtn) nextBtn.style.visibility = currentPage < totalPages ? 'visible' : 'hidden';
 }
 
 function setupFilters() {
@@ -136,9 +138,11 @@ function setupFilters() {
     document.getElementById('clearFiltersBtn')?.addEventListener('click', (e) => { e.preventDefault(); document.querySelectorAll('.filter input').forEach(cb => cb.checked = false); activeFilters = { types: [], destinations: [] }; currentPage = 1; renderProperties(); });
 }
 
+// Pagination button handlers
 document.getElementById('prevPage')?.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderProperties(); window.scrollTo({ top: 300, behavior: 'smooth' }); } });
-document.getElementById('nextPage')?.addEventListener('click', () => { if (currentPage < Math.ceil(royalProperties.length / itemsPerPage)) { currentPage++; renderProperties(); window.scrollTo({ top: 300, behavior: 'smooth' }); } });
+document.getElementById('nextPage')?.addEventListener('click', () => { const totalPages = Math.ceil(royalProperties.length / itemsPerPage); if (currentPage < totalPages) { currentPage++; renderProperties(); window.scrollTo({ top: 300, behavior: 'smooth' }); } });
 
+// Initialize based on page
 document.addEventListener('DOMContentLoaded', () => {
     const filename = window.location.pathname.split('/').pop();
     initMobileMenu();
@@ -147,4 +151,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.royalProperties = royalProperties;
-window.toggleMenu = function () { document.querySelector('.nav-menu')?.classList.toggle('active'); };

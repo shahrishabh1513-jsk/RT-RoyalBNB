@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <header class="site-header" id="siteHeader">
+    <!-- Header - Same as index.html -->
+    <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="./image/logo/RT_LOGO_BG1.png" class="logo logo-light">
-                <img src="./image/logo/RT_LOGO_BG2.png" class="logo logo-dark">
+                <img src="./image/logo/RT_LOGO_BG1.png" alt="RT RoyalBNB Logo" class="logo">
             </a>
             <nav class="main-nav">
                 <ul class="nav-menu">
@@ -38,7 +38,6 @@
             <h1>Royal <span class="gold-text">Concierge</span></h1>
             <p>We're here to assist you with your royal journey</p>
         </div>
-
         <div class="contact-wrapper">
             <div class="contact-info-card">
                 <div class="royal-badge"><i class="fas fa-crown"></i>
@@ -67,24 +66,8 @@
                             <p>royal@rtroyalbnb.com</p>
                         </div>
                     </div>
-                    <div class="detail-item"><i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Support Hours</h4>
-                            <p>Monday - Sunday</p>
-                            <p>24/7 Royal Assistance</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-social">
-                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/" class="social-link"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk" class="social-link"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" class="social-link"><i
-                            class="fas fa-code-branch"></i></a>
                 </div>
             </div>
-
             <div class="contact-form-card">
                 <div class="form-header">
                     <h2>Royal Registration</h2>
@@ -130,14 +113,22 @@
         </div>
     </div>
 
+    <!-- Footer - Same as index.html -->
     <footer class="royal-footer">
         <div class="footer-container">
-            <div class="footer-section footer-about"><img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
+            <div class="footer-section footer-about">
+                <img src="./image/logo/RT_LOGO_BG2.png" class="footer-logo">
                 <p class="footer-tagline">India's Premier Heritage Hospitality Platform</p>
-                <div class="footer-social"><a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
-                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a><a
-                        href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
-                            class="fab fa-github"></i></a></div>
+                <p class="footer-desc">Experience royal living across India's finest palace stays, heritage havelis, and
+                    luxury retreats.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"
+                        class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk" class="social-link github"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB" class="social-link project"><i
+                            class="fas fa-code-branch"></i></a>
+                </div>
             </div>
             <div class="footer-section footer-links">
                 <h3>Quick Links</h3>
@@ -170,10 +161,10 @@
         <div class="footer-bottom">
             <div class="footer-bottom-container">
                 <div class="copyright">
-                    <p>&copy; 2025 RT RoyalBNB</p>
+                    <p>&copy; 2025 RT RoyalBNB. All rights reserved.</p>
                 </div>
                 <div class="design-credit">
-                    <p>Design & Developed by <span>Rishabh Shah</span></p>
+                    <p>Design & Developed with <i class="fas fa-heart"></i> by <span>Rishabh Shah</span></p>
                 </div>
             </div>
         </div>
@@ -181,13 +172,10 @@
 
     <script src="./js/script.js"></script>
     <script>
-        function toggleMenu() { document.getElementById('siteHeader').classList.toggle('hidemenu'); }
         function openPopup() { document.getElementById('successPopup').style.display = 'flex'; }
         function closePopup() { document.getElementById('successPopup').style.display = 'none'; window.location.href = 'index.html'; }
         document.getElementById('contactForm')?.addEventListener('submit', (e) => { e.preventDefault(); if (document.getElementById('fullname').value) openPopup(); else alert('Please enter your full name'); });
         document.getElementById('cancelBtn')?.addEventListener('click', () => { document.getElementById('contactForm')?.reset(); });
-        initHeaderScroll();
-        initMobileMenu();
     </script>
 </body>
 
