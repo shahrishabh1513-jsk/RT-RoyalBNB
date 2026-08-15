@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6B0F1A,100:D4AF37&height=200&section=header&text=RT%20RoyalBNB&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Royal%20Stays%20%26%20Heritage%20Hotels%20Across%20India%20👑&descAlignY=62&descSize=16"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6B0F1A,100:D4AF37&height=200&section=header&text=RT%20RoyalBNB&fontSize=48&fontColor=ffffff&fontAlignY=45"/>
 
-<img src="https://github.com/user-attachments/assets/d6402202-ceae-4d65-a81f-fb9e9730a0e6" width="140" alt="RT RoyalBNB Logo"/>
+<img src="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/image/logo/RT_LOGO_BG1.png" width="140" alt="RT RoyalBNB Logo"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=D4AF37&center=true&vCenter=true&width=760&lines=India's+Premier+Heritage+Hospitality+Platform;Palace+Stays+%7C+Havelis+%7C+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Heritage+Property;Built+with+HTML%2C+CSS+%26+JavaScript" alt="Typing SVG" />
+<h3>Royal Stays & Heritage Hotels Across India</h3>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=D4AF37&center=true&vCenter=true&width=760&lines=India+Premier+Heritage+Hospitality+Platform;Palace+Stays+Havelis+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Property;Built+with+HTML+CSS+and+JavaScript" alt="Typing SVG" />
 
 <br/>
 
@@ -300,6 +302,6 @@ cd RT-RoyalBNB
 
 **Made with 👑 & ❤️ by Rishabh Shah**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:D4AF37,100:6B0F1A&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:D4AF37,100:6B0F1A&height=100&section=footer"/>
 
 </div>
