@@ -2,7 +2,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6B0F1A,100:D4AF37&height=200&section=header&text=RT%20RoyalBNB&fontSize=48&fontColor=ffffff&fontAlignY=45"/>
 
-<img src="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/image/logo/RT_LOGO_BG1.png" width="140" alt="RT RoyalBNB Logo"/>
+<br>
+<img src="https://github.com/user-attachments/assets/1bdc799f-4d60-4b86-b0d3-fcd493d925be" width="240" alt="RT RoyalBNB Logo"/>
 
 <h3>Royal Stays & Heritage Hotels Across India</h3>
 
