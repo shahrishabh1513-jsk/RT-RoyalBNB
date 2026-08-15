@@ -2,6 +2,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6B0F1A,100:D4AF37&height=200&section=header&text=RT%20RoyalBNB&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Royal%20Stays%20%26%20Heritage%20Hotels%20Across%20India%20👑&descAlignY=62&descSize=16"/>
 
+<img src="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/image/logo/RT_LOGO_BG1.png" width="140" alt="RT RoyalBNB Logo"/>
+
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=D4AF37&center=true&vCenter=true&width=760&lines=India's+Premier+Heritage+Hospitality+Platform;Palace+Stays+%7C+Havelis+%7C+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Heritage+Property;Built+with+HTML%2C+CSS+%26+JavaScript" alt="Typing SVG" />
 
 <br/>
@@ -25,6 +27,9 @@
 <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
 
 <br/>
 
