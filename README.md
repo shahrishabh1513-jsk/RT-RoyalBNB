@@ -108,7 +108,6 @@
 
 </div>
 
-> 💡 First-load screenshots can occasionally appear blank on `mshots` before the cache warms up — refresh once if that happens; it self-corrects within a minute.
 
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
 
