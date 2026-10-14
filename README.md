@@ -7,26 +7,24 @@
 <img src="https://github.com/user-attachments/assets/1bdc799f-4d60-4b86-b0d3-fcd493d925be" width="240" alt="RT RoyalBNB Logo"/>
 </td>
 <td width="15%" align="center">
-<img src="https://github.com/user-attachments/assets/41de0edc-f0a3-474a-9156-d8b3d10d41ba" width="600" alt="Shah Rishabh badge logo"/>
+<img src="https://github.com/user-attachments/assets/41de0edc-f0a3-474a-9156-d8b3d10d41ba" width="110" alt="Shah Rishabh badge logo"/>
 </td>
 </tr>
 </table>
 
 <div align="center">
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A237E,50:C2185B,100:FFB300&height=150&section=header&text=Royal%20Stays%20Across%20India&fontSize=34&fontColor=ffffff&fontAlignY=45" width="100%"/>
 
-<h3>Royal Stays & Heritage Hotels Across India</h3>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=D4AF37&center=true&vCenter=true&width=760&lines=India+Premier+Heritage+Hospitality+Platform;Palace+Stays+Havelis+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Property;Built+with+HTML+CSS+and+JavaScript" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=E91E63&center=true&vCenter=true&width=760&lines=India+Premier+Heritage+Hospitality+Platform;Palace+Stays+Havelis+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Property;Built+with+HTML+CSS+and+JavaScript" alt="Typing SVG" />
 
 <br/>
 
-<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/"><img src="https://img.shields.io/badge/LIVE_DEMO-Visit_Site-6B0F1A?style=for-the-badge&logo=googlechrome&logoColor=D4AF37"/></a>
+<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/"><img src="https://img.shields.io/badge/LIVE_DEMO-Visit_Site-1A237E?style=for-the-badge&logo=googlechrome&logoColor=FFB300"/></a>
 <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB"><img src="https://img.shields.io/badge/REPOSITORY-View_Code-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB/stargazers"><img src="https://img.shields.io/badge/STAR-Support_This_Repo-D4AF37?style=for-the-badge&logo=github&logoColor=black"/></a>
+<a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB/stargazers"><img src="https://img.shields.io/badge/STAR-Support_This_Repo-FFB300?style=for-the-badge&logo=github&logoColor=black"/></a>
 
-<br/>
+<br/><br/>
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
@@ -35,7 +33,7 @@
 
 <br/>
 
-<img src="https://img.shields.io/github/last-commit/shahrishabh1513-jsk/RT-RoyalBNB?style=flat-square&color=6B0F1A&label=Last%20Updated"/>
+<img src="https://img.shields.io/github/last-commit/shahrishabh1513-jsk/RT-RoyalBNB?style=flat-square&color=C2185B&label=Last%20Updated"/>
 <img src="https://img.shields.io/badge/Status-Live%20✅-brightgreen?style=flat-square"/>
 <img src="https://img.shields.io/badge/Responsive-100%25-success?style=flat-square"/>
 <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
@@ -43,7 +41,6 @@
 </div>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
 
 <br/>
 
@@ -59,19 +56,19 @@
 
 <div align="center">
 
-[![Preview](https://img.shields.io/badge/🔍_Preview-6B0F1A?style=for-the-badge)](#-live-preview)
-[![About](https://img.shields.io/badge/📖_About-7C1A22?style=for-the-badge)](#-about-the-project)
-[![Features](https://img.shields.io/badge/✨_Features-8D242A?style=for-the-badge)](#-key-features)
-[![Site Map](https://img.shields.io/badge/🗺️_Site_Map-9E2E31?style=for-the-badge)](#-site-map)
-[![Workflow](https://img.shields.io/badge/🧭_Workflow-AF3839?style=for-the-badge)](#-user-workflow)
-[![Tech Stack](https://img.shields.io/badge/🛠️_Tech_Stack-C04240?style=for-the-badge)](#️-tech-stack)
-[![Structure](https://img.shields.io/badge/📂_Structure-D14C47?style=for-the-badge&labelColor=A83A3A)](#-folder-structure)
-[![Setup](https://img.shields.io/badge/🚀_Setup-D4AF37?style=for-the-badge&logoColor=black)](#-getting-started)
-[![Connect](https://img.shields.io/badge/🤝_Connect-D4AF37?style=for-the-badge&logoColor=black)](#-connect)
+[![Preview](https://img.shields.io/badge/🔍_Preview-1A237E?style=for-the-badge)](#-live-preview)
+[![About](https://img.shields.io/badge/📖_About-442075?style=for-the-badge)](#-about-the-project)
+[![Features](https://img.shields.io/badge/✨_Features-6E1E6D?style=for-the-badge)](#-key-features)
+[![Site Map](https://img.shields.io/badge/🗺️_Site_Map-981B64?style=for-the-badge)](#-site-map)
+[![Workflow](https://img.shields.io/badge/🧭_Workflow-C2185B?style=for-the-badge)](#-user-workflow)
+[![Tech Stack](https://img.shields.io/badge/🛠️_Tech_Stack-D13F44?style=for-the-badge)](#️-tech-stack)
+[![Structure](https://img.shields.io/badge/📂_Structure-E1662E?style=for-the-badge)](#-folder-structure)
+[![Setup](https://img.shields.io/badge/🚀_Setup-F08C17?style=for-the-badge&logoColor=black)](#-getting-started)
+[![Connect](https://img.shields.io/badge/🤝_Connect-FFB300?style=for-the-badge&logoColor=black)](#-connect)
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:6B0F1A,100:D4AF37&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
 
 ## 🔍 Live Preview
 
@@ -103,20 +100,20 @@
 <br/>
 
 <a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html" target="_blank">
-  <img src="https://img.shields.io/badge/👑_BOOK_YOUR_STAY-6B0F1A?style=for-the-badge&logoColor=D4AF37"/>
+  <img src="https://img.shields.io/badge/👑_BOOK_YOUR_STAY-C2185B?style=for-the-badge"/>
 </a>
 
 </div>
 
+> 💡 First-load screenshots can occasionally appear blank before the screenshot cache warms up — refresh once if that happens.
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
 
 ## 📖 About The Project
 
-**RT RoyalBNB** is a premium, fully responsive **heritage hospitality platform** connecting travelers with palace stays, heritage havelis, and luxury retreats across India. The site presents curated royal properties, exclusive travel packages, guest reviews, and a host-onboarding flow for property owners — wrapped in an elegant maroon-and-gold "royal heritage" design language.
+**RT RoyalBNB** is a premium, fully responsive **heritage hospitality platform** connecting travelers with palace stays, heritage havelis, and luxury retreats across India. The site presents curated royal properties, exclusive travel packages, guest reviews, and a host-onboarding flow for property owners — wrapped in an elegant "royal heritage" design language.
 
 This project was built to practice **premium hospitality/booking website design** — hero storytelling, curated property showcases, trust-building sections (ratings, guest counts), and dual user flows for both **guests booking stays** and **hosts listing properties**.
-
 
 <div align="center">
 
@@ -129,7 +126,7 @@ This project was built to practice **premium hospitality/booking website design*
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:6B0F1A,100:D4AF37&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
 
 ## ✨ Key Features
 
@@ -168,7 +165,7 @@ This project was built to practice **premium hospitality/booking website design*
 
 ### 🎨 Design & UX
 - 📱 Fully **responsive** across all devices
-- 👑 Elegant maroon & gold "royal" visual identity
+- 👑 Elegant "royal heritage" visual identity
 - 🖼️ Rich imagery-driven property showcases
 - 🔘 Dual CTAs: "Book Your Stay" & "Plan Your Wedding"
 
@@ -176,7 +173,7 @@ This project was built to practice **premium hospitality/booking website design*
 </tr>
 </table>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
 
 ## 🗺️ Site Map
 
@@ -191,7 +188,7 @@ This project was built to practice **premium hospitality/booking website design*
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:6B0F1A,100:D4AF37&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
 
 ## 🧭 User Workflow
 
@@ -207,7 +204,7 @@ flowchart LR
     G -.-> H[🏛️ Property Listed]
 ```
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
 
 ## 🛠️ Tech Stack
 
@@ -223,7 +220,7 @@ flowchart LR
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:6B0F1A,100:D4AF37&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
 
 ## 📂 Folder Structure
 
@@ -256,7 +253,7 @@ RT-RoyalBNB/
 
 </details>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
 
 ## 🚀 Getting Started
 
@@ -273,7 +270,7 @@ cd RT-RoyalBNB
 
 ✅ No build tools, dependencies, or installations required — it's a pure **HTML/CSS/JS** project. Just open and explore India's heritage stays!
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:6B0F1A,100:D4AF37&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
 
 ## 🧭 Roadmap
 
@@ -285,7 +282,7 @@ cd RT-RoyalBNB
 - [ ] 🔐 Guest & host account system
 - [ ] 🌙 Dark mode
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:D4AF37,100:6B0F1A&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
 
 ## 🤝 Connect
 
@@ -293,7 +290,7 @@ cd RT-RoyalBNB
 
 **Rishabh Alpeshabhai Shah**
 
-<a href="https://rishabh-shah-portfolio.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-6B0F1A?style=for-the-badge&logo=netlify&logoColor=white"/></a>
+<a href="https://rishabh-shah-portfolio.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-1A237E?style=for-the-badge&logo=netlify&logoColor=FFB300"/></a>
 <a href="https://www.linkedin.com/in/rishabh-alpeshabhai-shah-91b9072a6/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="mailto:shahrishu1515@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://github.com/shahrishabh1513-jsk"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
@@ -306,12 +303,12 @@ cd RT-RoyalBNB
 
 ### ⭐ If you like this project, give it a star — it helps a lot!
 
-<img src="https://komarev.com/ghpvc/?username=rt-royalbnb&label=Repo%20Views&color=D4AF37&style=for-the-badge" alt="Repo Views" />
+<img src="https://komarev.com/ghpvc/?username=rt-royalbnb&label=Repo%20Views&color=FFB300&style=for-the-badge" alt="Repo Views" />
 
 <br/>
 
 **Made with 👑 & ❤️ by Rishabh Shah**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:D4AF37,100:6B0F1A&height=100&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFB300,50:C2185B,100:1A237E&height=100&section=footer"/>
 
 </div>
