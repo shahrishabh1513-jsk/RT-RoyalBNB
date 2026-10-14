@@ -7,7 +7,7 @@
 <img src="https://github.com/user-attachments/assets/1bdc799f-4d60-4b86-b0d3-fcd493d925be" width="240" alt="RT RoyalBNB Logo"/>
 </td>
 <td width="15%" align="center">
-<img src="https://github.com/user-attachments/assets/41de0edc-f0a3-474a-9156-d8b3d10d41ba" width="110" alt="Shah Rishabh badge logo"/>
+<img src="https://github.com/user-attachments/assets/41de0edc-f0a3-474a-9156-d8b3d10d41ba" width="210" alt="Shah Rishabh badge logo"/>
 </td>
 </tr>
 </table>
@@ -15,7 +15,6 @@
 <div align="center">
 
 <br>
-<img src="https://github.com/user-attachments/assets/1bdc799f-4d60-4b86-b0d3-fcd493d925be" width="240" alt="RT RoyalBNB Logo"/>
 
 <h3>Royal Stays & Heritage Hotels Across India</h3>
 
