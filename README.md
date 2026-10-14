@@ -117,7 +117,6 @@
 
 This project was built to practice **premium hospitality/booking website design** — hero storytelling, curated property showcases, trust-building sections (ratings, guest counts), and dual user flows for both **guests booking stays** and **hosts listing properties**.
 
-> 💬 *"Experience Refined Hospitality — Crafted to Make Every Moment Truly Exceptional."*
 
 <div align="center">
 
