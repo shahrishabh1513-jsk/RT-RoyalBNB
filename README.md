@@ -14,52 +14,45 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A237E,50:C2185B,100:FFB300&height=150&section=header&text=Royal%20Stays%20Across%20India&fontSize=34&fontColor=ffffff&fontAlignY=45" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A237E,50:C2185B,100:FFB300&height=170&section=header&text=Royal%20Stays%20Across%20India&fontSize=38&fontColor=ffffff&fontAlignY=45" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=E91E63&center=true&vCenter=true&width=760&lines=India+Premier+Heritage+Hospitality+Platform;Palace+Stays+Havelis+Luxury+Retreats;Book+Royal+Stays+or+List+Your+Property;Built+with+HTML+CSS+and+JavaScript" alt="Typing SVG" />
 
 <br/>
 
-<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/"><img src="https://img.shields.io/badge/LIVE_DEMO-Visit_Site-1A237E?style=for-the-badge&logo=googlechrome&logoColor=FFB300"/></a>
+<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/"><img src="https://img.shields.io/badge/👑_LIVE_DEMO-Visit_The_Site-1A237E?style=for-the-badge"/></a>
+<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html"><img src="https://img.shields.io/badge/🏰_BOOK_YOUR_STAY-Heritage_Homes-C2185B?style=for-the-badge"/></a>
 <a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB"><img src="https://img.shields.io/badge/REPOSITORY-View_Code-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB/stargazers"><img src="https://img.shields.io/badge/STAR-Support_This_Repo-FFB300?style=for-the-badge&logo=github&logoColor=black"/></a>
+<a href="https://github.com/shahrishabh1513-jsk/RT-RoyalBNB/stargazers"><img src="https://img.shields.io/badge/⭐_STAR-Support_This_Repo-FFB300?style=for-the-badge&logoColor=black"/></a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/PROPERTIES-50%2B-C2185B?style=for-the-badge&labelColor=1A237E"/>
+<img src="https://img.shields.io/badge/DESTINATIONS-15%2B-FFB300?style=for-the-badge&labelColor=1A237E"/>
+<img src="https://img.shields.io/badge/RATING-4.8%2F5-C2185B?style=for-the-badge&labelColor=1A237E"/>
+<img src="https://img.shields.io/badge/GUESTS-6K%2B-FFB300?style=for-the-badge&labelColor=1A237E"/>
+<img src="https://img.shields.io/badge/SUPPORT-24%2F7-C2185B?style=for-the-badge&labelColor=1A237E"/>
 
-<br/>
+<br/><br/>
 
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/GitHub_Pages-222?style=flat-square&logo=github&logoColor=white"/>
 <img src="https://img.shields.io/github/last-commit/shahrishabh1513-jsk/RT-RoyalBNB?style=flat-square&color=C2185B&label=Last%20Updated"/>
 <img src="https://img.shields.io/badge/Status-Live%20✅-brightgreen?style=flat-square"/>
 <img src="https://img.shields.io/badge/Responsive-100%25-success?style=flat-square"/>
-<img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
 <br/>
-
-<table align="center">
-<tr>
-<td align="center" width="20%"><sub>PROPERTIES</sub><br><b>50+</b></td>
-<td align="center" width="20%"><sub>DESTINATIONS</sub><br><b>15+</b></td>
-<td align="center" width="20%"><sub>RATING</sub><br><b>4.8 / 5</b></td>
-<td align="center" width="20%"><sub>GUESTS SERVED</sub><br><b>6K+</b></td>
-<td align="center" width="20%"><sub>SUPPORT</sub><br><b>24/7 Concierge</b></td>
-</tr>
-</table>
 
 <div align="center">
 
 [![Preview](https://img.shields.io/badge/🔍_Preview-1A237E?style=for-the-badge)](#-live-preview)
 [![About](https://img.shields.io/badge/📖_About-442075?style=for-the-badge)](#-about-the-project)
 [![Features](https://img.shields.io/badge/✨_Features-6E1E6D?style=for-the-badge)](#-key-features)
-[![Site Map](https://img.shields.io/badge/🗺️_Site_Map-981B64?style=for-the-badge)](#-site-map)
+[![Pages](https://img.shields.io/badge/🗺️_Pages-981B64?style=for-the-badge)](#-site-map)
 [![Workflow](https://img.shields.io/badge/🧭_Workflow-C2185B?style=for-the-badge)](#-user-workflow)
 [![Tech Stack](https://img.shields.io/badge/🛠️_Tech_Stack-D13F44?style=for-the-badge)](#️-tech-stack)
 [![Structure](https://img.shields.io/badge/📂_Structure-E1662E?style=for-the-badge)](#-folder-structure)
@@ -68,30 +61,20 @@
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=4&section=header"/></div>
 
 ## 🔍 Live Preview
 
 <div align="center">
 
-<table>
+<table width="90%">
 <tr>
-<td align="center" width="33%">
-<b>🏠 Home</b><br/><br/>
+<td>🔴 🟡 🟢 &nbsp;&nbsp; <code>shahrishabh1513-jsk.github.io/RT-RoyalBNB</code></td>
+</tr>
+<tr>
+<td align="center">
 <a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2F?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);"/>
-</a>
-</td>
-<td align="center" width="33%">
-<b>🏰 Heritage Homes</b><br/><br/>
-<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2Flisting.html?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);"/>
-</a>
-</td>
-<td align="center" width="33%">
-<b>⭐ Reviews</b><br/><br/>
-<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/reviews.html" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2Freviews.html?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);"/>
+<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2F?w=1400" width="100%" alt="RT RoyalBNB home page"/>
 </a>
 </td>
 </tr>
@@ -99,112 +82,158 @@
 
 <br/>
 
+<table width="90%">
+<tr>
+<td align="center" width="50%">
+<b>🏰 Heritage Homes</b><br/><br/>
 <a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html" target="_blank">
-  <img src="https://img.shields.io/badge/👑_BOOK_YOUR_STAY-C2185B?style=for-the-badge"/>
+<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2Flisting.html?w=1000" width="100%" alt="Heritage Homes page"/>
 </a>
+</td>
+<td align="center" width="50%">
+<b>⭐ Guest Reviews</b><br/><br/>
+<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/reviews.html" target="_blank">
+<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-RoyalBNB%2Freviews.html?w=1000" width="100%" alt="Reviews page"/>
+</a>
+</td>
+</tr>
+</table>
+
+<br/>
+
+<a href="https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html" target="_blank"><img src="https://img.shields.io/badge/👑_BOOK_YOUR_STAY-C2185B?style=for-the-badge"/></a>
 
 </div>
 
-> 💡 First-load screenshots can occasionally appear blank before the screenshot cache warms up — refresh once if that happens.
+> 💡 Screenshots are captured live by a free service — if one shows blank on first load, refresh once and it fills in within a minute.
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=4&section=header"/></div>
 
 ## 📖 About The Project
 
-**RT RoyalBNB** is a premium, fully responsive **heritage hospitality platform** connecting travelers with palace stays, heritage havelis, and luxury retreats across India. The site presents curated royal properties, exclusive travel packages, guest reviews, and a host-onboarding flow for property owners — wrapped in an elegant "royal heritage" design language.
-
-This project was built to practice **premium hospitality/booking website design** — hero storytelling, curated property showcases, trust-building sections (ratings, guest counts), and dual user flows for both **guests booking stays** and **hosts listing properties**.
-
-<div align="center">
-
-| | |
-|---|---|
-| 🏰 **Type** | Heritage Hospitality / Booking Website |
-| 🎯 **Built For** | Practicing premium booking-platform UX/UI |
-| 👑 **Trust Signals** | 4.8/5 rating · Trusted by 6K+ guests · Since 2024 |
-| 🤝 **Dual Flows** | Guest booking flow + Host onboarding flow |
-
-</div>
-
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
-
-## ✨ Key Features
-
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="60%" valign="top">
 
-### 🏰 Heritage Stays
-- ✦ **Most Picked Royal Retreats** curated showcase
-- ✧ **Exclusive Royal Packages** across India
-- 🏨 Full **Heritage Homes** listing page
-- ⭐ Guest **Reviews** page with ratings
+**RT RoyalBNB** is a premium, fully responsive **heritage hospitality platform** connecting travelers with palace stays, heritage havelis, and luxury retreats across India.
 
-</td>
-<td width="50%" valign="top">
+The site presents curated royal properties, exclusive travel packages, guest reviews, and a host-onboarding flow for property owners — wrapped in an elegant "royal heritage" design language.
 
-### 🤝 Host Onboarding
-- 🏛️ "Become a Royal Host" partner program
-- 🎁 Zero commission for 6 months
-- 📸 Free professional photography offer
-- 🛎️ 24/7 host support
+It was built to practice **premium booking-platform design**: hero storytelling, curated property showcases, trust-building sections, and two user flows — **guests booking stays** and **hosts listing properties**.
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="40%" valign="top">
 
-### 📄 Content & Trust
-- ℹ️ **About** section with brand story & stats
-- 📊 Trust badges: 50+ properties, 15+ destinations
-- ✉️ **Contact Us** page with location & phone
-- 💒 Wedding & fine-dining experience highlights
-
-</td>
-<td width="50%" valign="top">
-
-### 🎨 Design & UX
-- 📱 Fully **responsive** across all devices
-- 👑 Elegant "royal heritage" visual identity
-- 🖼️ Rich imagery-driven property showcases
-- 🔘 Dual CTAs: "Book Your Stay" & "Plan Your Wedding"
+| At a glance | |
+|---|---|
+| 🏰 **Type** | Heritage booking website |
+| 🎯 **Focus** | Premium hospitality UX/UI |
+| 👑 **Trust** | 4.8/5 · 6K+ guests · Since 2024 |
+| 🤝 **Flows** | Guest booking + Host onboarding |
 
 </td>
 </tr>
 </table>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=4&section=header"/></div>
+
+## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+
+<img src="https://img.shields.io/badge/🏰_HERITAGE_STAYS-1A237E?style=for-the-badge"/>
+
+<div align="left">
+
+- ✦ **Most Picked Royal Retreats** showcase
+- ✧ **Exclusive Royal Packages** across India
+- 🏨 Full **Heritage Homes** listing page
+- ⭐ Guest **Reviews** page with ratings
+
+</div>
+
+</td>
+<td width="50%" valign="top" align="center">
+
+<img src="https://img.shields.io/badge/🤝_HOST_ONBOARDING-C2185B?style=for-the-badge"/>
+
+<div align="left">
+
+- 🏛️ **"Become a Royal Host"** partner program
+- 🎁 **Zero commission** for 6 months
+- 📸 **Free professional photography** offer
+- 🛎️ **24/7 host support**
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+
+<img src="https://img.shields.io/badge/📄_CONTENT_%26_TRUST-FFB300?style=for-the-badge&logoColor=black"/>
+
+<div align="left">
+
+- ℹ️ **About** section with brand story & stats
+- 📊 Trust badges: 50+ properties, 15+ destinations
+- ✉️ **Contact Us** page with location & phone
+- 💒 Wedding & fine-dining experience highlights
+
+</div>
+
+</td>
+<td width="50%" valign="top" align="center">
+
+<img src="https://img.shields.io/badge/🎨_DESIGN_%26_UX-6E1E6D?style=for-the-badge"/>
+
+<div align="left">
+
+- 📱 Fully **responsive** across all devices
+- 👑 Elegant "royal heritage" visual identity
+- 🖼️ Rich, imagery-driven property showcases
+- 🔘 Dual CTAs: **Book Your Stay** & **Plan Your Wedding**
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=4&section=header"/></div>
 
 ## 🗺️ Site Map
 
 <div align="center">
 
-| Page | Description |
-|:---:|---|
-| 🏠 **Home** (`index.html`) | Hero, most-picked retreats, exclusive packages, about & host CTA |
-| 🏰 **Heritage Homes** (`listing.html`) | Full property listing / booking catalog |
-| ⭐ **Reviews** (`reviews.html`) | Guest reviews & ratings |
-| ✉️ **Contact Us** (`contact.html`) | Location, phone, email & enquiry form |
+| Page | What's on it | Open |
+|:---:|---|:---:|
+| 🏠 **Home** | Hero, most-picked retreats, exclusive packages, about & host CTA | [![Open](https://img.shields.io/badge/OPEN_→-1A237E?style=flat-square)](https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/) |
+| 🏰 **Heritage Homes** | Full property listing / booking catalog | [![Open](https://img.shields.io/badge/OPEN_→-C2185B?style=flat-square)](https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/listing.html) |
+| ⭐ **Reviews** | Guest reviews & ratings | [![Open](https://img.shields.io/badge/OPEN_→-E1662E?style=flat-square)](https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/reviews.html) |
+| ✉️ **Contact Us** | Location, phone, email & enquiry form | [![Open](https://img.shields.io/badge/OPEN_→-FFB300?style=flat-square&logoColor=black)](https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/contact.html) |
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=4&section=header"/></div>
 
 ## 🧭 User Workflow
 
 ```mermaid
 flowchart LR
-    A[🏠 Home] --> B[🏰 Heritage Homes]
-    B --> C[👑 Select Property]
-    C --> D[📅 Book Your Stay]
-    D --> E[✅ Confirmation]
+    A[🏠 Home]:::start --> B[🏰 Heritage Homes]:::guest --> C[👑 Select Property]:::guest --> D[📅 Book Your Stay]:::guest --> E[✅ Confirmation]:::done
 
-    A -.->|Property Owner?| F[🤝 Become a Royal Host]
-    F -.-> G[📝 Register on Contact Page]
-    G -.-> H[🏛️ Property Listed]
+    A -.->|Property owner?| F[🤝 Become a Royal Host]:::host -.-> G[📝 Submit Host Enquiry]:::host -.-> H[🏛️ Property Listed]:::done
+
+    classDef start fill:#FFB300,stroke:#FFB300,color:#000
+    classDef guest fill:#1A237E,stroke:#1A237E,color:#fff
+    classDef host fill:#C2185B,stroke:#C2185B,color:#fff
+    classDef done fill:#2E7D32,stroke:#2E7D32,color:#fff
 ```
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=4&section=header"/></div>
 
 ## 🛠️ Tech Stack
 
@@ -220,7 +249,7 @@ flowchart LR
 
 </div>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=4&section=header"/></div>
 
 ## 📂 Folder Structure
 
@@ -253,36 +282,63 @@ RT-RoyalBNB/
 
 </details>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=4&section=header"/></div>
 
 ## 🚀 Getting Started
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Option 1 — Use the live site**
+
+No setup needed 👉 **[Open RT RoyalBNB](https://shahrishabh1513-jsk.github.io/RT-RoyalBNB/)**
+
+</td>
+<td width="50%" valign="top">
+
+**Option 2 — Run it locally**
+
 ```bash
-# 1️⃣ Clone the repository
 git clone https://github.com/shahrishabh1513-jsk/RT-RoyalBNB.git
-
-# 2️⃣ Navigate into the project directory
 cd RT-RoyalBNB
-
-# 3️⃣ Open index.html in your browser
-#    (or use the Live Server extension in VS Code)
+# open index.html in your browser
+# (or use Live Server in VS Code)
 ```
 
-✅ No build tools, dependencies, or installations required — it's a pure **HTML/CSS/JS** project. Just open and explore India's heritage stays!
+</td>
+</tr>
+</table>
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=3&section=header"/></div>
+✅ No build tools, dependencies, or installations required — it's a pure **HTML/CSS/JS** project.
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A237E,50:C2185B,100:FFB300&height=4&section=header"/></div>
 
 ## 🧭 Roadmap
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**✅ Done**
 - [x] Home, Heritage Homes, Reviews & Contact pages
 - [x] Guest booking CTAs & host onboarding CTA
 - [x] Trust signals (ratings, guest count, property count)
+
+</td>
+<td width="50%" valign="top">
+
+**🚧 Up next**
 - [ ] 🔧 Backend integration for real booking & payments
 - [ ] 🔍 Property search & filtering (location, price, type)
 - [ ] 🔐 Guest & host account system
 - [ ] 🌙 Dark mode
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=3&section=header"/></div>
+</td>
+</tr>
+</table>
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:FFB300,50:C2185B,100:1A237E&height=4&section=header"/></div>
 
 ## 🤝 Connect
 
@@ -295,11 +351,7 @@ cd RT-RoyalBNB
 <a href="mailto:shahrishu1515@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://github.com/shahrishabh1513-jsk"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
-</div>
-
----
-
-<div align="center">
+<br/><br/>
 
 ### ⭐ If you like this project, give it a star — it helps a lot!
 
