@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment | Royal BnB</title>
+<meta name="description" content="Royal BnB - book handpicked heritage hotels in Udaipur, Jaisalmer, Jaipur, Jodhpur and Dwarka.">
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="payment">
+<div id="app-header"></div>
+<main class="page-fade">
+
+<div class="wrap" style="padding-bottom:10px">
+  <div class="page-hero" style="padding-bottom:6px"><span class="eyebrow" style="justify-content:center">Secure checkout</span><h1 id="pay-title">Choose payment method</h1></div>
+  <div class="steps" id="pay-steps"><div class="stp done"><i>&#10003;</i>Guest details</div><div class="stp on"><i>2</i>Payment</div><div class="stp"><i>3</i>Confirmation</div></div>
+  <div id="payment-root"></div>
+</div>
+</main>
+<div id="app-footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/payment.js"></script>
+<script>UI.init('payment');</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+(function () {
+    var body = A.shell('payments', 'Manage Payments', '<button class="btn btn-ghost sm" id="csv"><span data-i="download" data-s="15"></span><span>Export CSV</span></button>'); if (!body) { return; }
+    var icon = UI.icon, money = UI.money, esc = UI.esc, st = { q: '', s: '', m: '' };
+    function bk(p) { return RT.db().bookings.filter(function (b) { return b.id === p.bookingId; })[0]; }
+    function list() { return RT.db().payments.filter(function (p) { var b = bk(p); return (!st.s || p.status === st.s) && (!st.m || p.method === st.m) && (!st.q || (p.txnId + (b ? b.ref + b.guestName : '')).toLowerCase().indexOf(st.q.toLowerCase()) >= 0); }).sort(function (a, b) { return b.id - a.id; }); }
+    function draw() {
+        var all = RT.db().payments, sum = function (s) { return all.filter(function (p) { return p.status === s; }).reduce(function (a, p) { return a + p.amount; }, 0); }, ls = list();
+        body.innerHTML = '<div class="stats-a">' + [['Received', money(sum('success')), 'rupee', all.filter(function (p) { return p.status === 'success'; }).length + ' payments'], ['Refunded', money(sum('refunded')), 'download', all.filter(function (p) { return p.status === 'refunded'; }).length + ' refunds'], ['Failed', money(sum('failed')), 'x', all.filter(function (p) { return p.status === 'failed'; }).length + ' attempts'], ['Pay at hotel', RT.db().bookings.filter(function (b) { return b.paymentStatus === 'pay-at-hotel'; }).length, 'home', 'Collect on arrival']].map(function (s) { return '<div class="sc"><div><small>' + s[0] + '</small><b>' + s[1] + '</b><span class="d" style="color:var(--text-secondary)">' + s[3] + '</span></div><span class="ico">' + icon(s[2], 24) + '</span></div>'; }).join('') + '</div>' +
+            '<div class="toolbar"><div class="grow">' + icon('search', 16) + '<input id="q" placeholder="Search transaction, booking, guest..." value="' + esc(st.q) + '"></div><select id="sf"><option value="">All status</option>' + ['success', 'refunded', 'failed'].map(function (s) { return '<option' + (st.s === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select><select id="mf"><option value="">All methods</option>' + ['UPI', 'Credit / Debit Card', 'Net Banking', 'Pay at Hotel'].map(function (s) { return '<option' + (st.m === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select></div>' +
+            '<div class="panel"><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Transaction</th><th>Booking</th><th>Customer</th><th>Method</th><th>Amount</th><th>Date</th><th>Status</th><th>Action</th></tr></thead><tbody>' + ls.map(function (p) { var b = bk(p);
+                return '<tr><td><b>' + p.txnId + '</b></td><td>' + (b ? b.ref : '-') + '</td><td>' + esc(b ? b.guestName : '-') + '</td><td>' + esc(p.method) + '</td><td><b>' + money(p.amount) + '</b></td><td>' + UI.fdate(p.createdAt) + '</td><td>' + A.badge(p.status) + '</td><td>' + (p.status === 'success' && p.method !== 'Pay at Hotel' ? '<button class="btn btn-ghost sm" data-rf="' + p.id + '"><span>Refund</span></button>' : '') + '</td></tr>'; }).join('') + '</tbody></table></div></div>';
+        UI.hydrate(document);
+        document.getElementById('q').oninput = function () { st.q = this.value; var p = this.selectionStart; draw(); var n = document.getElementById('q'); n.focus(); n.setSelectionRange(p, p); };
+        document.getElementById('sf').onchange = function () { st.s = this.value; draw(); }; document.getElementById('mf').onchange = function () { st.m = this.value; draw(); };
+    }
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('#csv')) { A.csv('payments.csv', [['Transaction', 'Booking', 'Customer', 'Method', 'Amount', 'Date', 'Status']].concat(list().map(function (p) { var b = bk(p); return [p.txnId, b ? b.ref : '', b ? b.guestName : '', p.method, p.amount, p.createdAt.slice(0, 10), p.status]; }))); return; }
+        var r = e.target.closest('[data-rf]'); if (r) { UI.confirm('Refund this payment in full? The booking will be cancelled.', function () { var p = RT.db().payments.filter(function (x) { return x.id === +r.dataset.rf; })[0], b = bk(p); p.status = 'refunded'; if (b) { b.paymentStatus = 'refunded'; b.status = 'cancelled'; b.refundAmount = b.total; } RT.save(); UI.toast('Refund processed'); draw(); }); }
+    });
+    draw();
+})();

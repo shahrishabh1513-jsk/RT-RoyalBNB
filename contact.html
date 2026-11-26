@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Royal BnB</title>
+<meta name="description" content="Royal BnB - book handpicked heritage hotels in Udaipur, Jaisalmer, Jaipur, Jodhpur and Dwarka.">
+<link rel="icon" type="image/png" href="images/logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<div id="app-header"></div>
+<main class="page-fade">
+
+<div class="wrap">
+  <div class="contact-head"><div><span class="pill reveal">Plan Trip</span><h1 class="reveal">Contact Us</h1></div><p class="reveal">Tell us when and where you&rsquo;d like to go and we&rsquo;ll confirm availability within 24 hours.</p></div>
+  <div class="contact-grid">
+    <form class="cform reveal" id="cf" novalidate>
+      <div class="two"><div class="fld"><label>Name</label><input name="name" placeholder="Your full name"></div><div class="fld"><label>Email</label><input type="email" name="email" placeholder="you@example.com"></div></div>
+      <div class="two"><div class="fld"><label>Phone Number</label><input name="phone" inputmode="tel" placeholder="+91 78619 76128"></div><div class="fld"><label>Select Your Destination</label><select name="dest"><option value="">Choose your destination...</option></select></div></div>
+      <div class="two"><div class="fld"><label>Preferred Date</label><input type="date" name="date"></div><div class="fld"><label>Number of Travelers</label><input name="trav" placeholder="2 adults, 1 child"></div></div>
+      <div class="fld"><label>Message / Special Requests</label><textarea name="message" placeholder="Anything else we should know?"></textarea></div><div class="fld"><span class="err" id="cf-err"></span></div>
+      <div class="cform-act"><button class="btn btn-dark" type="submit"><span>Reserve Your Spot</span></button><span class="circ" data-i="arrowur" data-s="18"></span></div>
+    </form>
+    <div class="cimg reveal right"><div class="art" data-scene="desert"></div><span class="pill-o">Your Journey</span></div>
+  </div>
+  <div class="cinfo">
+    <div class="reveal"><span class="ico" data-i="phone" data-s="22"></span><h3>Call &amp; WhatsApp</h3><a href="tel:+917861976128">+91 78619 76128</a><a target="_blank" rel="noopener" href="https://wa.me/917861976128">Chat on WhatsApp</a></div>
+    <div class="reveal"><span class="ico" data-i="clock" data-s="22"></span><h3>Working Hours</h3><p>Office: Mon - Sat, 9am - 7pm</p><p>Guest support: 24/7</p></div>
+    <div class="reveal"><span class="ico" data-i="mail" data-s="22"></span><h3>Write to Us</h3><a href="mailto:hello@royalbnb.com">hello@royalbnb.com</a><a href="mailto:bookings@royalbnb.com">bookings@royalbnb.com</a></div>
+  </div>
+  <div class="cta-soft reveal"><div><span class="pill">Head office</span><h2>RT Hub, Vadodara</h2><p>opp. Sumandeep College, near Suzlon Company, Vadodara, Gujarat 391760<br>Phone: +91 78619 76128</p><a class="btn btn-dark" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=RT+Hub+opp.+Sumandeep+College+near+Suzlon+Company+Vadodara+Gujarat+391760"><span>Get directions</span><i data-i="arrowur" data-s="16"></i></a></div>
+    <div class="cta-imgs"><div class="art" data-scene="udaipur"></div><div class="art" data-scene="jaipur"></div></div></div>
+  <section class="section faq"><div class="sec-head"><div><span class="eyebrow">Good to know</span><h2>Frequently asked questions</h2></div></div>
+    <details><summary>Can I cancel my booking?</summary><p>Yes. Cancel free of charge up to 48 hours before check-in for a full refund. Within 48 hours, 50% of the amount is refunded.</p></details>
+    <details><summary>Do you offer group or custom packages?</summary><p>Yes - share your destination, dates and number of travellers in the form above and we will send a custom quote within 24 hours.</p></details>
+    <details><summary>Which payment methods are accepted?</summary><p>UPI, credit/debit cards and net banking, or choose Pay at Hotel for selected stays.</p></details>
+    <details><summary>Is airport pickup available?</summary><p>Select hotels include airport pickup. Look for the &ldquo;Airport Pickup&rdquo; amenity on the hotel page or use the amenity filter.</p></details>
+  </section>
+</div>
+</main>
+<div id="app-footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/contact.js"></script>
+<script>UI.init('contact');</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+(function () {
+    var body = A.shell('customers', 'Manage Customers', '<button class="btn btn-ghost sm" id="csv"><span data-i="download" data-s="15"></span><span>Export CSV</span></button>'); if (!body) { return; }
+    var icon = UI.icon, money = UI.money, esc = UI.esc, q = '';
+    function stats(u) { var bs = RT.db().bookings.filter(function (b) { return b.userId === u.id && b.status !== 'pending'; }); return { n: bs.length, spent: bs.filter(function (b) { return b.status !== 'cancelled'; }).reduce(function (a, b) { return a + b.total; }, 0) }; }
+    function list() { return RT.db().users.filter(function (u) { return !q || (u.name + u.email + u.phone + (u.city || '')).toLowerCase().indexOf(q.toLowerCase()) >= 0; }); }
+    function draw() {
+        var us = list();
+        body.innerHTML = '<div class="toolbar"><div class="grow">' + icon('search', 16) + '<input id="q" placeholder="Search customers..." value="' + esc(q) + '"></div><span class="muted">' + us.length + ' customers</span></div><div class="panel"><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Customer</th><th>Phone</th><th>City</th><th>Joined</th><th>Bookings</th><th>Total spent</th><th>Status</th><th>Actions</th></tr></thead><tbody>' + us.map(function (u) { var s = stats(u);
+            return '<tr><td><div style="display:flex;gap:12px;align-items:center"><span class="avatar" style="width:38px;height:38px">' + esc(u.name.charAt(0)) + '</span><div><span class="nm">' + esc(u.name) + '</span><small>' + esc(u.email) + '</small></div></div></td><td>' + esc(u.phone) + '</td><td>' + esc(u.city || '-') + '</td><td>' + UI.fdate(u.joined) + '</td><td>' + s.n + '</td><td><b>' + money(s.spent) + '</b></td><td>' + A.badge(u.status) + '</td><td><div class="acts"><button class="ib" data-v="' + u.id + '" title="Bookings">' + icon('eye', 15) + '</button><button class="ib' + (u.status === 'active' ? ' dng' : '') + '" data-bl="' + u.id + '" title="' + (u.status === 'active' ? 'Block' : 'Unblock') + '">' + icon(u.status === 'active' ? 'lock' : 'check', 15) + '</button></div></td></tr>'; }).join('') + '</tbody></table></div></div>';
+        UI.hydrate(document); document.getElementById('q').oninput = function () { q = this.value; var p = this.selectionStart; draw(); var n = document.getElementById('q'); n.focus(); n.setSelectionRange(p, p); };
+    }
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('#csv')) { A.csv('customers.csv', [['Name', 'Email', 'Phone', 'City', 'Joined', 'Bookings', 'Spent', 'Status']].concat(list().map(function (u) { var s = stats(u); return [u.name, u.email, u.phone, u.city, u.joined, s.n, s.spent, u.status]; }))); return; }
+        var bl = e.target.closest('[data-bl]'); if (bl) { var u = RT.db().users.filter(function (x) { return x.id === +bl.dataset.bl; })[0]; u.status = u.status === 'active' ? 'blocked' : 'active'; RT.save(); UI.toast(u.name + ' is now ' + u.status); draw(); return; }
+        var v = e.target.closest('[data-v]'); if (v) { var us = RT.db().users.filter(function (x) { return x.id === +v.dataset.v; })[0], bs = RT.db().bookings.filter(function (b) { return b.userId === us.id && b.status !== 'pending'; }).sort(function (a, b) { return b.id - a.id; });
+            UI.modal('<h3>' + esc(us.name) + '</h3><p class="muted">' + esc(us.email) + ' &middot; ' + esc(us.phone) + '</p><div style="margin-top:12px">' + (bs.length ? bs.map(function (b) { return '<div class="sumline"><span><b>' + b.ref + '</b> &middot; ' + esc(A.hotelName(b.hotelId)) + '<br><small class="muted">' + UI.fdate(b.checkIn) + ' - ' + UI.fdate(b.checkOut) + '</small></span><span style="text-align:right">' + money(b.total) + '<br>' + A.badge(b.status) + '</span></div>'; }).join('') : '<p class="muted">No bookings yet.</p>') + '</div>', 'sm'); }
+    });
+    draw();
+})();
