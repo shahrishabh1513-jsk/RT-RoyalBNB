@@ -20,12 +20,18 @@
 
     /* trip plans */
     var plans = [
-        { t: '3 Days in Udaipur', loc: 'udaipur', dur: '3 Nights', best: 'Oct - Mar', budget: '\u20B96,500 / day', desc: 'Palaces, lakes and the most romantic sunsets in India.',
-          days: [['Day 1 - Lake Pichola', 'Check in, City Palace tour, sunset boat ride to Jag Mandir.'], ['Day 2 - Hills & Gardens', 'Sajjangarh Monsoon Palace, Saheliyon Ki Bari, evening dance show at Bagore Ki Haveli.'], ['Day 3 - Ghats & Temples', 'Jagdish Temple, Fateh Sagar Lake and shopping at Hathi Pol bazaar.']] },
-        { t: 'Golden Circuit (7 Days)', loc: 'jaipur', dur: '6 Nights', best: 'Nov - Feb', budget: '\u20B95,800 / day', desc: 'Jaipur, Jodhpur and Jaisalmer - forts, blue lanes and dunes.',
-          days: [['Day 1-2 - Jaipur', 'Amer Fort, Hawa Mahal, City Palace and the Johari bazaar.'], ['Day 3-4 - Jodhpur', 'Mehrangarh Fort, Jaswant Thada and the Clock Tower market.'], ['Day 5-7 - Jaisalmer', 'Golden Fort, Patwon Ki Haveli and a night under the stars at Sam Dunes.']] },
-        { t: 'Dwarka Sacred Coast', loc: 'dwarka', dur: '2 Nights', best: 'Oct - Mar', budget: '\u20B93,800 / day', desc: 'Temple aarti, Gomti ghats and Arabian Sea sunsets.',
-          days: [['Day 1 - Dwarka', 'Morning aarti at Dwarkadhish Temple, Gomti Ghat, Rukmini Devi Temple.'], ['Day 2 - Around Dwarka', 'Nageshwar Jyotirlinga, Gopi Talav and Bet Dwarka by boat.']] }
+        {
+            t: '3 Days in Udaipur', loc: 'udaipur', dur: '3 Nights', best: 'Oct - Mar', budget: '\u20B96,500 / day', desc: 'Palaces, lakes and the most romantic sunsets in India.',
+            days: [['Day 1 - Lake Pichola', 'Check in, City Palace tour, sunset boat ride to Jag Mandir.'], ['Day 2 - Hills & Gardens', 'Sajjangarh Monsoon Palace, Saheliyon Ki Bari, evening dance show at Bagore Ki Haveli.'], ['Day 3 - Ghats & Temples', 'Jagdish Temple, Fateh Sagar Lake and shopping at Hathi Pol bazaar.']]
+        },
+        {
+            t: 'Golden Circuit (7 Days)', loc: 'jaipur', dur: '6 Nights', best: 'Nov - Feb', budget: '\u20B95,800 / day', desc: 'Jaipur, Jodhpur and Jaisalmer - forts, blue lanes and dunes.',
+            days: [['Day 1-2 - Jaipur', 'Amer Fort, Hawa Mahal, City Palace and the Johari bazaar.'], ['Day 3-4 - Jodhpur', 'Mehrangarh Fort, Jaswant Thada and the Clock Tower market.'], ['Day 5-7 - Jaisalmer', 'Golden Fort, Patwon Ki Haveli and a night under the stars at Sam Dunes.']]
+        },
+        {
+            t: 'Dwarka Sacred Coast', loc: 'dwarka', dur: '2 Nights', best: 'Oct - Mar', budget: '\u20B93,800 / day', desc: 'Temple aarti, Gomti ghats and Arabian Sea sunsets.',
+            days: [['Day 1 - Dwarka', 'Morning aarti at Dwarkadhish Temple, Gomti Ghat, Rukmini Devi Temple.'], ['Day 2 - Around Dwarka', 'Nageshwar Jyotirlinga, Gopi Talav and Bet Dwarka by boat.']]
+        }
     ];
     var cur = 0;
     function drawPlan() {
@@ -43,8 +49,8 @@
 
     /* must-visit places */
     var places = [['jaipur', 'Hawa Mahal', 'Jaipur', 'Palace of Winds with 953 lattice windows - glows rose at sunrise.', 'Best time: Oct - Mar'], ['udaipur', 'City Palace & Lake Pichola', 'Udaipur', 'Sunset boat rides past marble palaces and lakeside ghats.', 'Best time: Sep - Mar'],
-        ['jodhpur', 'Mehrangarh Fort', 'Jodhpur', 'A 15th-century fort above the indigo rooftops of the Blue City.', 'Best time: Oct - Feb'], ['jaisalmer', 'Sam Sand Dunes', 'Jaisalmer', 'Camel safaris, folk music and star-lit desert camps.', 'Best time: Nov - Feb'],
-        ['dwarka', 'Dwarkadhish Temple', 'Dwarka', 'One of the Char Dham - sacred shikhara by the Gomti river and sea.', 'Best time: Oct - Mar'], ['jaisalmer', 'Jaisalmer Fort', 'Jaisalmer', 'A living golden fort with havelis, cafes and 800 years of stories.', 'Best time: Oct - Mar']];
+    ['jodhpur', 'Mehrangarh Fort', 'Jodhpur', 'A 15th-century fort above the indigo rooftops of the Blue City.', 'Best time: Oct - Feb'], ['jaisalmer', 'Sam Sand Dunes', 'Jaisalmer', 'Camel safaris, folk music and star-lit desert camps.', 'Best time: Nov - Feb'],
+    ['dwarka', 'Dwarkadhish Temple', 'Dwarka', 'One of the Char Dham - sacred shikhara by the Gomti river and sea.', 'Best time: Oct - Mar'], ['jaisalmer', 'Jaisalmer Fort', 'Jaisalmer', 'A living golden fort with havelis, cafes and 800 years of stories.', 'Best time: Oct - Mar']];
     $('#places').innerHTML = places.map(function (p) { return '<a class="place reveal" href="hotels.html?loc=' + RT.locations.filter(function (l) { return l.name === p[2]; })[0].id + '"><div class="art" data-scene="' + p[0] + '"></div><div><span class="tagp">' + p[2] + '</span><h4>' + p[1] + '</h4><p>' + p[3] + '</p><small>' + icon('sun', 13) + ' ' + p[4] + '</small></div></a>'; }).join('');
 
     /* offers */

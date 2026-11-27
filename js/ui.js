@@ -1,6 +1,3 @@
-/* =====================================================================
-   RT ROYAL BNB v2 - shared UI (icons, illustrated scenes, header, footer)
-   ===================================================================== */
 (function (w) {
     'use strict';
     var d = document;
@@ -126,8 +123,12 @@
             o += rect(130, 196, 190, 44, fcl) + rect(120, 176, 30, 64, fcl) + rect(205, 166, 34, 74, fcl) + rect(290, 180, 30, 60, fcl) + bat(130, 196, 190, fcl, 5) + bat(120, 176, 30, fcl, 4) + bat(205, 166, 34, fcl, 4) + bat(290, 180, 30, fcl, 4) + dome(222, 166, 11, fcl);
             for (i = 0; i < 6; i++) { o += arch(142 + i * 28, 210, 8, 16, '#8C6B4E'); }
             var blues = ['#4B86B4', '#5E9BC9', '#8FBFE0', '#3A6E99', '#6FA7D1', '#A9CEE8'], n2 = 0;
-            for (var r = 0; r < 6; r++) { for (var c = 0; c < 9; c++) { var bx = 10 + c * 44 + (r % 2) * 18 + ((c * 7 + r * 3) % 9), by = 296 + r * 34 + ((c * 5) % 7), bw = 34 + ((c + r) % 3) * 6, bh = 30 + ((c * 3 + r) % 4) * 5;
-                if (by + bh > 500) { continue; } o += rect(bx, by, bw, bh, blues[(c + r * 2) % 6]) + rect(bx + 6, by + 8, 7, 9, '#F3E6D0', 0.85); n2++; } }
+            for (var r = 0; r < 6; r++) {
+                for (var c = 0; c < 9; c++) {
+                    var bx = 10 + c * 44 + (r % 2) * 18 + ((c * 7 + r * 3) % 9), by = 296 + r * 34 + ((c * 5) % 7), bw = 34 + ((c + r) % 3) * 6, bh = 30 + ((c * 3 + r) % 4) * 5;
+                    if (by + bh > 500) { continue; } o += rect(bx, by, bw, bh, blues[(c + r * 2) % 6]) + rect(bx + 6, by + 8, 7, 9, '#F3E6D0', 0.85); n2++;
+                }
+            }
             o += '<path d="M0 500V480Q100 470 200 482T400 474V500Z" fill="#2E4C66" opacity=".55"/>' + birds(250, 90);
         } else if (kind === 'dwarka') {
             defs = sky(u + 'a', [[0, '#FCE0B0'], [0.5, '#EE9C6E'], [0.62, '#C9645F']]) + sky(u + 'b', [[0, '#3B7F93'], [1, '#1E4A5C']]);

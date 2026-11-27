@@ -16,13 +16,16 @@
     function tabs() {
         var all = RT.activeHotels();
         $('#loc-tabs').innerHTML = '<button class="loc-tab' + (!S.loc ? ' on' : '') + '" data-loc="">All <small>' + all.length + '</small></button>' + RT.locations.map(function (l) {
-            return '<button class="loc-tab' + (S.loc === l.id ? ' on' : '') + '" data-loc="' + l.id + '">' + icon('pin', 14) + l.name + ' <small>' + all.filter(function (h) { return h.locationId === l.id; }).length + '</small></button>'; }).join('');
+            return '<button class="loc-tab' + (S.loc === l.id ? ' on' : '') + '" data-loc="' + l.id + '">' + icon('pin', 14) + l.name + ' <small>' + all.filter(function (h) { return h.locationId === l.id; }).length + '</small></button>';
+        }).join('');
     }
     function catOk(h) {
         if (!cat) { return true; }
         var rooms = RT.hotelRooms(h.id);
-        return ({ heritage: /Heritage|Haveli|Palace/.test(h.type), desert: h.locationId === 'jaisalmer', lakes: h.locationId === 'udaipur', spiritual: h.locationId === 'dwarka', honeymoon: h.stars >= 4 && h.rating >= 4.6,
-            family: rooms.some(function (r) { return (r.adults + r.children) >= 4; }) })[cat];
+        return ({
+            heritage: /Heritage|Haveli|Palace/.test(h.type), desert: h.locationId === 'jaisalmer', lakes: h.locationId === 'udaipur', spiritual: h.locationId === 'dwarka', honeymoon: h.stars >= 4 && h.rating >= 4.6,
+            family: rooms.some(function (r) { return (r.adults + r.children) >= 4; })
+        })[cat];
     }
     function avail(h) {
         if (!S.in || !S.out) { return true; }

@@ -20,8 +20,10 @@
     document.addEventListener('click', function (e) {
         var t = e.target.closest('[data-t]'); if (t) { tab = t.dataset.t; draw(); return; }
         var c = e.target.closest('[data-cancel]');
-        if (c) { var b = RT.db().bookings.filter(function (x) { return x.id === +c.dataset.cancel; })[0], pct = RT.diffDays(RT.today(), b.checkIn) >= 2 ? '100%' : '50%';
-            UI.confirm('Cancel booking ' + b.ref + '? You will receive a ' + pct + ' refund (' + money(Math.round(b.total * (pct === '100%' ? 1 : .5))) + ') to your original payment method.', function () { RT.cancel(b.id); UI.toast('Booking cancelled'); draw(); }); return; }
+        if (c) {
+            var b = RT.db().bookings.filter(function (x) { return x.id === +c.dataset.cancel; })[0], pct = RT.diffDays(RT.today(), b.checkIn) >= 2 ? '100%' : '50%';
+            UI.confirm('Cancel booking ' + b.ref + '? You will receive a ' + pct + ' refund (' + money(Math.round(b.total * (pct === '100%' ? 1 : .5))) + ') to your original payment method.', function () { RT.cancel(b.id); UI.toast('Booking cancelled'); draw(); }); return;
+        }
         var rv = e.target.closest('[data-review]');
         if (rv) {
             var bk = RT.db().bookings.filter(function (x) { return x.id === +rv.dataset.review; })[0], h = RT.hotel(bk.hotelId), rating = 5;

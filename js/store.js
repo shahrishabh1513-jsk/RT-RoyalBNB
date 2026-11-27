@@ -1,25 +1,29 @@
-/* =====================================================================
-   RT ROYAL BNB v2 - data store (frontend only, localStorage)
-   Tables: users, admins, locations, hotels, rooms, bookings, payments,
-           reviews, queries, subscribers, coupons
-   Add  ?resetdb  to any page URL to restore the demo data.
-   ===================================================================== */
 (function (w) {
     'use strict';
     var KEY = 'rtbnb2_db';
 
     /* ------------------------------------------------ catalogue ---- */
     var LOCATIONS = [
-        { id: 'udaipur', name: 'Udaipur', state: 'Rajasthan', tag: 'City of Lakes', best: 'Oct - Mar', airport: 'Maharana Pratap Airport, 24 km',
-          blurb: 'Palaces mirrored in Lake Pichola, marble ghats and sunset boat rides - the most romantic city in India.' },
-        { id: 'jaisalmer', name: 'Jaisalmer', state: 'Rajasthan', tag: 'The Golden City', best: 'Nov - Feb', airport: 'Jaisalmer Airport, 14 km',
-          blurb: 'A living sandstone fort, havelis carved like lace and star-lit nights on the Sam sand dunes.' },
-        { id: 'jaipur', name: 'Jaipur', state: 'Rajasthan', tag: 'The Pink City', best: 'Oct - Mar', airport: 'Jaipur International Airport, 12 km',
-          blurb: 'Hawa Mahal, Amer Fort and bustling bazaars - royal heritage wrapped in rose-pink sandstone.' },
-        { id: 'jodhpur', name: 'Jodhpur', state: 'Rajasthan', tag: 'The Blue City', best: 'Oct - Mar', airport: 'Jodhpur Airport, 5 km',
-          blurb: 'Mehrangarh Fort towers over a sea of indigo houses, spice markets and rooftop cafes.' },
-        { id: 'dwarka', name: 'Dwarka', state: 'Gujarat', tag: 'The Sacred Coast', best: 'Oct - Mar', airport: 'Jamnagar Airport, 137 km',
-          blurb: 'Dwarkadhish Temple, the Gomti ghats and Arabian Sea sunsets - a calm, spiritual coastal escape.' }
+        {
+            id: 'udaipur', name: 'Udaipur', state: 'Rajasthan', tag: 'City of Lakes', best: 'Oct - Mar', airport: 'Maharana Pratap Airport, 24 km',
+            blurb: 'Palaces mirrored in Lake Pichola, marble ghats and sunset boat rides - the most romantic city in India.'
+        },
+        {
+            id: 'jaisalmer', name: 'Jaisalmer', state: 'Rajasthan', tag: 'The Golden City', best: 'Nov - Feb', airport: 'Jaisalmer Airport, 14 km',
+            blurb: 'A living sandstone fort, havelis carved like lace and star-lit nights on the Sam sand dunes.'
+        },
+        {
+            id: 'jaipur', name: 'Jaipur', state: 'Rajasthan', tag: 'The Pink City', best: 'Oct - Mar', airport: 'Jaipur International Airport, 12 km',
+            blurb: 'Hawa Mahal, Amer Fort and bustling bazaars - royal heritage wrapped in rose-pink sandstone.'
+        },
+        {
+            id: 'jodhpur', name: 'Jodhpur', state: 'Rajasthan', tag: 'The Blue City', best: 'Oct - Mar', airport: 'Jodhpur Airport, 5 km',
+            blurb: 'Mehrangarh Fort towers over a sea of indigo houses, spice markets and rooftop cafes.'
+        },
+        {
+            id: 'dwarka', name: 'Dwarka', state: 'Gujarat', tag: 'The Sacred Coast', best: 'Oct - Mar', airport: 'Jamnagar Airport, 137 km',
+            blurb: 'Dwarkadhish Temple, the Gomti ghats and Arabian Sea sunsets - a calm, spiritual coastal escape.'
+        }
     ];
 
     var AMENITIES = {
@@ -154,9 +158,9 @@
 
         var pw = hash('Test@123');
         var people = [['Aarav Shah', 'aarav@example.com', '9876543210', 'Ahmedabad'], ['Rohan Mehta', 'rohan@example.com', '9825012345', 'Surat'],
-            ['Karan Patel', 'karan@example.com', '9898012345', 'Vadodara'], ['Neha Joshi', 'neha@example.com', '9712345678', 'Mumbai'],
-            ['Priya Nair', 'priya@example.com', '9123456780', 'Pune'], ['Dhruv Trivedi', 'dhruv@example.com', '9012345678', 'Rajkot'],
-            ['Isha Kapoor', 'isha@example.com', '9988776655', 'Delhi'], ['Vivek Rao', 'vivek@example.com', '9090909090', 'Bengaluru']];
+        ['Karan Patel', 'karan@example.com', '9898012345', 'Vadodara'], ['Neha Joshi', 'neha@example.com', '9712345678', 'Mumbai'],
+        ['Priya Nair', 'priya@example.com', '9123456780', 'Pune'], ['Dhruv Trivedi', 'dhruv@example.com', '9012345678', 'Rajkot'],
+        ['Isha Kapoor', 'isha@example.com', '9988776655', 'Delhi'], ['Vivek Rao', 'vivek@example.com', '9090909090', 'Bengaluru']];
         people.forEach(function (p, i) {
             D.users.push({ id: i + 1, name: p[0], email: p[1], phone: p[2], city: p[3], password: pw, status: 'active', joined: addDays(today(), -(200 - i * 22)), wishlist: [] });
         });
@@ -185,8 +189,10 @@
                 });
             });
             for (var k = 0; k < 3; k++) {
-                D.reviews.push({ id: D.reviews.length + 1, hotelId: hid, userId: ((i + k) % people.length) + 1, name: NAMES[(i + k * 3) % NAMES.length],
-                    rating: k === 2 ? Math.max(4, Math.round(h[4]) - 1) : Math.min(5, Math.round(h[4] + 0.2)), text: REVIEW_TEXT[(i + k * 2) % REVIEW_TEXT.length], date: addDays(today(), -(12 + i * 5 + k * 17)) });
+                D.reviews.push({
+                    id: D.reviews.length + 1, hotelId: hid, userId: ((i + k) % people.length) + 1, name: NAMES[(i + k * 3) % NAMES.length],
+                    rating: k === 2 ? Math.max(4, Math.round(h[4]) - 1) : Math.min(5, Math.round(h[4] + 0.2)), text: REVIEW_TEXT[(i + k * 2) % REVIEW_TEXT.length], date: addDays(today(), -(12 + i * 5 + k * 17))
+                });
             }
         });
 
@@ -270,9 +276,11 @@
         createBooking: function (o) {
             var room = byId('rooms', o.roomId), p = API.price(room, o.checkIn, o.checkOut, o.rooms, o.coupon);
             var id = nextId('bookings');
-            var b = { id: id, ref: 'RTB' + (260100 + id * 37), userId: o.userId, hotelId: room.hotelId, roomId: room.id, checkIn: o.checkIn, checkOut: o.checkOut,
+            var b = {
+                id: id, ref: 'RTB' + (260100 + id * 37), userId: o.userId, hotelId: room.hotelId, roomId: room.id, checkIn: o.checkIn, checkOut: o.checkOut,
                 nights: p.nights, rooms: o.rooms || 1, adults: o.adults, children: o.children, guestName: o.guestName, phone: o.phone, email: o.email, requests: o.requests || '',
-                subtotal: p.subtotal, tax: p.tax, discount: p.discount, coupon: p.coupon, total: p.total, status: 'pending', paymentStatus: 'unpaid', createdAt: nowISO(), reviewed: 0 };
+                subtotal: p.subtotal, tax: p.tax, discount: p.discount, coupon: p.coupon, total: p.total, status: 'pending', paymentStatus: 'unpaid', createdAt: nowISO(), reviewed: 0
+            };
             db.bookings.push(b); save(); return b;
         },
         pay: function (bookingId, method, ok) {
