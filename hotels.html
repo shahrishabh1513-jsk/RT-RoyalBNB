@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hotels - Choose your stay | Royal BnB</title>
-<meta name="description" content="Royal BnB - book handpicked heritage hotels in Udaipur, Jaisalmer, Jaipur, Jodhpur and Dwarka.">
-<link rel="icon" type="image/png" href="images/logo/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotels - Choose your stay | Royal BnB</title>
+  <meta name="description"
+    content="Royal BnB - book handpicked heritage hotels in Udaipur, Jaisalmer, Jaipur, Jodhpur and Dwarka.">
+  <link rel="icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body data-page="hotels">
-<div id="app-header"></div>
-<main class="page-fade">
+  <div id="app-header"></div>
+  <main class="page-fade">
 
-<div class="wrap">
-  <div class="page-hero"><span class="eyebrow" style="justify-content:center">Book</span><h1>Choose your stay</h1><p>17 handpicked hotels across Udaipur, Jaisalmer, Jaipur, Jodhpur &amp; Dwarka &mdash; each with two room categories.</p></div>
-  <div class="loc-tabs" id="loc-tabs"></div>
-  <div class="sbar-wrap" id="hotels-search"></div>
-  <div class="listing">
-    <aside class="filters reveal" id="filters">
-      <h4>Filters <button id="f-reset">Reset all</button></h4>
-      <div class="fgroup"><b>Max price / night</b><input type="range" class="range" id="f-price" min="2000" max="16000" step="500" value="16000"><div class="range-val"><span>&#8377;2,000</span><span id="f-price-v">&#8377;16,000</span></div></div>
-      <div class="fgroup"><b>Guest rating</b>
-        <div id="f-rate"></div></div>
-      <div class="fgroup"><b>Star class</b><div id="f-stars"></div></div>
-      <div class="fgroup"><b>Amenities</b><div id="f-am"></div></div>
-    </aside>
-    <section>
-      <div class="res-bar"><h2 id="res-title">Hotels</h2>
-        <div style="display:flex;gap:10px;align-items:center"><button class="btn btn-ghost sm f-toggle" id="f-toggle"><span data-i="filter" data-s="15"></span>Filters</button>
-        <select id="sort"><option value="rec">Sort: Recommended</option><option value="plow">Price: low to high</option><option value="phigh">Price: high to low</option><option value="rate">Guest rating</option><option value="near">Nearest to main attraction</option></select></div></div>
-      <div id="results"></div>
-    </section>
-  </div>
-</div>
+    <div class="wrap">
+      <div class="page-hero"><span class="eyebrow" style="justify-content:center">Book</span>
+        <h1>Choose your stay</h1>
+        <p>17 handpicked hotels across Udaipur, Jaisalmer, Jaipur, Jodhpur &amp; Dwarka &mdash; each with two room
+          categories.</p>
+      </div>
+      <div class="loc-tabs" id="loc-tabs"></div>
+      <div class="sbar-wrap" id="hotels-search"></div>
+      <div class="listing">
+        <aside class="filters reveal" id="filters">
+          <h4>Filters <button id="f-reset">Reset all</button></h4>
+          <div class="fgroup"><b>Max price / night</b><input type="range" class="range" id="f-price" min="2000"
+              max="16000" step="500" value="16000">
+            <div class="range-val"><span>&#8377;2,000</span><span id="f-price-v">&#8377;16,000</span></div>
+          </div>
+          <div class="fgroup"><b>Guest rating</b>
+            <div id="f-rate"></div>
+          </div>
+          <div class="fgroup"><b>Star class</b>
+            <div id="f-stars"></div>
+          </div>
+          <div class="fgroup"><b>Amenities</b>
+            <div id="f-am"></div>
+          </div>
+        </aside>
+        <section>
+          <div class="res-bar">
+            <h2 id="res-title">Hotels</h2>
+            <div style="display:flex;gap:10px;align-items:center"><button class="btn btn-ghost sm f-toggle"
+                id="f-toggle"><span data-i="filter" data-s="15"></span>Filters</button>
+              <select id="sort">
+                <option value="rec">Sort: Recommended</option>
+                <option value="plow">Price: low to high</option>
+                <option value="phigh">Price: high to low</option>
+                <option value="rate">Guest rating</option>
+                <option value="near">Nearest to main attraction</option>
+              </select>
+            </div>
+          </div>
+          <div id="results"></div>
+        </section>
+      </div>
+    </div>
 
-</main>
-<div id="app-footer"></div>
-<script src="js/store.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/pages/hotels.js"></script>
-<script>UI.init('hotels');</script>
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/hotels.js"></script>
+  <script>UI.init('hotels');</script>
 </body>
+
 </html>
